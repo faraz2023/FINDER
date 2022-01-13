@@ -21,7 +21,7 @@ def GetSolution(STEPRATIO, MODEL_FILE):
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
     data_test_name = ['ba_space_100']
     data_test_costType = ['degree', 'random']
-    model_file = './FINDER_CN_cost/models/%s'%MODEL_FILE
+    model_file = 'models/%s'%MODEL_FILE
     ## save_dir
     save_dir = 'results'
     if not os.path.exists(save_dir):
