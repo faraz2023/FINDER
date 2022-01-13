@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 import sys,os
-sys.path.append(os.path.dirname(__file__) + os.sep + '../')
+#sys.path.append(os.path.dirname(__file__) + os.sep + '../')
 from FINDER import FINDER
 import numpy as np
 from tqdm import tqdm
