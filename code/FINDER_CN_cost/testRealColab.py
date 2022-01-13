@@ -29,8 +29,10 @@ def GetSolution(STEPRATIO, MODEL_FILE):
     
     save_dir_degree = save_dir + '/Data_degree'
     save_dir_random = save_dir + '/Data_random'
-    os.mkdir(save_dir_degree)
-    os.mkdir(save_dir_random)
+    if not os.path.exists(save_dir_degree):
+        os.mkdir(save_dir_degree)
+    if not os.path.exists(save_dir_random):
+        os.mkdir(save_dir_random)
 
     ## begin computing...
     print('The best model is :%s' % (model_file))
