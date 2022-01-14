@@ -15,6 +15,11 @@ for i in range(len(data_name)):
     data = os.path.join(data_path , data_name[i] + '.edgelist')
     g = nx.read_edgelist(data)
 
+    # adding node ids that do not exist (people no longer in the communities)
+    for j in range(nx.number_of_nodes(g)):
+        if not str(j) in g.nodes():
+            g.add_node(str(j))
+
     ### degree weight
     if cost_type == 'degree':
         degree = nx.degree(g)
