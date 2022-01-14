@@ -72,7 +72,8 @@ def EvaluateSolution(STEPRATIO, STRTEGYID):
     data_test_path = '/content/FINDER/data/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
     data_test_name = ['ba_space_100']
-    data_test_costType = ['degree', 'random']
+    data_test_costType = ['degree']
+    #data_test_costType = ['degree', 'random']
 
     ## save_dir
     save_dir_degree = 'results/Data_degree/StepRatio_%.4f/' % STEPRATIO
