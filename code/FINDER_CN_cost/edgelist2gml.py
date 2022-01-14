@@ -13,7 +13,7 @@ cost_type = 'degree'
 
 for i in range(len(data_name)):
     data = os.path.join(data_path , data_name[i] + '.edgelist')
-    g = nx.read_edgelist(data, node)
+    g = nx.read_edgelist(data)
 
     ### degree weight
     if cost_type == 'degree':
