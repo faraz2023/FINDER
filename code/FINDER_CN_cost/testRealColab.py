@@ -20,7 +20,8 @@ def GetSolution(STEPRATIO, MODEL_FILE):
     data_test_path = '/content/FINDER/data/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
     data_test_name = ['ba_space_100']
-    data_test_costType = ['degree', 'random']
+    #data_test_costType = ['degree', 'random']
+    data_test_costType = ['degree']
     model_file = 'models/%s'%MODEL_FILE
     ## save_dir
     save_dir = 'results'
