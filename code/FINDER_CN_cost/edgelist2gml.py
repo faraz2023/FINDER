@@ -4,7 +4,8 @@ import random
 import os
 
 data_path = os.path.join("..", "..", "data")
-data_name = ['ba_space_100']
+#data_name = ['ba_space_100']
+data_name = ['day20']
 save_dir = os.path.join("..", "..", "data")
 
 
@@ -12,7 +13,7 @@ cost_type = 'degree'
 
 for i in range(len(data_name)):
     data = os.path.join(data_path , data_name[i] + '.edgelist')
-    g = nx.read_edgelist(data)
+    g = nx.read_edgelist(data, node)
 
     ### degree weight
     if cost_type == 'degree':
