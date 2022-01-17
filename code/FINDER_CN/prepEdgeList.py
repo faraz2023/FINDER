@@ -17,4 +17,4 @@ for j in range(nx.number_of_nodes(g)):
     if not str(j) in g.nodes():
         g.add_node(str(j))
 
-nx.write_edgelist(g, "day20_modified.edgelist")
+nx.write_edgelist(g, os.path.join(save_dir, "day20_modified.edgelist"))
