@@ -12,9 +12,11 @@ i = 0
 data = os.path.join(data_path , data_name[i] + '.edgelist')
 g = nx.read_edgelist(data)
 
-# adding node ids that do not exist (people no longer in the communities)
+nodes = g.nodes()
+print(nodes)
+'''# adding node ids that do not exist (people no longer in the communities)
 for j in range(nx.number_of_nodes(g)):
     if not str(j) in g.nodes():
         g.add_node(str(j))
-
-nx.write_edgelist(g, os.path.join(save_dir, "day20_modified.edgelist"))
+'''
+#nx.write_edgelist(g, os.path.join(save_dir, "day20_modified.edgelist"))
