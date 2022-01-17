@@ -25,8 +25,8 @@ for i in range(len(data_name)):
     nodes_l = list(nodes_l_map)
 
     new_node_labels = {}
-    for i in range(len(nodes_l)):
-        new_node_labels[nodes_l[i]] = str(i)
+    for k in range(len(nodes_l)):
+        new_node_labels[nodes_l[k]] = str(k)
 
     g = nx.relabel_nodes(g, new_node_labels)
 
