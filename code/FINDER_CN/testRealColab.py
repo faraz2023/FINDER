@@ -19,7 +19,7 @@ def GetSolution(STEPRATIO, MODEL_FILE_CKPT):
 #     data_test_name = ['Crime','HI-II-14','Digg','Enron','Gnutella31','Epinions','Facebook','Youtube','Flickr']
 
     #data_test_name = ['ba_space_100']
-    data_test_name = ['day20_modified.edgelist']
+    data_test_name = ['day20_modified']
     model_file_path = 'models/'
     model_file_ckpt = MODEL_FILE_CKPT
     model_file = model_file_path + model_file_ckpt
@@ -54,7 +54,7 @@ def EvaluateSolution(STEPRATIO, MODEL_FILE_CKPT, STRTEGYID):
     data_test_path = '/content/FINDER/data/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
     #data_test_name = ['ba_space_100']
-    data_test_name = ['day20_modified.edgelist']
+    data_test_name = ['day20_modified']
 
     save_dir = 'results/StepRatio_%.4f/'%STEPRATIO
     ## begin computing...
