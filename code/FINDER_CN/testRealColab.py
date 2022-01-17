@@ -17,7 +17,9 @@ def GetSolution(STEPRATIO, MODEL_FILE_CKPT):
     dqn = FINDER()
     data_test_path = '/content/FINDER/data/'
 #     data_test_name = ['Crime','HI-II-14','Digg','Enron','Gnutella31','Epinions','Facebook','Youtube','Flickr']
-    data_test_name = ['ba_space_100']
+
+    #data_test_name = ['ba_space_100']
+    data_test_name = ['day20_modified.edgelist']
     model_file_path = 'models/'
     model_file_ckpt = MODEL_FILE_CKPT
     model_file = model_file_path + model_file_ckpt
@@ -51,7 +53,9 @@ def EvaluateSolution(STEPRATIO, MODEL_FILE_CKPT, STRTEGYID):
     dqn = FINDER()
     data_test_path = '/content/FINDER/data/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
-    data_test_name = ['ba_space_100']
+    #data_test_name = ['ba_space_100']
+    data_test_name = ['day20_modified.edgelist']
+
     save_dir = 'results/StepRatio_%.4f/'%STEPRATIO
     ## begin computing...
     df = pd.DataFrame(np.arange(2 * len(data_test_name)).reshape((2, len(data_test_name))), index=['solution', 'time'], columns=data_test_name)
