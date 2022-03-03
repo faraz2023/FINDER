@@ -1,6 +1,6 @@
 # FINDER (FInding key players in complex Networks through DEep Reinforcement learning)
 
-This is a TensorFlow implementation of FINDER, as described in our paper:
+This is a PyTorch implementation of FINDER, as described in the paper:
 
 Fan, C., Zeng, L., Sun, Y and Liu Y-Y. [Finding key players in complex networks through deep reinforcement learning](https://www.nature.com/articles/s42256-020-0177-2.epdf?sharing_token=0CAxnrCP1THxBEtK2mS5c9RgN0jAjWel9jnR3ZoTv0O3ej6g4eVo3V4pnngJO-QMH375GbplyUstNSGUaq-zMyAnpSrZIOiiDvB0V_CqsCipIfCq-enY3sK3Uv_D_4b4aRn6lYXd8HEinWjLNM42tQZ0iVjeMBl6ZRA7D7WUBjM%3D). Nat Mach Intell (2020). ![demo](https://github.com/FFrankyy/FINDER/blob/master/paper/FINDER-Overview.jpg)
 
@@ -33,16 +33,7 @@ Finding an optimal set of nodes, called key players, whose activation (or remova
 
 ### Software dependencies
 
-Users should install the following packages first, which will install in about 5 minutes on a machine with the recommended specs. The versions of software are, specifically:
-```
-cython==0.29.13 
-networkx==2.3 
-numpy==1.17.3 
-pandas==0.25.2 
-scipy==1.3.1 
-tensorflow-gpu==1.14.0 
-tqdm==4.36.1
-```
+Look at `reuirements.txt`
 
 ### Operating systems
 The package development version is tested on *Linux and Windows 10* operating systems. The developmental version of the package has been tested on the following systems:
@@ -65,7 +56,9 @@ The runtimes below are generated using a computer with the recommended specs (16
 
 
 # Installation Guide
+## For pytorch:
 
+We are currently working on the pytorch implementation for `FINDER_ND_cost`. (look under `FINDER_torch.pyx` and `train_torch.py`)
 ## Instructions
 1. First install all the above required packages, which are contained in the requirements.txt file
 ```
