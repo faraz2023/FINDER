@@ -6,8 +6,10 @@ Created on Tue Dec 19 00:33:33 2017
 @author: fanchangjun
 """
 
-from __future__ import print_function, division
-import tensorflow as tf
+#from __future__ import print_function, division
+#import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 import numpy as np
 import networkx as nx
 import random
@@ -669,7 +671,7 @@ class FINDER:
         VCFile = '%s/ModelVC_%d_%d.csv'%(save_dir, NUM_MIN, NUM_MAX)
         f_out = open(VCFile, 'w')
         for iter in range(MAX_ITERATION):
-            start = time.clock()
+            start = time.perf_counter()
             ###########-----------------------normal training data setup(start) -----------------##############################
             if iter and iter % 5000 == 0:
                 self.gen_new_graphs(NUM_MIN, NUM_MAX)
@@ -692,7 +694,7 @@ class FINDER:
                 f_out.flush()
                 print('iter', iter, 'eps', eps, 'average size of vc: ', frac / n_valid)
                 print ('testing 100 graphs time: %.8fs'%(test_end-test_start))
-                N_end = time.clock()
+                N_end = time.perf_counter()
                 print ('300 iterations total time: %.8fs'%(N_end-N_start))
                 sys.stdout.flush()
                 model_path = '%s/nrange_%d_%d_iter_%d.ckpt' % (save_dir, NUM_MIN, NUM_MAX, iter)
@@ -881,7 +883,7 @@ class FINDER:
         edges = g.edges()
         weights = []
         for i in range(len(nodes)):
-            weights.append(g.node[i]['weight'])
+            weights.append(g.nodes[i]['weight'])
         if len(edges) > 0:
             a, b = zip(*edges)
             A = np.array(a)

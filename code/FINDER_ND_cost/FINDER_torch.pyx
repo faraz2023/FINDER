@@ -1,3 +1,5 @@
+import torch
+
 import numpy as np
 import networkx as nx
 import random
@@ -15,7 +17,6 @@ import heapq
 import scipy.linalg as linalg
 import os
 import pandas as pd
-import torch
 # from gurobipy import *
 
 # Hyper Parameters:

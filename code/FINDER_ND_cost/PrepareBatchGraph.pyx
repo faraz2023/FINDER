@@ -6,7 +6,7 @@ from libc.stdlib cimport malloc
 from libc.stdlib cimport free
 from graph cimport Graph
 #import tensorflow as tf
-import torch
+#import torch
 import tensorflow.compat.v1 as tf
 #
 from scipy.sparse import coo_matrix
