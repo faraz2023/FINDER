@@ -390,13 +390,17 @@ class FINDER:
                 list_pred = self.PredictWithSnapshot(sample.g_list, sample.list_s_primes)
 
         list_target = np.zeros([BATCH_SIZE, 1])
-        print("=======")
-        print(sample.g_list)
-        print(sample.list_s_primes)
-        print("========")
+
+        #print("=======")
+        #print(sample.g_list)
+        #print(sample.list_s_primes)
+        #print("========")
+        ## THIS CODE IS here to create a toy list_pred (must be removed in working verion!)
         list_pred = []
         for i in range(BATCH_SIZE):
             list_pred.append([1])
+
+
         for i in range(BATCH_SIZE):
             q_rhs = 0
             if (not sample.list_term[i]):
@@ -428,8 +432,15 @@ class FINDER:
             batch_idxes = np.int32(batch_idxes)
 
             self.SetupTrain(batch_idxes, g_list, covered, actions,list_target)
-            print("From fit:")
-            print(self.inputs['action_select'])
+            print("----From fit: (dense dimensions of input tensors")
+            print("Action Select:" , self.inputs['action_select'].dense_shape)
+            print("rep_global:" , self.inputs['rep_global'].dense_shape)
+            print("n2nsum_param:" , self.inputs['n2nsum_param'].dense_shape)
+            print("laplacian_param:" , self.inputs['laplacian_param'].dense_shape)
+            print("subgsum_param:" , self.inputs['subgsum_param'].dense_shape)
+            print("(list) node_input:" , len(self.inputs['node_input']))
+            print("(list) aux_input:" , len(self.inputs['aux_input']))
+            print("(list) target:" , len(self.inputs['target']))
             result = self.session.run([self.loss,self.trainStep],feed_dict={
                                         self.action_select : self.inputs['action_select'],
                                         self.rep_global : self.inputs['rep_global'],
