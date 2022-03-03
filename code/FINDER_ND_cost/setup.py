@@ -15,6 +15,7 @@ setup(
                     Extension('nstep_replay_mem', sources=['nstep_replay_mem.pyx', 'src/lib/nstep_replay_mem.cpp', 'src/lib/graph.cpp', 'src/lib/mvc_env.cpp', 'src/lib/disjoint_set.cpp'], language='c++',extra_compile_args=['-std=c++11']),
                     Extension('nstep_replay_mem_prioritized',sources=['nstep_replay_mem_prioritized.pyx', 'src/lib/nstep_replay_mem_prioritized.cpp','src/lib/graph.cpp', 'src/lib/mvc_env.cpp', 'src/lib/disjoint_set.cpp'], language='c++',extra_compile_args=['-std=c++11']),
                     Extension('graph_struct', sources=['graph_struct.pyx', 'src/lib/graph_struct.cpp'], language='c++',extra_compile_args=['-std=c++11']),
-                    Extension('FINDER', sources = ['FINDER.pyx'])
+                    Extension('FINDER', sources = ['FINDER.pyx']),
+                    Extension('FINDER_torch', sources = ['FINDER_torch.pyx'])
                    ])
 

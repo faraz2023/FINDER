@@ -5,7 +5,10 @@ import graph
 from libc.stdlib cimport malloc
 from libc.stdlib cimport free
 from graph cimport Graph
-import tensorflow as tf
+#import tensorflow as tf
+import torch
+import tensorflow.compat.v1 as tf
+#
 from scipy.sparse import coo_matrix
 # import gc
 
@@ -128,7 +131,11 @@ cdef class py_PrepareBatchGraph:
         rowNum= matrix.rowNum
         colNum= matrix.colNum
         indices = np.mat([rowIndex, colIndex]).transpose()
+        # tf.SparseTensorValue(indices, data, (rowNum,colNum))
+        #return torch.sparse_coo_tensor(indices, data, (rowNum,colNum))
         return tf.SparseTensorValue(indices, data, (rowNum,colNum))
+
+        
 
 
 
