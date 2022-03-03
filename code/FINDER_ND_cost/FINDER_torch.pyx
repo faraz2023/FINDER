@@ -124,7 +124,7 @@ class FINDER:
             if iter and iter % 5000 == 0:
                 self.gen_new_graphs(NUM_MIN, NUM_MAX)
             eps = eps_end + max(0., (eps_start - eps_end) * (eps_step - iter) / eps_step)
-
+            eps = 1.1 # fix this later. Just to bipass predict from Q network for now. 
             if iter % 10 == 0:
                 self.PlayGame(10, eps)
             #if iter % 300 == 0: #put this back for proper snapshot
@@ -286,8 +286,7 @@ class FINDER:
         cdef int num_env = len(self.env_list)
         cdef int n = 0
         cdef int i
-        # To bipass q-network for now
-        eps = 1.1
+
         while n < num_seq:
             for i in range(num_env):
                 if self.env_list[i].graph.num_nodes == 0 or self.env_list[i].isTerminal():
