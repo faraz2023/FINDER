@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 import torch.optim as optim
-
+import torch_sparse
 import numpy as np
 import networkx as nx
 import random
@@ -106,6 +106,8 @@ class FINDER:
         self.test_env = mvc_env.py_MvcEnv(NUM_MAX)
 
         print("CUDA:", torch.cuda.is_available())
+        torch.set_num_threads(16)
+
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
         self.FINDER_net = FINDER_net(device=self.device)
@@ -516,9 +518,13 @@ class FINDER:
 
     def calc_loss(self, q_pred, cur_message_layer) :
         ## first order reconstruction loss
+        #OLD loss_recons = 2 * torch.trace(torch.matmul(torch.transpose(cur_message_layer,0,1),\
+        #    torch.matmul(self.inputs['laplacian_param'], cur_message_layer)))
         loss_recons = 2 * torch.trace(torch.matmul(torch.transpose(cur_message_layer,0,1),\
-            torch.matmul(self.inputs['laplacian_param'], cur_message_layer)))
-        edge_num = torch.sparse.sum(self.inputs['n2nsum_param'])
+            torch_sparse.spmm(self.inputs['laplacian_param']['index'], self.inputs['laplacian_param']['value'],\
+            self.inputs['laplacian_param']['m'], self.inputs['laplacian_param']['n'],\
+             cur_message_layer)))
+        edge_num = torch.sum(self.inputs['n2nsum_param']['value'])
         #edge_num = torch.sum(self.inputs['n2nsum_param'])
 
         loss_recons = torch.divide(loss_recons, edge_num)
@@ -577,27 +583,37 @@ class FINDER:
         '''
         return None
 
+    def SetupSparseT(self, sparse_dict):
+        sparse_dict['index'] = sparse_dict['index'].to(self.device)
+        sparse_dict['value'] = sparse_dict['value'].to(self.device)
+
+        return sparse_dict
 
     def SetupTrain(self, idxes, g_list, covered, actions, target):
         self.m_y = target
         self.inputs['target'] = torch.tensor(self.m_y).type(torch.FloatTensor).to(self.device)
         prepareBatchGraph = PrepareBatchGraph.py_PrepareBatchGraph(aggregatorID)
         prepareBatchGraph.SetupTrain(idxes, g_list, covered, actions)
-        self.inputs['action_select'] = prepareBatchGraph.act_select.to(self.device)
-        self.inputs['rep_global'] = prepareBatchGraph.rep_global.to(self.device)
-        self.inputs['n2nsum_param'] = prepareBatchGraph.n2nsum_param.to(self.device)
-        self.inputs['laplacian_param'] = prepareBatchGraph.laplacian_param.to(self.device)
-        self.inputs['subgsum_param'] = prepareBatchGraph.subgsum_param.to(self.device)
+
+        self.inputs['action_select'] = self.SetupSparseT(prepareBatchGraph.act_select)
+        self.inputs['rep_global'] = self.SetupSparseT(prepareBatchGraph.rep_global)
+        self.inputs['n2nsum_param'] = self.SetupSparseT(prepareBatchGraph.n2nsum_param)
+        self.inputs['laplacian_param'] = self.SetupSparseT(prepareBatchGraph.laplacian_param)
+        self.inputs['subgsum_param'] = self.SetupSparseT(prepareBatchGraph.subgsum_param)
+
         self.inputs['node_input'] = torch.tensor(prepareBatchGraph.node_feat).type(torch.FloatTensor).to(self.device)
         self.inputs['aux_input'] = torch.tensor(prepareBatchGraph.aux_feat).type(torch.FloatTensor).to(self.device)
 
     def SetupPredAll(self, idxes, g_list, covered):
         prepareBatchGraph = PrepareBatchGraph.py_PrepareBatchGraph(aggregatorID)
         prepareBatchGraph.SetupPredAll(idxes, g_list, covered)
-        self.inputs['rep_global'] = prepareBatchGraph.rep_global.to(self.device)
-        self.inputs['n2nsum_param'] = prepareBatchGraph.n2nsum_param.to(self.device)
+        self.inputs['rep_global'] = self.SetupSparseT(prepareBatchGraph.rep_global)
+
+        self.inputs['n2nsum_param'] = self.SetupSparseT(prepareBatchGraph.n2nsum_param)
+
         # self.inputs['laplacian_param'] = prepareBatchGraph.laplacian_param
-        self.inputs['subgsum_param'] = prepareBatchGraph.subgsum_param.to(self.device)
+        self.inputs['subgsum_param'] = self.SetupSparseT(prepareBatchGraph.subgsum_param)
+
         self.inputs['node_input'] = torch.tensor(prepareBatchGraph.node_feat).type(torch.FloatTensor).to(self.device)
         self.inputs['aux_input'] = torch.tensor(prepareBatchGraph.aux_feat).type(torch.FloatTensor).to(self.device)
         return prepareBatchGraph.idx_map_list
