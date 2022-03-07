@@ -7,6 +7,8 @@ from libc.stdlib cimport free
 from graph cimport Graph
 #import tensorflow as tf
 import torch
+import torch_sparse
+
 #import tensorflow.compat.v1 as tf
 #
 from scipy.sparse import coo_matrix
@@ -136,7 +138,7 @@ cdef class py_PrepareBatchGraph:
 
         index = torch.tensor(np.transpose(np.array(indices)))
         value = torch.Tensor(np.array(data))
-        index, value = coalesce(index, value, m=rowNum, n=colNum)
+        index, value = torch_sparse.coalesce(index, value, m=rowNum, n=colNum)
         return_dict = {"index": index, "value": value, "m":rowNum, "n":colNum}
 
         return return_dict
