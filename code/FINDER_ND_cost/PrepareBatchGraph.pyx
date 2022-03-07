@@ -137,7 +137,7 @@ cdef class py_PrepareBatchGraph:
         indices = np.mat([rowIndex, colIndex]).transpose()
 
         index = torch.tensor(np.transpose(np.array(indices)))
-        value = torch.Tensor(np.array(data))
+        value = torch.tensor(np.array(data))
         index, value = torch_sparse.coalesce(index, value, m=rowNum, n=colNum)
         return_dict = {"index": index, "value": value, "m":rowNum, "n":colNum}
 
