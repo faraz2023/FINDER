@@ -517,7 +517,7 @@ class FINDER:
     def calc_loss(self, q_pred, cur_message_layer) :
         ## first order reconstruction loss
         loss_recons = 2 * torch.trace(torch.matmul(torch.transpose(cur_message_layer,0,1),\
-            torch.matmul(self.inputs['laplacian_param'].type(torch.FloatTensor), cur_message_layer)))
+            torch.matmul(self.inputs['laplacian_param'], cur_message_layer)))
         edge_num = torch.sparse.sum(self.inputs['n2nsum_param'])
         loss_recons = torch.divide(loss_recons, edge_num)
 
