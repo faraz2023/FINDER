@@ -1,4 +1,6 @@
 import torch
+from torch import nn
+import torch.optim as optim
 
 import numpy as np
 import networkx as nx
@@ -70,6 +72,10 @@ class FINDER:
 
         ############----------------------------- variants of DQN(start) ------------------- ###################################
         self.IsHuberloss = False
+        if(self.IsHuberloss):
+            self.loss = nn.HuberLoss(delta=1.0)
+        else:
+            self.loss = nn.MSELoss()
         self.IsDoubleDQN = False
         self.IsPrioritizedSampling = False
 
@@ -105,6 +111,16 @@ class FINDER:
         self.FINDER_net = FINDER_net()
         self.FINDER_net_T = FINDER_net()
 
+        #self.FINDER_net = self.FINDER_net.double()
+        #self.FINDER_net_T = self.FINDER_net.double()
+
+        self.FINDER_net.to(self.device)
+        self.FINDER_net_T.to(self.device)
+
+        self.FINDER_net_T.eval()
+
+        self.optimizer = optim.Adam(self.FINDER_net.parameters(), lr=self.learning_rate)
+
         pytorch_total_params = sum(p.numel() for p in self.FINDER_net.parameters())
         print("Total number of FINDER_net parameters: {}".format(pytorch_total_params))
 
@@ -137,7 +153,6 @@ class FINDER:
             #eps = 1.1 # fix this later. Just to bipass predict from Q network for now. 
             if iter % 10 == 0:
                 self.PlayGame(10, eps)
-            print("Finished playing the game")
             #if iter % 300 == 0: #put this back for proper snapshot
             if iter % 300 == 0:
                 if(iter == 0):
@@ -431,15 +446,6 @@ class FINDER:
 
         list_target = np.zeros([BATCH_SIZE, 1])
 
-        #print("=======")
-        #print(sample.g_list)
-        #print(sample.list_s_primes)
-        #print("========")
-        ## THIS CODE IS here to create a toy list_pred (must be removed in working verion!)
-        #list_pred = []
-        #for i in range(BATCH_SIZE):
-        #    list_pred.append([1])
-
 
         for i in range(BATCH_SIZE):
             q_rhs = 0
@@ -457,10 +463,12 @@ class FINDER:
             return self.fit(sample.g_list, sample.list_st, sample.list_at,list_target)
 
     def fit(self,g_list,covered,actions,list_target):
-        cdef double loss = 0.0
+        cdef double loss_values = 0.0
         cdef int n_graphs = len(g_list)
         cdef int i, j, bsize
         for i in range(0,n_graphs,BATCH_SIZE):
+            self.optimizer.zero_grad()
+
             bsize = BATCH_SIZE
             if (i + BATCH_SIZE) > n_graphs:
                 bsize = n_graphs - i
@@ -486,8 +494,6 @@ class FINDER:
             q_pred, cur_message_layer = self.FINDER_net.train_forward(node_input=self.inputs['node_input'],\
                 subgsum_param=self.inputs['subgsum_param'], n2nsum_param=self.inputs['n2nsum_param'],\
                 action_select=self.inputs['action_select'], aux_input=self.inputs['aux_input'])
-            print(q_pred.shape)
-            print(cur_message_layer.shape)
             ''''
             result = self.session.run([self.loss,self.trainStep],feed_dict={
                                         self.action_select : self.inputs['action_select'],
@@ -499,9 +505,42 @@ class FINDER:
                                         self.aux_input: np.array(self.inputs['aux_input']),
                                         self.target : self.inputs['target']})
             '''
-            print("Now is time to calc loss!!!")
-            #loss += result[0]*bsize
-        return loss / len(g_list)
+
+            loss = self.calc_loss(q_pred, cur_message_layer)
+            loss.backward()
+            self.optimizer.step()
+
+            loss_values += loss.item()*bsize
+
+        return loss_values / len(g_list)
+
+    def calc_loss(self, q_pred, cur_message_layer) :
+        ## first order reconstruction loss
+        loss_recons = 2 * torch.trace(torch.matmul(torch.transpose(cur_message_layer,0,1),\
+            torch.matmul(self.inputs['laplacian_param'].type(torch.FloatTensor), cur_message_layer)))
+        edge_num = torch.sparse.sum(self.inputs['n2nsum_param'])
+        loss_recons = torch.divide(loss_recons, edge_num)
+
+        if self.IsPrioritizedSampling:
+            self.TD_errors = torch.sum(torch.abs(self.inputs['target'] - q_pred), dim=1)    # for updating Sumtree
+            if self.IsHuberloss:
+                pass
+                #loss_rl = self.loss(self.ISWeights * self.target, self.ISWeights * q_pred)
+            else:
+                pass
+                #loss_rl = torch.sum(self.ISWeights * self.loss(self.target, q_pred))
+        else:
+            if self.IsHuberloss:
+                pass
+                #loss_rl = self.loss(self.inputs['target'], q_pred)
+            else:
+                loss_rl = self.loss(self.inputs['target'], q_pred)
+
+        loss = torch.add(loss_rl, loss_recons, alpha = Alpha)
+
+        return loss
+
+
 
     def fit_with_prioritized(self,tree_idx,ISWeights,g_list,covered,actions,list_target):
         '''
@@ -539,26 +578,26 @@ class FINDER:
 
     def SetupTrain(self, idxes, g_list, covered, actions, target):
         self.m_y = target
-        self.inputs['target'] = self.m_y
+        self.inputs['target'] = torch.tensor(self.m_y).type(torch.FloatTensor).to(self.device)
         prepareBatchGraph = PrepareBatchGraph.py_PrepareBatchGraph(aggregatorID)
         prepareBatchGraph.SetupTrain(idxes, g_list, covered, actions)
-        self.inputs['action_select'] = prepareBatchGraph.act_select
-        self.inputs['rep_global'] = prepareBatchGraph.rep_global
-        self.inputs['n2nsum_param'] = prepareBatchGraph.n2nsum_param
-        self.inputs['laplacian_param'] = prepareBatchGraph.laplacian_param
-        self.inputs['subgsum_param'] = prepareBatchGraph.subgsum_param
-        self.inputs['node_input'] = torch.tensor(prepareBatchGraph.node_feat)
-        self.inputs['aux_input'] = torch.tensor(prepareBatchGraph.aux_feat)
+        self.inputs['action_select'] = prepareBatchGraph.act_select.to(self.device)
+        self.inputs['rep_global'] = prepareBatchGraph.rep_global.to(self.device)
+        self.inputs['n2nsum_param'] = prepareBatchGraph.n2nsum_param.to(self.device)
+        self.inputs['laplacian_param'] = prepareBatchGraph.laplacian_param.to(self.device)
+        self.inputs['subgsum_param'] = prepareBatchGraph.subgsum_param.to(self.device)
+        self.inputs['node_input'] = torch.tensor(prepareBatchGraph.node_feat).type(torch.FloatTensor).to(self.device)
+        self.inputs['aux_input'] = torch.tensor(prepareBatchGraph.aux_feat).type(torch.FloatTensor).to(self.device)
 
     def SetupPredAll(self, idxes, g_list, covered):
         prepareBatchGraph = PrepareBatchGraph.py_PrepareBatchGraph(aggregatorID)
         prepareBatchGraph.SetupPredAll(idxes, g_list, covered)
-        self.inputs['rep_global'] = prepareBatchGraph.rep_global
-        self.inputs['n2nsum_param'] = prepareBatchGraph.n2nsum_param
+        self.inputs['rep_global'] = prepareBatchGraph.rep_global.to(self.device)
+        self.inputs['n2nsum_param'] = prepareBatchGraph.n2nsum_param.to(self.device)
         # self.inputs['laplacian_param'] = prepareBatchGraph.laplacian_param
-        self.inputs['subgsum_param'] = prepareBatchGraph.subgsum_param
-        self.inputs['node_input'] = torch.tensor(prepareBatchGraph.node_feat)
-        self.inputs['aux_input'] = torch.tensor(prepareBatchGraph.aux_feat)
+        self.inputs['subgsum_param'] = prepareBatchGraph.subgsum_param.to(self.device)
+        self.inputs['node_input'] = torch.tensor(prepareBatchGraph.node_feat).type(torch.FloatTensor).to(self.device)
+        self.inputs['aux_input'] = torch.tensor(prepareBatchGraph.aux_feat).type(torch.FloatTensor).to(self.device)
         return prepareBatchGraph.idx_map_list
 
 

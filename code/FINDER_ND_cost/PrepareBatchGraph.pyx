@@ -7,7 +7,7 @@ from libc.stdlib cimport free
 from graph cimport Graph
 #import tensorflow as tf
 import torch
-import tensorflow.compat.v1 as tf
+#import tensorflow.compat.v1 as tf
 #
 from scipy.sparse import coo_matrix
 import inspect
@@ -44,6 +44,7 @@ cdef class py_PrepareBatchGraph:
     cdef sparseMatrix matrix
     def __cinit__(self,aggregatorID):
         self.inner_PrepareBatchGraph =shared_ptr[PrepareBatchGraph](new PrepareBatchGraph(aggregatorID))
+
     # def __dealloc__(self):
     #     if self.inner_PrepareBatchGraph != NULL:
     #         self.inner_PrepareBatchGraph.reset()
@@ -132,7 +133,8 @@ cdef class py_PrepareBatchGraph:
         rowNum= matrix.rowNum
         colNum= matrix.colNum
         indices = np.mat([rowIndex, colIndex]).transpose()
-        return torch.sparse_coo_tensor(np.transpose(np.array(indices)), np.array(data), size=torch.Size([rowNum,colNum]))
+        return torch.sparse_coo_tensor(np.transpose(np.array(indices)), np.array(data), size=torch.Size([rowNum,colNum]))\
+            .type(torch.FloatTensor)
         #return tf.SparseTensorValue(indices, data, (rowNum,colNum))
 
 
