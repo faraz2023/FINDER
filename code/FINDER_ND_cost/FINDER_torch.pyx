@@ -626,8 +626,16 @@ class FINDER:
     def SaveModel(self,model_path):
         #self.saver.save(self.session, model_path)
         #print('model has been saved success!')
-        print("Complete this function to save the model")
-        
+        torch.save(self.FINDER_net.state_dict(), model_path)
+        print('model has been saved success!')
+        #print("Complete this function to save the model")
+
+    def LoadModel(self,model_path):
+        #self.saver.restore(self.session, model_path)
+        self.FINDER_net.load_state_dict(torch.load(model_path))
+        print('restore model from file successfully')
+
+
     def Max(self, scores):
         cdef int n = len(scores)
         cdef int pos = -1
@@ -650,4 +658,147 @@ class FINDER:
                 best = scores[i]
         return pos
 
+    def findModel(self):
+        VCFile = './models/ModelVC_%d_%d.csv'%(NUM_MIN, NUM_MAX)
+        vc_list = []
+        for line in open(VCFile):
+            vc_list.append(float(line))
+        start_loc = 33
+        min_vc = start_loc + np.argmin(vc_list[start_loc:])
+        best_model_iter = 300 * min_vc
+        best_model = './models/nrange_%d_%d_iter_%d.ckpt' % (NUM_MIN, NUM_MAX, best_model_iter)
+        return best_model
+
+    def Evaluate(self, data_test, model_file=None):
+        if model_file == None:  #if user do not specify the model_file
+            model_file = self.findModel()
+        print ('The best model is :%s'%(model_file))
+        sys.stdout.flush()
+        self.LoadModel(model_file)
+        cdef int n_test = 100
+        cdef int i
+        result_list_score = []
+        result_list_time = []
+        sys.stdout.flush()
+        for i in tqdm(range(n_test)):
+            g_path = '%s/'%data_test + 'g_%d'%i
+            g = nx.read_gml(g_path)
+            self.InsertGraph(g, is_test=True)
+            t1 = time.time()
+            val, sol = self.GetSol(i)
+            t2 = time.time()
+            result_list_score.append(val)
+            result_list_time.append(t2-t1)
+        self.ClearTestGraphs()
+        score_mean = np.mean(result_list_score)
+        score_std = np.std(result_list_score)
+        time_mean = np.mean(result_list_time)
+        time_std = np.std(result_list_time)
+        return  score_mean, score_std, time_mean, time_std
+
+
+    def EvaluateRealData(self, model_file, data_test, save_dir, stepRatio=0.0025):  #测试真实数据
+        cdef double solution_time = 0.0
+        test_name = data_test.split('/')[-1].replace('.gml','.txt')
+        save_dir_local = save_dir+'/StepRatio_%.4f'%stepRatio
+        if not os.path.exists(save_dir_local):#make dir
+            os.mkdir(save_dir_local)
+        result_file = '%s/%s' %(save_dir_local, test_name)
+        # g = nx.read_edgelist(data_test)
+        g = nx.read_gml(data_test)
+        # g = self.Real2networkx(g_temp)
+        with open(result_file, 'w') as f_out:
+            print ('testing')
+            sys.stdout.flush()
+            print ('number of nodes:%d'%(nx.number_of_nodes(g)))
+            print ('number of edges:%d'%(nx.number_of_edges(g)))
+            if stepRatio > 0:
+                step = int(stepRatio*nx.number_of_nodes(g)) #step size
+            else:
+                step = 1
+            self.InsertGraph(g, is_test=True)
+            t1 = time.time()
+            solution = self.GetSolution(0,step)
+            t2 = time.time()
+            solution_time = (t2 - t1)
+            for i in range(len(solution)):
+                f_out.write('%d\n' % solution[i])
+        self.ClearTestGraphs()
+        return solution, solution_time
+
+
+    def GetSolution(self, int gid, int step=1):
+        g_list = []
+        self.test_env.s0(self.TestSet.Get(gid))
+        g_list.append(self.test_env.graph)
+        sol = []
+        start = time.time()
+        cdef int iter = 0
+        cdef int new_action
+        while (not self.test_env.isTerminal()):
+            print ('Iteration:%d'%iter)
+            iter += 1
+            list_pred = self.PredictWithCurrentQNet(g_list, [self.test_env.action_list])
+            batchSol = np.argsort(-list_pred[0])[:step]
+            for new_action in batchSol:
+                if not self.test_env.isTerminal():
+                    self.test_env.stepWithoutReward(new_action)
+                    sol.append(new_action)
+                else:
+                    break
+        return sol
+
+
+    def EvaluateSol(self, data_test, sol_file, strategyID=0, reInsertStep=20):
+        #evaluate the robust given the solution, strategyID:0,count;2:rank;3:multipy
+        sys.stdout.flush()
+        # g = nx.read_weighted_edgelist(data_test)
+        g = nx.read_gml(data_test)
+        g_inner = self.GenNetwork(g)
+        # print ('number of nodes:%d'%nx.number_of_nodes(g))
+        # print ('number of edges:%d'%nx.number_of_edges(g))
+        nodes = list(range(nx.number_of_nodes(g)))
+        sol = []
+        for line in open(sol_file):
+            sol.append(int(line))
+
+        sol_left = list(set(nodes)^set(sol))
+        if strategyID > 0:
+            start = time.time()
+            sol_reinsert = self.utils.reInsert(g_inner, sol, sol_left, strategyID, reInsertStep)
+            end = time.time()
+            print ('reInsert time:%.6f'%(end-start))
+        else:
+            sol_reinsert = sol
+        solution = sol_reinsert + sol_left
+        # print ('number of solution nodes:%d'%len(solution))
+        Robustness = self.utils.getRobustness(g_inner, solution)
+        MaxCCList = self.utils.MaxWccSzList
+        return Robustness, MaxCCList, solution
+
+
+    def GetSol(self, int gid, int step=1):
+        g_list = []
+        self.test_env.s0(self.TestSet.Get(gid))
+        g_list.append(self.test_env.graph)
+        cdef double cost = 0.0
+        sol = []
+        # start = time.time()
+        cdef int new_action
+        while (not self.test_env.isTerminal()):
+            list_pred = self.PredictWithCurrentQNet(g_list, [self.test_env.action_list])
+            batchSol = np.argsort(-list_pred[0])[:step]
+            for new_action in batchSol:
+                if not self.test_env.isTerminal():
+                    self.test_env.stepWithoutReward(new_action)
+                    sol.append(new_action)
+                else:
+                    break
+        # end = time.time()
+        # print ('solution obtained time is:%.8f'%(end-start))
+        nodes = list(range(g_list[0].num_nodes))
+        solution = sol + list(set(nodes)^set(sol))
+        Robustness = self.utils.getRobustness(g_list[0], solution)
+        # print ('Robustness is:%.8f'%(Robustness))
+        return Robustness, sol
 
