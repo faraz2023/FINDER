@@ -17,6 +17,8 @@ import heapq
 import scipy.linalg as linalg
 import os
 import pandas as pd
+
+from FINDER_net import FINDER_net
 # from gurobipy import *
 
 # Hyper Parameters:
@@ -98,6 +100,13 @@ class FINDER:
         self.test_env = mvc_env.py_MvcEnv(NUM_MAX)
 
         print("CUDA:", torch.cuda.is_available())
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+        self.FINDER_net = FINDER_net()
+        self.FINDER_net_T = FINDER_net()
+
+        pytorch_total_params = sum(p.numel() for p in self.FINDER_net.parameters())
+        print("Total number of FINDER_net parameters: {}".format(pytorch_total_params))
 
 
     def Train(self):
