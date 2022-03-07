@@ -134,11 +134,12 @@ class FINDER:
             if iter and iter % 5000 == 0:
                 self.gen_new_graphs(NUM_MIN, NUM_MAX)
             eps = eps_end + max(0., (eps_start - eps_end) * (eps_step - iter) / eps_step)
-            eps = 1.1 # fix this later. Just to bipass predict from Q network for now. 
+            #eps = 1.1 # fix this later. Just to bipass predict from Q network for now. 
             if iter % 10 == 0:
                 self.PlayGame(10, eps)
+            print("Finished playing the game")
             #if iter % 300 == 0: #put this back for proper snapshot
-            if iter % 300 == 300:
+            if iter % 300 == 0:
                 if(iter == 0):
                     N_start = start
                 else:
@@ -163,6 +164,25 @@ class FINDER:
                 self.TakeSnapShot()
             self.Fit()
         f_out.close()
+
+    def Test(self,int gid):
+        g_list = []
+        self.test_env.s0(self.TestSet.Get(gid))
+        g_list.append(self.test_env.graph)
+        cdef double cost = 0.0
+        cdef int i
+        sol = []
+        while (not self.test_env.isTerminal()):
+            # cost += 1
+            list_pred = self.PredictWithCurrentQNet(g_list, [self.test_env.action_list])
+            new_action = self.argMax(list_pred[0])
+            self.test_env.stepWithoutReward(new_action)
+            sol.append(new_action)
+        nodes = list(range(g_list[0].num_nodes))
+        solution = sol + list(set(nodes)^set(sol))
+        Robustness = self.utils.getRobustness(g_list[0], solution)
+        return Robustness
+
 
     def PrepareValidData(self):
         print('\ngenerating validation graphs...')
@@ -333,7 +353,7 @@ class FINDER:
         return result
 
     def Predict(self,g_list,covered,isSnapSnot):
-        """
+        
         cdef int n_graphs = len(g_list)
         cdef int i, j, k, bsize
         for i in range(0, n_graphs, BATCH_SIZE):
@@ -347,22 +367,34 @@ class FINDER:
 
             idx_map_list = self.SetupPredAll(batch_idxes, g_list, covered)
             if isSnapSnot:
-                result = self.session.run([self.q_on_allT], feed_dict={
-                    self.rep_global: self.inputs['rep_global'],
-                    self.n2nsum_param: self.inputs['n2nsum_param'],
-                    self.subgsum_param: self.inputs['subgsum_param'],
-                    self.node_input: self.inputs['node_input'],
-                    self.aux_input: np.array(self.inputs['aux_input'])
-                })
+                result = self.FINDER_net_T.test_forward(node_input=self.inputs['node_input'],\
+                    subgsum_param=self.inputs['subgsum_param'], n2nsum_param=self.inputs['n2nsum_param'],\
+                    rep_global=self.inputs['rep_global'], aux_input=self.inputs['aux_input'])
+
+                #result = self.session.run([self.q_on_allT], feed_dict={
+                #    self.rep_global: self.inputs['rep_global'],
+                #    self.n2nsum_param: self.inputs['n2nsum_param'],
+                #    self.subgsum_param: self.inputs['subgsum_param'],
+                #    self.node_input: self.inputs['node_input'],
+                #    self.aux_input: np.array(self.inputs['aux_input'])
+                #})
             else:
-                result = self.session.run([self.q_on_all], feed_dict={
-                    self.rep_global: self.inputs['rep_global'],
-                    self.n2nsum_param: self.inputs['n2nsum_param'],
-                    self.subgsum_param: self.inputs['subgsum_param'],
-                    self.node_input: self.inputs['node_input'],
-                    self.aux_input: np.array(self.inputs['aux_input'])
-                })
-            raw_output = result[0]
+                result = self.FINDER_net.test_forward(node_input=self.inputs['node_input'],\
+                    subgsum_param=self.inputs['subgsum_param'], n2nsum_param=self.inputs['n2nsum_param'],\
+                    rep_global=self.inputs['rep_global'], aux_input=self.inputs['aux_input'])
+
+
+                #result = self.session.run([self.q_on_all], feed_dict={
+                #    self.rep_global: self.inputs['rep_global'],
+                #    self.n2nsum_param: self.inputs['n2nsum_param'],
+                #    self.subgsum_param: self.inputs['subgsum_param'],
+                #    self.node_input: self.inputs['node_input'],
+                #    self.aux_input: np.array(self.inputs['aux_input'])
+                #})
+            # TOFIX: line below used to be raw_output = result[0]. This is weird because results is supposed to be 
+            # [node_cnt, 1] (Q-values per node). And indeed it resulted in an error! I have fixed it by the line below
+            # look inito it later.
+            raw_output = result[:,0]
             pos = 0
             pred = []
             for j in range(i, i + bsize):
@@ -379,8 +411,7 @@ class FINDER:
                 pred.append(cur_pred)
             assert (pos == len(raw_output))
         return pred
-        """
-        return None
+        
 
     def Fit(self):
         sample = self.nStepReplayMem.Sampling(BATCH_SIZE)
@@ -405,9 +436,9 @@ class FINDER:
         #print(sample.list_s_primes)
         #print("========")
         ## THIS CODE IS here to create a toy list_pred (must be removed in working verion!)
-        list_pred = []
-        for i in range(BATCH_SIZE):
-            list_pred.append([1])
+        #list_pred = []
+        #for i in range(BATCH_SIZE):
+        #    list_pred.append([1])
 
 
         for i in range(BATCH_SIZE):
@@ -441,6 +472,7 @@ class FINDER:
             batch_idxes = np.int32(batch_idxes)
 
             self.SetupTrain(batch_idxes, g_list, covered, actions,list_target)
+            '''
             print("----From fit: (dense dimensions of input tensors")
             print("Action Select:" , self.inputs['action_select'].shape)
             print("rep_global:" , self.inputs['rep_global'].shape)
@@ -450,6 +482,13 @@ class FINDER:
             print("(list) node_input:" , len(self.inputs['node_input']))
             print("(list) aux_input:" , len(self.inputs['aux_input']))
             print("(list) target:" , len(self.inputs['target']))
+            '''
+            q_pred, cur_message_layer = self.FINDER_net.train_forward(node_input=self.inputs['node_input'],\
+                subgsum_param=self.inputs['subgsum_param'], n2nsum_param=self.inputs['n2nsum_param'],\
+                action_select=self.inputs['action_select'], aux_input=self.inputs['aux_input'])
+            print(q_pred.shape)
+            print(cur_message_layer.shape)
+            ''''
             result = self.session.run([self.loss,self.trainStep],feed_dict={
                                         self.action_select : self.inputs['action_select'],
                                         self.rep_global : self.inputs['rep_global'],
@@ -459,8 +498,44 @@ class FINDER:
                                         self.node_input: self.inputs['node_input'],
                                         self.aux_input: np.array(self.inputs['aux_input']),
                                         self.target : self.inputs['target']})
-            loss += result[0]*bsize
+            '''
+            print("Now is time to calc loss!!!")
+            #loss += result[0]*bsize
         return loss / len(g_list)
+
+    def fit_with_prioritized(self,tree_idx,ISWeights,g_list,covered,actions,list_target):
+        '''
+        cdef double loss = 0.0
+        cdef int n_graphs = len(g_list)
+        cdef int i, j, bsize
+        for i in range(0,n_graphs,BATCH_SIZE):
+            bsize = BATCH_SIZE
+            if (i + BATCH_SIZE) > n_graphs:
+                bsize = n_graphs - i
+            batch_idxes = np.zeros(bsize)
+            # batch_idxes = []
+            for j in range(i, i + bsize):
+                batch_idxes[j-i] = j
+                # batch_idxes.append(j)
+            batch_idxes = np.int32(batch_idxes)
+
+            self.SetupTrain(batch_idxes, g_list, covered, actions,list_target)
+            result = self.session.run([self.trainStep,self.TD_errors,self.loss],feed_dict={
+                                        self.action_select : self.inputs['action_select'],
+                                        self.rep_global : self.inputs['rep_global'],
+                                        self.n2nsum_param : self.inputs['n2nsum_param'],
+                                        self.laplacian_param : self.inputs['laplacian_param'],
+                                        self.subgsum_param : self.inputs['subgsum_param'],
+                                        self.node_input: self.inputs['node_input'],
+                                        self.aux_input : np.array(self.inputs['aux_input']),
+                                        self.ISWeights : np.mat(ISWeights).T,
+                                        self.target : self.inputs['target']})
+            self.nStepReplayMem.batch_update(tree_idx, result[1])
+            loss += result[2]*bsize
+        return loss / len(g_list)
+        '''
+        return None
+
 
     def SetupTrain(self, idxes, g_list, covered, actions, target):
         self.m_y = target
@@ -472,11 +547,23 @@ class FINDER:
         self.inputs['n2nsum_param'] = prepareBatchGraph.n2nsum_param
         self.inputs['laplacian_param'] = prepareBatchGraph.laplacian_param
         self.inputs['subgsum_param'] = prepareBatchGraph.subgsum_param
-        self.inputs['node_input'] = prepareBatchGraph.node_feat
-        self.inputs['aux_input'] = prepareBatchGraph.aux_feat
+        self.inputs['node_input'] = torch.tensor(prepareBatchGraph.node_feat)
+        self.inputs['aux_input'] = torch.tensor(prepareBatchGraph.aux_feat)
+
+    def SetupPredAll(self, idxes, g_list, covered):
+        prepareBatchGraph = PrepareBatchGraph.py_PrepareBatchGraph(aggregatorID)
+        prepareBatchGraph.SetupPredAll(idxes, g_list, covered)
+        self.inputs['rep_global'] = prepareBatchGraph.rep_global
+        self.inputs['n2nsum_param'] = prepareBatchGraph.n2nsum_param
+        # self.inputs['laplacian_param'] = prepareBatchGraph.laplacian_param
+        self.inputs['subgsum_param'] = prepareBatchGraph.subgsum_param
+        self.inputs['node_input'] = torch.tensor(prepareBatchGraph.node_feat)
+        self.inputs['aux_input'] = torch.tensor(prepareBatchGraph.aux_feat)
+        return prepareBatchGraph.idx_map_list
+
 
     def TakeSnapShot(self):
-        pass
+        self.FINDER_net_T.load_state_dict(self.FINDER_net.state_dict())
         #self.session.run(self.UpdateTargetQNetwork)
 
     def SaveModel(self,model_path):
@@ -494,5 +581,16 @@ class FINDER:
                 pos = i
                 best = scores[i]
         return best
+
+    def argMax(self, scores):
+        cdef int n = len(scores)
+        cdef int pos = -1
+        cdef double best = -10000000
+        cdef int i
+        for i in range(n):
+            if pos == -1 or scores[i] > best:
+                pos = i
+                best = scores[i]
+        return pos
 
 
