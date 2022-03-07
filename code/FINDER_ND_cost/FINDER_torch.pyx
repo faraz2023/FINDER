@@ -108,8 +108,8 @@ class FINDER:
         print("CUDA:", torch.cuda.is_available())
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-        self.FINDER_net = FINDER_net()
-        self.FINDER_net_T = FINDER_net()
+        self.FINDER_net = FINDER_net(device=self.device)
+        self.FINDER_net_T = FINDER_net(device=self.device)
 
         #self.FINDER_net = self.FINDER_net.double()
         #self.FINDER_net_T = self.FINDER_net.double()
