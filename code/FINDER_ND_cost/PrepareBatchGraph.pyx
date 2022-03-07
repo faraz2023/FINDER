@@ -133,7 +133,7 @@ cdef class py_PrepareBatchGraph:
         rowNum= matrix.rowNum
         colNum= matrix.colNum
         indices = np.mat([rowIndex, colIndex]).transpose()
-        return torch.sparse_coo_tensor(np.transpose(np.array(indices)), np.array(data), size=torch.Size([rowNum,colNum])).coalesce()\
+        return torch.sparse_coo_tensor(np.transpose(np.array(indices)), np.array(data), size=torch.Size([rowNum,colNum]), device=torch.device('cuda:0')).coalesce()\
             .type(torch.FloatTensor)
         #return tf.SparseTensorValue(indices, data, (rowNum,colNum))
 
