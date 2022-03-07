@@ -2,6 +2,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
+import torch_sparse
+
+#out = torch_sparse.spmm(index, value, 3, 3, matrix)
 
 class FINDER_net(nn.Module):
     def __init__(self, embedding_size=64, w_initialization_std=1, reg_hidden=32, max_bp_iter=3, embeddingMethod=1, aux_dim=4, device=None):
@@ -62,7 +65,7 @@ class FINDER_net(nn.Module):
 
     def train_forward(self, node_input, subgsum_param, n2nsum_param, action_select, aux_input):
         
-        y_nodes_size = subgsum_param.shape[0]
+        y_nodes_size = subgsum_param['m']
         # [batch_size, 2]
         y_node_input = torch.ones((y_nodes_size,2)).type(torch.FloatTensor).to(self.device)
 
@@ -101,7 +104,9 @@ class FINDER_net(nn.Module):
             #[node_cnt, node_cnt] * [node_cnt, embed_dim] = [node_cnt, embed_dim], dense
             #n2npool = tf.sparse_tensor_dense_matmul(tf.cast(self.n2nsum_param,tf.float32), cur_message_layer)
             # see https://discuss.pytorch.org/t/sparse-tensors-in-pytorch/859/4
-            n2npool = torch.matmul(n2nsum_param, cur_message_layer)
+            #OLD n2npool = torch.matmul(n2nsum_param, cur_message_layer)
+            n2npool = torch_sparse.spmm(n2nsum_param['index'], n2nsum_param['value'],\
+                 n2nsum_param['m'], n2nsum_param['n'], cur_message_layer)
             #[node_cnt, embed_dim] * [embed_dim, embed_dim] = [node_cnt, embed_dim], dense
             #node_linear = tf.matmul(n2npool, p_node_conv)
             node_linear = torch.matmul(n2npool, self.p_node_conv)
@@ -109,7 +114,10 @@ class FINDER_net(nn.Module):
             # [batch_size, node_cnt] * [node_cnt, embed_dim] = [batch_size, embed_dim]
             #y_n2npool = tf.sparse_tensor_dense_matmul(tf.cast(self.subgsum_param,tf.float32), cur_message_layer)
             # why cur_message_layer, instead of y_cur_message_layer?
-            y_n2npool = torch.matmul(subgsum_param, cur_message_layer)
+            #OLD y_n2npool = torch.matmul(subgsum_param, cur_message_layer)
+            y_n2npool = torch_sparse.spmm(subgsum_param['index'], subgsum_param['value'],\
+                 subgsum_param['m'], subgsum_param['n'], cur_message_layer)
+
             #[batch_size, embed_dim] * [embed_dim, embed_dim] = [batch_size, embed_dim], dense
             #y_node_linear = tf.matmul(y_n2npool, p_node_conv)
             y_node_linear = torch.matmul(y_n2npool, self.p_node_conv)
@@ -161,7 +169,9 @@ class FINDER_net(nn.Module):
         y_potential = y_cur_message_layer
         #[batch_size, node_cnt] * [node_cnt, embed_dim] = [batch_size, embed_dim]
         #action_embed = tf.sparse_tensor_dense_matmul(tf.cast(self.action_select, tf.float32), cur_message_layer)
-        action_embed = torch.matmul(action_select, cur_message_layer)
+        #OLD action_embed = torch.matmul(action_select, cur_message_layer)
+        action_embed = torch_sparse.spmm(action_select['index'], action_select['value'],\
+                 action_select['m'], action_select['n'], cur_message_layer)
 
         # # [batch_size, embed_dim, embed_dim]
         #temp = tf.matmul(tf.expand_dims(action_embed, axis=2),tf.expand_dims(y_potential, axis=1))
@@ -199,7 +209,7 @@ class FINDER_net(nn.Module):
     
     def test_forward(self, node_input, subgsum_param, n2nsum_param, rep_global, aux_input):
         
-        y_nodes_size = subgsum_param.shape[0]
+        y_nodes_size = subgsum_param['m']
         # [batch_size, 2]
         y_node_input = torch.ones((y_nodes_size,2)).type(torch.FloatTensor).to(self.device)
 
@@ -238,7 +248,10 @@ class FINDER_net(nn.Module):
             #[node_cnt, node_cnt] * [node_cnt, embed_dim] = [node_cnt, embed_dim], dense
             #n2npool = tf.sparse_tensor_dense_matmul(tf.cast(self.n2nsum_param,tf.float32), cur_message_layer)
             # see https://discuss.pytorch.org/t/sparse-tensors-in-pytorch/859/4
-            n2npool = torch.matmul(n2nsum_param, cur_message_layer)
+            # OLD n2npool = torch.matmul(n2nsum_param, cur_message_layer)
+            n2npool = torch_sparse.spmm(n2nsum_param['index'], n2nsum_param['value'],\
+                 n2nsum_param['m'], n2nsum_param['n'], cur_message_layer)
+
             #[node_cnt, embed_dim] * [embed_dim, embed_dim] = [node_cnt, embed_dim], dense
             #node_linear = tf.matmul(n2npool, p_node_conv)
             node_linear = torch.matmul(n2npool, self.p_node_conv)
@@ -246,7 +259,10 @@ class FINDER_net(nn.Module):
             # [batch_size, node_cnt] * [node_cnt, embed_dim] = [batch_size, embed_dim]
             #y_n2npool = tf.sparse_tensor_dense_matmul(tf.cast(self.subgsum_param,tf.float32), cur_message_layer)
             # why cur_message_layer, instead of y_cur_message_layer?
-            y_n2npool = torch.matmul(subgsum_param, cur_message_layer)
+            #OLD y_n2npool = torch.matmul(subgsum_param, cur_message_layer)
+            y_n2npool = torch_sparse.spmm(subgsum_param['index'], subgsum_param['value'],\
+                 subgsum_param['m'], subgsum_param['n'], cur_message_layer)
+
             #[batch_size, embed_dim] * [embed_dim, embed_dim] = [batch_size, embed_dim], dense
             #y_node_linear = tf.matmul(y_n2npool, p_node_conv)
             y_node_linear = torch.matmul(y_n2npool, self.p_node_conv)
@@ -293,9 +309,13 @@ class FINDER_net(nn.Module):
             y_cur_message_layer = torch.nn.functional.normalize(y_cur_message_layer, p=2, dim=1)
 
         
-            y_potential = y_cur_message_layer        #[node_cnt, batch_size] * [batch_size, embed_dim] = [node_cnt, embed_dim]
-        
-        rep_y = torch.matmul(rep_global, y_potential)
+            y_potential = y_cur_message_layer        
+            
+        #[node_cnt, batch_size] * [batch_size, embed_dim] = [node_cnt, embed_dim]
+        #OLD rep_y = torch.matmul(rep_global, y_potential)
+        rep_y = torch_sparse.spmm(rep_global['index'], rep_global['value'],\
+                 rep_global['m'], rep_global['n'], y_potential)
+
         #[[node_cnt, embed_dim], [node_cnt, embed_dim]] = [node_cnt, 2*embed_dim]
         # embed_s_a_all = tf.concat([cur_message_layer,rep_y],1)
         # # [node_cnt, embed_dim, embed_dim]
@@ -317,7 +337,9 @@ class FINDER_net(nn.Module):
             # last_output = tf.nn.relu(last_output_hidden)
 
         #[node_cnt, batch_size] * [batch_size, aux_dim] = [node_cnt, aux_dim]
-        rep_aux = torch.matmul(rep_global, aux_input)
+        rep_aux = torch_sparse.spmm(rep_global['index'], rep_global['value'],\
+            rep_global['m'], rep_global['n'], aux_input)
+        #rep_aux = torch.matmul(rep_global, aux_input)
 
         #if reg_hidden == 0: , [[node_cnt, 2 * embed_dim], [node_cnt, aux_dim]] = [node_cnt, 2*embed_dim + aux_dim]
         #if reg_hidden > 0: , [[node_cnt, reg_hidden], [node_cnt, aux_dim]] = [node_cnt, reg_hidden + aux_dim]
