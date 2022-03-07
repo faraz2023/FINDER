@@ -136,7 +136,7 @@ cdef class py_PrepareBatchGraph:
         t =  torch.sparse_coo_tensor(np.transpose(np.array(indices)), np.array(data), size=torch.Size([rowNum,colNum]))\
             .type(torch.FloatTensor)
 
-        return t.to_dense()
+        return t
 
         
         #return tf.SparseTensorValue(indices, data, (rowNum,colNum))
