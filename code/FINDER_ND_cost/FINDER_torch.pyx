@@ -19,6 +19,7 @@ import heapq
 import scipy.linalg as linalg
 import os
 import pandas as pd
+import os.path
 
 from FINDER_net import FINDER_net
 # from gurobipy import *
@@ -127,7 +128,7 @@ class FINDER:
         print("Total number of FINDER_net parameters: {}".format(pytorch_total_params))
 
 
-    def Train(self):
+    def Train(self,skip_saved_iter=False):
         self.PrepareValidData()
         self.gen_new_graphs(NUM_MIN, NUM_MAX)
         cdef int i, iter, idx
@@ -144,12 +145,33 @@ class FINDER:
         if not os.path.exists(save_dir):
             os.mkdir(save_dir)
         VCFile = '{}/ModelVC_{}_{}.csv'.format(save_dir, NUM_MIN, NUM_MAX)
-        f_out = open(VCFile, 'w')
-        for iter in range(MAX_ITERATION):
+        
+        start_iter=0
+        if(skip_saved_iter):
+            if(os.path.isfile(VCFile)):
+                f_read = open(VCFile)
+                line_ctr = f_read.read().count("\n")
+                f_read.close()
+                start_iter = max(300 * (line_ctr-1), 0)
+                start_model = '%s/nrange_%d_%d_iter_%d.ckpt' % (save_dir, NUM_MIN, NUM_MAX, start_iter)
+                print(f'Found VCFile {VCFile}, choose start model: {start_model}')
+                if(os.path.isfile(VCFile)):
+                    self.LoadModel(start_model)
+                    print(f'skipping iterations that are aleady done, starting at iter {start_iter}..')                    
+                    # append instead of new write
+                    f_out = open(VCFile, 'a')
+                else:
+                    print('failed to load starting model, start iteration from 0..')
+                    start_iter=0
+                    f_out = open(VCFile, 'w')                
+        else:
+            f_out = open(VCFile, 'w')
+
+        for iter in range(start_iter,MAX_ITERATION):
             #start = time.clock()
             start = time.perf_counter()
             ###########-----------------------normal training data setup(start) -----------------##############################
-            if iter and iter % 5000 == 0:
+            if( (iter and iter % 5000 == 0) or (iter==start_iter)):
                 self.gen_new_graphs(NUM_MIN, NUM_MAX)
             eps = eps_end + max(0., (eps_start - eps_end) * (eps_step - iter) / eps_step)
             #eps = 1.1 # fix this later. Just to bipass predict from Q network for now. 
@@ -162,7 +184,7 @@ class FINDER:
                 else:
                     N_start = N_end
                 frac = 0.0
-                # n_valid = 1
+                # n_valid = 1                
                 test_start = time.time()
                 for idx in range(n_valid):
                     frac += self.Test(idx)
@@ -176,8 +198,11 @@ class FINDER:
                 print ('300 iterations total time: %.8fs'%(N_end-N_start))
                 sys.stdout.flush()
                 model_path = '%s/nrange_%d_%d_iter_%d.ckpt' % (save_dir, NUM_MIN, NUM_MAX, iter)
-                self.SaveModel(model_path)
-            if iter % UPDATE_TIME == 0:
+                if(skip_saved_iter and iter==start_iter):
+                    pass
+                else:
+                    self.SaveModel(model_path)
+            if( (iter % UPDATE_TIME == 0) or (iter==start_iter)):
                 self.TakeSnapShot()
             self.Fit()
         f_out.close()
