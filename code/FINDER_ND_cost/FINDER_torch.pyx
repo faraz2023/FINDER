@@ -157,7 +157,7 @@ class FINDER:
                 print(f'Found VCFile {VCFile}, choose start model: {start_model}')
                 if(os.path.isfile(VCFile)):
                     self.LoadModel(start_model)
-                    print(f'skipping iterations that are aleady done, starting at iter {start_iter}..')                    
+                    print(f'skipping iterations that are already done, starting at iter {start_iter}..')                    
                     # append instead of new write
                     f_out = open(VCFile, 'a')
                 else:
@@ -179,7 +179,7 @@ class FINDER:
                 self.PlayGame(10, eps)
             #if iter % 300 == 0: #put this back for proper snapshot
             if iter % 300 == 0:
-                if(iter == 0):
+                if(iter == 0 or iter == start_iter):
                     N_start = start
                 else:
                     N_start = N_end
