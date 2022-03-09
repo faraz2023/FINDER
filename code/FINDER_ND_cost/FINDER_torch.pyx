@@ -325,8 +325,8 @@ class FINDER:
         edges = g.edges()
         weights = []
         for i in range(len(nodes)):
-            #weights.append(g.node[i]['weight'])
             weights.append(g.nodes[i]['weight'])
+
         if len(edges) > 0:
             a, b = zip(*edges)
             A = np.array(a)
@@ -658,7 +658,11 @@ class FINDER:
 
     def LoadModel(self,model_path):
         #self.saver.restore(self.session, model_path)
-        self.FINDER_net.load_state_dict(torch.load(model_path))
+        try:
+            self.FINDER_net.load_state_dict(torch.load(model_path))
+        except:
+            self.FINDER_net.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
+
         print('restore model from file successfully')
 
 
@@ -708,7 +712,7 @@ class FINDER:
         sys.stdout.flush()
         for i in tqdm(range(n_test)):
             g_path = '%s/'%data_test + 'g_%d'%i
-            g = nx.read_gml(g_path)
+            g = nx.read_gml(g_path, destringizer=int)
             self.InsertGraph(g, is_test=True)
             t1 = time.time()
             val, sol = self.GetSol(i)
@@ -731,7 +735,7 @@ class FINDER:
             os.mkdir(save_dir_local)
         result_file = '%s/%s' %(save_dir_local, test_name)
         # g = nx.read_edgelist(data_test)
-        g = nx.read_gml(data_test)
+        g = nx.read_gml(data_test, destringizer=int)
         # g = self.Real2networkx(g_temp)
         with open(result_file, 'w') as f_out:
             print ('testing')
@@ -779,7 +783,7 @@ class FINDER:
         #evaluate the robust given the solution, strategyID:0,count;2:rank;3:multipy
         sys.stdout.flush()
         # g = nx.read_weighted_edgelist(data_test)
-        g = nx.read_gml(data_test)
+        g = nx.read_gml(data_test, destringizer=int)
         g_inner = self.GenNetwork(g)
         # print ('number of nodes:%d'%nx.number_of_nodes(g))
         # print ('number of edges:%d'%nx.number_of_edges(g))

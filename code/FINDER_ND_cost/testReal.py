@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import sys,os
 sys.path.append(os.path.dirname(__file__) + os.sep + '../')
-from FINDER import FINDER
+from FINDER_torch import FINDER
 import numpy as np
 from tqdm import tqdm
 import time
@@ -12,25 +12,32 @@ import pickle as cp
 import random
 
 
+def mkdir(path):
+    if not os.path.exists(path):
+        os.mkdir(path)
+
 def GetSolution(STEPRATIO, MODEL_FILE):
     ######################################################################################################################
     ##................................................Get Solution (model).....................................................
     dqn = FINDER()
     ## data_test
-    data_test_path = '../data/real/Cost/'
+    data_test_path = '../../data/real/cost/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
-    data_test_name = ['Crime', 'HI-II-14']
-    data_test_costType = ['degree', 'random']
-    model_file = './FINDER_ND_cost/models/%s'%MODEL_FILE
+    #data_test_name = ['Crime', 'HI-II-14']
+    #data_test_costType = ['degree', 'random']
+    data_test_name = ['HI-II-14']
+    data_test_costType = ['degree']
+    #model_file = './FINDER_ND_cost/models/%s'%MODEL_FILE
+    model_file = './models/TORCH-Model_barabasi_albert/{}'.format(MODEL_FILE)
     ## save_dir
     save_dir = '../results/FINDER_ND_cost/real'
     if not os.path.exists(save_dir):
-        os.mkdir(save_dir)
+        os.makedirs(save_dir, exist_ok=True)
     
     save_dir_degree = save_dir + '/Data_degree'
-    save_dir_random = save_dir + '/Data_random'
-    os.mkdir(save_dir_degree)
-    os.mkdir(save_dir_random)
+    #save_dir_random = save_dir + '/Data_random'
+    mkdir(save_dir_degree)
+    #os.mkdir(save_dir_random)
 
     ## begin computing...
     print('The best model is :%s' % (model_file))
@@ -56,7 +63,7 @@ def GetSolution(STEPRATIO, MODEL_FILE):
             save_dir_local = save_dir_random + '/StepRatio_%.4f' % stepRatio
             
         if not os.path.exists(save_dir_local):
-            os.mkdir(save_dir_local)
+            mkdir(save_dir_local)
 
         df.to_csv(save_dir_local + '/solution_%s_time.csv' % costType, encoding='utf-8', index=False)
         print('model has been tested!')
@@ -67,14 +74,16 @@ def EvaluateSolution(STEPRATIO, STRTEGYID):
     ##................................................Evaluate Solution.....................................................
     dqn = FINDER()
     ## data_test
-    data_test_path = '../data/real/Cost/'
+    data_test_path = '../../data/real/cost/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
-    data_test_name = ['Crime', 'HI-II-14']
-    data_test_costType = ['degree', 'random']
+    #data_test_name = ['Crime', 'HI-II-14']
+    #data_test_costType = ['degree', 'random']
+    data_test_name = ['HI-II-14']
+    data_test_costType = ['degree']
 
     ## save_dir
     save_dir_degree = '../results/FINDER_ND_cost/real/Data_degree/StepRatio_%.4f/' % STEPRATIO
-    save_dir_random = '../results/FINDER_ND_cost/real/Data_random/StepRatio_%.4f/' % STEPRATIO
+    #save_dir_random = '../results/FINDER_ND_cost/real/Data_random/StepRatio_%.4f/' % STEPRATIO
     ## begin computing...
 
     for costType in data_test_costType:
@@ -114,7 +123,7 @@ def EvaluateSolution(STEPRATIO, STRTEGYID):
 
 
 def main():
-    model_file = 'nrange_30_50_iter_134100.ckpt'
+    model_file = 'nrange_30_50_iter_944400.ckpt'
     GetSolution(0.01, model_file)
     EvaluateSolution(0.01, 0)
 
