@@ -24,9 +24,9 @@ def GetSolution(STEPRATIO, MODEL_FILE):
     data_test_path = '../../data/real/cost/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
     #data_test_name = ['Crime', 'HI-II-14']
-    #data_test_costType = ['degree', 'random']
-    data_test_name = ['HI-II-14']
-    data_test_costType = ['degree']
+    data_test_costType = ['zero', 'degree', 'random']
+    data_test_name = ['HI-II-14', 'Digg', ]
+    #data_test_costType = ['degree']
     #model_file = './FINDER_ND_cost/models/%s'%MODEL_FILE
     model_file = './models/{}'.format(MODEL_FILE)
     ## save_dir
@@ -35,9 +35,12 @@ def GetSolution(STEPRATIO, MODEL_FILE):
         os.makedirs(save_dir, exist_ok=True)
     
     save_dir_degree = save_dir + '/Data_degree'
-    #save_dir_random = save_dir + '/Data_random'
+    save_dir_random = save_dir + '/Data_random'
+    save_dir_zero = save_dir + '/Data_zero'
+
     mkdir(save_dir_degree)
-    #os.mkdir(save_dir_random)
+    mkdir(save_dir_random)
+    mkdir(save_dir_zero)
 
     ## begin computing...
     print('The best model is :%s' % (model_file))
@@ -55,12 +58,18 @@ def GetSolution(STEPRATIO, MODEL_FILE):
                 solution, time = dqn.EvaluateRealData(model_file, data_test, save_dir_degree, stepRatio)
             elif costType == 'random':
                 solution, time = dqn.EvaluateRealData(model_file, data_test, save_dir_random, stepRatio)
+            elif costType == 'zero':
+                solution, time = dqn.EvaluateRealData(model_file, data_test, save_dir_zero, stepRatio)
+
             df.iloc[0, j] = time
 
         if costType == 'degree':
             save_dir_local = save_dir_degree + '/StepRatio_%.4f' % stepRatio
         elif costType == 'random':
             save_dir_local = save_dir_random + '/StepRatio_%.4f' % stepRatio
+        elif costType == 'zero':
+            save_dir_local = save_dir_zero + '/StepRatio_%.4f' % stepRatio
+
             
         if not os.path.exists(save_dir_local):
             mkdir(save_dir_local)
@@ -77,13 +86,15 @@ def EvaluateSolution(STEPRATIO, STRTEGYID):
     data_test_path = '../../data/real/cost/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
     #data_test_name = ['Crime', 'HI-II-14']
-    #data_test_costType = ['degree', 'random']
-    data_test_name = ['HI-II-14']
-    data_test_costType = ['degree']
+    data_test_costType = ['zero', 'degree', 'random']
+    data_test_name = ['HI-II-14', 'Digg']
+    #data_test_costType = ['degree']
 
     ## save_dir
     save_dir_degree = '../results/old_FINDER_ND_cost_tf/real/Data_degree/StepRatio_%.4f/' % STEPRATIO
-    #save_dir_random = '../results/FINDER_ND_cost/real/Data_random/StepRatio_%.4f/' % STEPRATIO
+    save_dir_random = '../results/old_FINDER_ND_cost_tf/real/Data_random/StepRatio_%.4f/' % STEPRATIO
+    save_dir_zero = '../results/old_FINDER_ND_cost_tf/real/Data_zero/StepRatio_%.4f/' % STEPRATIO
+
     ## begin computing...
 
     for costType in data_test_costType:
@@ -96,6 +107,8 @@ def EvaluateSolution(STEPRATIO, STRTEGYID):
                 solution = save_dir_degree + data_test_name[i] + '_degree.txt'
             elif costType == 'random':
                 solution = save_dir_random + data_test_name[i] + '_random.txt'
+            elif costType == 'zero':
+                solution = save_dir_zero + data_test_name[i] + '_zero.txt'
 
             t1 = time.time()
             # strategyID: 0:no insert; 1:count; 2:rank; 3:multiply
@@ -109,6 +122,9 @@ def EvaluateSolution(STEPRATIO, STRTEGYID):
                 result_file = save_dir_degree + '/MaxCCList__Strategy_' + data_test_name[i] + '.txt'
             elif costType == 'random':
                 result_file = save_dir_random + '/MaxCCList_Strategy_' + data_test_name[i] + '.txt'
+            elif costType == 'zero':
+                result_file = save_dir_zero + '/MaxCCList_Strategy_' + data_test_name[i] + '.txt'
+
 
             with open(result_file, 'w') as f_out:
                 for j in range(len(MaxCCList)):
@@ -120,6 +136,9 @@ def EvaluateSolution(STEPRATIO, STRTEGYID):
             df.to_csv(save_dir_degree + '/solution_%s_score.csv' % (costType), encoding='utf-8', index=False)
         elif costType == 'random':
             df.to_csv(save_dir_random + '/solution_%s_score.csv' % (costType), encoding='utf-8', index=False)
+        elif costType == 'zero':
+            df.to_csv(save_dir_zero + '/solution_%s_score.csv' % (costType), encoding='utf-8', index=False)
+
 
 
 def main():
