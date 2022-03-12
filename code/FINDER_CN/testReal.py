@@ -1,26 +1,28 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
 
-from FINDER import FINDER
+
+from FINDER_torch import FINDER
 import numpy as np
 import time
+import os
 import pandas as pd
+def mkdir(path):
+    if not os.path.exists(path):
+        os.mkdir(path)
 
 
-def GetSolution(STEPRATIO, MODEL_FILE_CKPT):
+def GetSolution(STEPRATIO, MODEL_FILE):
     ######################################################################################################################
     ##................................................Get Solution (model).....................................................
     dqn = FINDER()
-    data_test_path = '../data/real/'
+    g_type = "barabasi_albert"
+    data_test_path = '../../data/real/'
 #     data_test_name = ['Crime','HI-II-14','Digg','Enron','Gnutella31','Epinions','Facebook','Youtube','Flickr']
-    data_test_name = ['Crime','HI-II-14']
-    model_file_path = './FINDER_CN/models/'
-    model_file_ckpt = MODEL_FILE_CKPT
-    model_file = model_file_path + model_file_ckpt
+    data_test_name = ['Digg','HI-II-14']
+    model_file = './models/TORCH-Model_{}/{}'.format(g_type, MODEL_FILE)
     ## save_dir
     save_dir = '../results/FINDER_CN/real'
     if not os.path.exists(save_dir):
-        os.mkdir(save_dir)
+        os.makedirs(save_dir, exist_ok=True)
     ## begin computing...
     print ('The best model is :%s'%(model_file))
     dqn.LoadModel(model_file)
@@ -43,9 +45,9 @@ def EvaluateSolution(STEPRATIO, MODEL_FILE_CKPT, STRTEGYID):
     #######################################################################################################################
     ##................................................Evaluate Solution.....................................................
     dqn = FINDER()
-    data_test_path = '../data/real/'
+    data_test_path = '../../data/real/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
-    data_test_name = ['Crime','HI-II-14']
+    data_test_name = ['Digg', 'HI-II-14']
     save_dir = '../results/FINDER_CN/real/StepRatio_%.4f/'%STEPRATIO
     ## begin computing...
     df = pd.DataFrame(np.arange(2 * len(data_test_name)).reshape((2, len(data_test_name))), index=['solution', 'time'], columns=data_test_name)
@@ -70,7 +72,7 @@ def EvaluateSolution(STEPRATIO, MODEL_FILE_CKPT, STRTEGYID):
 
 
 def main():
-    model_file_ckpt = 'nrange_30_50_iter_93300.ckpt'
+    model_file_ckpt = 'nrange_30_50_iter_900.ckpt'
     GetSolution(0.01, model_file_ckpt)
     EvaluateSolution(0.01, model_file_ckpt, 0)
 
