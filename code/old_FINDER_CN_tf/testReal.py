@@ -3,24 +3,28 @@
 
 from FINDER import FINDER
 import numpy as np
+import sys, os
 import time
 import pandas as pd
+def mkdir(path):
+    if not os.path.exists(path):
+        os.mkdir(path)
 
 
 def GetSolution(STEPRATIO, MODEL_FILE_CKPT):
     ######################################################################################################################
     ##................................................Get Solution (model).....................................................
     dqn = FINDER()
-    data_test_path = '../data/real/'
+    data_test_path = '../../data/real/'
 #     data_test_name = ['Crime','HI-II-14','Digg','Enron','Gnutella31','Epinions','Facebook','Youtube','Flickr']
-    data_test_name = ['Crime','HI-II-14']
-    model_file_path = './FINDER_CN/models/'
+    data_test_name = ['Digg','HI-II-14']
+    model_file_path = './models/'
     model_file_ckpt = MODEL_FILE_CKPT
     model_file = model_file_path + model_file_ckpt
     ## save_dir
-    save_dir = '../results/FINDER_CN/real'
+    save_dir = '../results/old_FINDER_CN_tf/real'
     if not os.path.exists(save_dir):
-        os.mkdir(save_dir)
+        os.makedirs(save_dir, exist_ok=True)
     ## begin computing...
     print ('The best model is :%s'%(model_file))
     dqn.LoadModel(model_file)
@@ -43,10 +47,10 @@ def EvaluateSolution(STEPRATIO, MODEL_FILE_CKPT, STRTEGYID):
     #######################################################################################################################
     ##................................................Evaluate Solution.....................................................
     dqn = FINDER()
-    data_test_path = '../data/real/'
+    data_test_path = '../../data/real/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
-    data_test_name = ['Crime','HI-II-14']
-    save_dir = '../results/FINDER_CN/real/StepRatio_%.4f/'%STEPRATIO
+    data_test_name = ['Digg','HI-II-14']
+    save_dir = '../results/old_FINDER_CN_tf/real/StepRatio_%.4f/'%STEPRATIO
     ## begin computing...
     df = pd.DataFrame(np.arange(2 * len(data_test_name)).reshape((2, len(data_test_name))), index=['solution', 'time'], columns=data_test_name)
     for i in range(len(data_test_name)):
