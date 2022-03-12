@@ -5,7 +5,9 @@ import graph
 from libc.stdlib cimport malloc
 from libc.stdlib cimport free
 from graph cimport Graph
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+
 from scipy.sparse import coo_matrix
 # import gc
 

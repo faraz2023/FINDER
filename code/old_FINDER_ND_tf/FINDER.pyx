@@ -1,13 +1,6 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Dec 19 00:33:33 2017
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
-@author: fanchangjun
-"""
-
-from __future__ import print_function, division
-import tensorflow as tf
 import numpy as np
 import networkx as nx
 import random
@@ -671,7 +664,7 @@ class FINDER:
         sys.stdout.flush()
         for i in tqdm(range(n_test)):
             g_path = '%s/'%data_test + 'g_%d'%i
-            g = nx.read_gml(g_path)
+            g = nx.read_gml(g_path, destringizer=int)
             self.InsertGraph(g, is_test=True)
             t1 = time.time()
             val, sol = self.GetSol(i)
