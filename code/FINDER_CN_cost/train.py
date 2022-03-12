@@ -1,7 +1,5 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
 
-from FINDER import FINDER
+from FINDER_torch import FINDER
 
 def main():
     dqn = FINDER()
