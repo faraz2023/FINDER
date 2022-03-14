@@ -1,8 +1,6 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 import sys,os
 sys.path.append(os.path.dirname(__file__) + os.sep + '../')
-from FINDER import FINDER
+from FINDER_torch import FINDER
 import numpy as np
 from tqdm import tqdm
 import time
@@ -10,30 +8,30 @@ import networkx as nx
 import pandas as pd
 import pickle as cp
 import graph
+def mkdir(path):
+    if not os.path.exists(path):
+        os.mkdir(path)
 
 
-def GetSolution(STEPRATIO, MODEL_FILE_CKPT):
+def GetSolution(STEPRATIO, MODEL_FILE):
     ######################################################################################################################
     ##................................................Get Solution (model).....................................................
     dqn = FINDER()
-    data_test_path = '../data/real/'
+    g_type = "barabasi_albert"
+    data_test_path = '../../data/real/'
 #     data_test_name = ['Crime','HI-II-14','Digg','Enron','Gnutella31','Epinions','Facebook','Youtube','Flickr']
-    data_test_name = ['Crime','HI-II-14']
-    model_file_path = './FINDER_ND/models/'
-    model_file_ckpt = MODEL_FILE_CKPT
-    model_file = model_file_path + model_file_ckpt
+    data_test_name = ['Digg','HI-II-14']
+    model_file = './models/TORCH-Model_{}/{}'.format(g_type, MODEL_FILE)
     ## save_dir
     save_dir = '../results/FINDER_ND/real'
     if not os.path.exists(save_dir):
-        os.mkdir(save_dir)
-        
+        os.makedirs(save_dir, exist_ok=True)        
     ## begin computing...
     print ('The best model is :%s'%(model_file))
     dqn.LoadModel(model_file)
     df = pd.DataFrame(np.arange(1*len(data_test_name)).reshape((1,len(data_test_name))),index=['time'], columns=data_test_name)
     #################################### modify to choose which stepRatio to get the solution
     stepRatio = STEPRATIO
-
     for j in range(len(data_test_name)):
         print ('\nTesting dataset %s'%data_test_name[j])
         data_test = data_test_path + data_test_name[j] + '.txt'
@@ -46,13 +44,13 @@ def GetSolution(STEPRATIO, MODEL_FILE_CKPT):
     df.to_csv(save_dir_local + '/sol_time.csv', encoding='utf-8', index=False)
 
 
-def EvaluateSolution(STEPRATIO, MODEL_FILE_CKPT, STRTEGYID):
+def EvaluateSolution(STEPRATIO, MODEL_FILE, STRTEGYID):
     #######################################################################################################################
     ##................................................Evaluate Solution.....................................................
     dqn = FINDER()
-    data_test_path = '../data/real/'
+    data_test_path = '../../data/real/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
-    data_test_name = ['Crime', 'HI-II-14']
+    data_test_name = ['Digg', 'HI-II-14']
     save_dir = '../results/FINDER_ND/real/StepRatio_%.4f/'%STEPRATIO
     ## begin computing...
     df = pd.DataFrame(np.arange(2 * len(data_test_name)).reshape((2, len(data_test_name))), index=['solution', 'time'], columns=data_test_name)
@@ -77,9 +75,9 @@ def EvaluateSolution(STEPRATIO, MODEL_FILE_CKPT, STRTEGYID):
 
 
 def main():
-    model_file_ckpt = 'nrange_30_50_iter_78000.ckpt'
-    GetSolution(0.01, model_file_ckpt)
-    EvaluateSolution(0.01, model_file_ckpt, 0)
+    model_file= 'nrange_30_50_iter_206700.ckpt'
+    GetSolution(0.01, model_file)
+    EvaluateSolution(0.01, model_file, 0)
 
 
 
