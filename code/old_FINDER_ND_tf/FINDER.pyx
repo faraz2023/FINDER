@@ -606,7 +606,7 @@ class FINDER:
         f_out = open(VCFile, 'w')
         t_train_start = time.time()
         for iter in range(MAX_ITERATION):
-            start = time.clock()
+            start = time.perf_counter()
             ###########-----------------------normal training data setup(start) -----------------##############################
             if iter and iter % 5000 == 0:
                 self.gen_new_graphs(NUM_MIN, NUM_MAX)
@@ -628,7 +628,7 @@ class FINDER:
                 f_out.flush()
                 print('iter %d, eps %.4f, average size of vc:%.6f'%(iter, eps, frac/n_valid))
                 print ('testing 200 graphs time: %.2fs'%(test_end-test_start))
-                N_end = time.clock()
+                N_end = time.perf_counter()
                 print ('300 iterations total time: %.2fs\n'%(N_end-N_start))
                 sys.stdout.flush()
                 model_path = '%s/nrange_%d_%d_iter_%d.ckpt' % (save_dir, NUM_MIN, NUM_MAX, iter)
@@ -686,7 +686,7 @@ class FINDER:
         if not os.path.exists(save_dir_local):#make dir
             os.mkdir(save_dir_local)
         result_file = '%s/%s' %(save_dir_local, test_name)
-        g = nx.read_edgelist(data_test)
+        g = nx.read_edgelist(data_test, nodetype=int)
         with open(result_file, 'w') as f_out:
             print ('testing')
             sys.stdout.flush()
@@ -736,7 +736,7 @@ class FINDER:
     def EvaluateSol(self, data_test, sol_file, strategyID=0, reInsertStep=20):
         #evaluate the robust given the solution, strategyID:0,count;2:rank;3:multipy
         sys.stdout.flush()
-        g = nx.read_edgelist(data_test)
+        g = nx.read_edgelist(data_test, node_type=int)
         g_inner = self.GenNetwork(g)
         print ('number of nodes:%d'%nx.number_of_nodes(g))
         print ('number of edges:%d'%nx.number_of_edges(g))
