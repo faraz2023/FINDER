@@ -101,11 +101,11 @@ class FINDER:
         self.test_env = mvc_env.py_MvcEnv(NUM_MAX)
 
         print("CUDA:", torch.cuda.is_available())
-        torch.set_num_threads(8)
-        torch.set_num_interop_threads(8)
+        #torch.set_num_threads(8)
+        #torch.set_num_interop_threads(8)
 
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        self.device = "cpu"
+        #self.device = "cpu"
         print("===", self.device)
 
         self.FINDER_net = FINDER_net(device=self.device)
