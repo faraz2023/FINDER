@@ -736,7 +736,7 @@ class FINDER:
     def EvaluateSol(self, data_test, sol_file, strategyID=0, reInsertStep=20):
         #evaluate the robust given the solution, strategyID:0,count;2:rank;3:multipy
         sys.stdout.flush()
-        g = nx.read_edgelist(data_test, node_type=int)
+        g = nx.read_edgelist(data_test, nodetype=int)
         g_inner = self.GenNetwork(g)
         print ('number of nodes:%d'%nx.number_of_nodes(g))
         print ('number of edges:%d'%nx.number_of_edges(g))
