@@ -21,7 +21,7 @@ import os
 cdef double GAMMA = 1  # decay rate of past observations
 cdef int UPDATE_TIME = 1000
 cdef int EMBEDDING_SIZE = 64
-cdef int MAX_ITERATION = 200001
+cdef int MAX_ITERATION = 400001
 cdef double LEARNING_RATE = 0.0001   #dai
 cdef int MEMORY_SIZE = 500000
 cdef double Alpha = 0.001 ## weight of reconstruction loss
@@ -634,7 +634,7 @@ class FINDER:
                 print ('500 iterations total time: %.2fs\n'%(N_end-N_start))
                 sys.stdout.flush()
                 model_path = '%s/nrange_%d_%d_iter_%d.ckpt' % (save_dir, NUM_MIN, NUM_MAX, iter)
-                if(iter % 5000 == 0):
+                if(iter % 10000 == 0):
                     self.SaveModel(model_path)
             if iter % UPDATE_TIME == 0:
                 self.TakeSnapShot()
