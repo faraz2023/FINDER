@@ -616,7 +616,7 @@ class FINDER:
 
             if iter % 10 == 0:
                 self.PlayGame(10, eps)
-            if iter % 300 == 0:
+            if iter % 500 == 0:
                 if(iter == 0):
                     N_start = start
                 else:
@@ -631,7 +631,7 @@ class FINDER:
                 print('iter %d, eps %.4f, average size of vc:%.6f'%(iter, eps, frac/n_valid))
                 print ('testing 200 graphs time: %.2fs'%(test_end-test_start))
                 N_end = time.perf_counter()
-                print ('300 iterations total time: %.2fs\n'%(N_end-N_start))
+                print ('500 iterations total time: %.2fs\n'%(N_end-N_start))
                 sys.stdout.flush()
                 model_path = '%s/nrange_%d_%d_iter_%d.ckpt' % (save_dir, NUM_MIN, NUM_MAX, iter)
                 if(iter % 5000 == 0):
