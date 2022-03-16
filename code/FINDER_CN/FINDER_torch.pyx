@@ -451,7 +451,7 @@ class FINDER:
         cdef int loss = 0
         cdef double frac, start, end
 
-        save_dir = './models/TORCH-Model_%s'%(self.g_type)
+        save_dir = './models/truncNormal-TORCH-Model_%s'%(self.g_type)
         if not os.path.exists(save_dir):
             os.mkdir(save_dir)
         VCFile = '%s/ModelVC_%d_%d.csv'%(save_dir, NUM_MIN, NUM_MAX)
