@@ -142,7 +142,7 @@ class FINDER:
         cdef int loss = 0
         cdef double frac, start, end
 
-        save_dir = './models/TORCH-Model_{}'.format(self.g_type)
+        save_dir = './models/truncNormal-TORCH-Model_{}'.format(self.g_type)
         if not os.path.exists(save_dir):
             os.mkdir(save_dir)
         VCFile = '{}/ModelVC_{}_{}.csv'.format(save_dir, NUM_MIN, NUM_MAX)
@@ -179,7 +179,7 @@ class FINDER:
             if iter % 10 == 0:
                 self.PlayGame(10, eps)
             #if iter % 300 == 0: #put this back for proper snapshot
-            if iter % 300 == 0:
+            if iter % 500 == 0:
                 if(iter == 0 or iter == start_iter):
                     N_start = start
                 else:
@@ -202,7 +202,8 @@ class FINDER:
                 if(skip_saved_iter and iter==start_iter):
                     pass
                 else:
-                    self.SaveModel(model_path)
+                    if(iter % 5000 == 0):
+                        self.SaveModel(model_path)
             if( (iter % UPDATE_TIME == 0) or (iter==start_iter)):
                 self.TakeSnapShot()
             self.Fit()
