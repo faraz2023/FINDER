@@ -32,7 +32,7 @@ import pandas as pd
 cdef double GAMMA = 1  # decay rate of past observations
 cdef int UPDATE_TIME = 1000
 cdef int EMBEDDING_SIZE = 64
-cdef int MAX_ITERATION = 1000000
+cdef int MAX_ITERATION = 400001
 cdef double LEARNING_RATE = 0.0001   #dai
 cdef int MEMORY_SIZE = 500000
 cdef double Alpha = 0.001 ## weight of reconstruction loss
@@ -686,7 +686,7 @@ class FINDER:
 
             if iter % 10 == 0:
                 self.PlayGame(10, eps)
-            if iter % 300 == 0:
+            if iter % 500 == 0:
                 if(iter == 0):
                     N_start = start
                 else:
@@ -702,10 +702,11 @@ class FINDER:
                 print('iter', iter, 'eps', eps, 'average size of vc: ', frac / n_valid)
                 print ('testing 100 graphs time: %.8fs'%(test_end-test_start))
                 N_end = time.perf_counter()
-                print ('300 iterations total time: %.8fs'%(N_end-N_start))
+                print ('500 iterations total time: %.8fs'%(N_end-N_start))
                 sys.stdout.flush()
                 model_path = '%s/nrange_%d_%d_iter_%d.ckpt' % (save_dir, NUM_MIN, NUM_MAX, iter)
-                self.SaveModel(model_path)
+                if iter % 10000 == 0:
+                    self.SaveModel(model_path)
             if iter % UPDATE_TIME == 0:
                 self.TakeSnapShot()
             self.Fit()
