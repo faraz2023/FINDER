@@ -22,6 +22,7 @@ import scipy.linalg as linalg
 import os
 import pandas as pd
 import os.path
+from torch.autograd import Variable
 
 from FINDER_net import FINDER_net
 
@@ -249,14 +250,14 @@ class FINDER:
 
 
     def SetupSparseT(self, sparse_dict):
-        sparse_dict['index'] = sparse_dict['index'].to(self.device)
-        sparse_dict['value'] = sparse_dict['value'].to(self.device)
+        sparse_dict['index'] = Variable(sparse_dict['index']).to(self.device)
+        sparse_dict['value'] = Variable(sparse_dict['value']).to(self.device)
 
         return sparse_dict
 
     def SetupTrain(self, idxes, g_list, covered, actions, target):
         self.m_y = target
-        self.inputs['target'] = torch.tensor(self.m_y).type(torch.FloatTensor).to(self.device)
+        self.inputs['target'] = Variable(torch.tensor(self.m_y).type(torch.FloatTensor)).to(self.device)
         prepareBatchGraph = PrepareBatchGraph.py_PrepareBatchGraph(aggregatorID)
         prepareBatchGraph.SetupTrain(idxes, g_list, covered, actions)
 
@@ -266,8 +267,8 @@ class FINDER:
         self.inputs['laplacian_param'] = self.SetupSparseT(prepareBatchGraph.laplacian_param)
         self.inputs['subgsum_param'] = self.SetupSparseT(prepareBatchGraph.subgsum_param)
 
-        self.inputs['node_input'] = torch.tensor(prepareBatchGraph.node_feat).type(torch.FloatTensor).to(self.device)
-        self.inputs['aux_input'] = torch.tensor(prepareBatchGraph.aux_feat).type(torch.FloatTensor).to(self.device)
+        self.inputs['node_input'] = Variable(torch.tensor(prepareBatchGraph.node_feat).type(torch.FloatTensor)).to(self.device)
+        self.inputs['aux_input'] = Variable(torch.tensor(prepareBatchGraph.aux_feat).type(torch.FloatTensor)).to(self.device)
 
     def SetupPredAll(self, idxes, g_list, covered):
         prepareBatchGraph = PrepareBatchGraph.py_PrepareBatchGraph(aggregatorID)
@@ -279,8 +280,8 @@ class FINDER:
         # self.inputs['laplacian_param'] = prepareBatchGraph.laplacian_param
         self.inputs['subgsum_param'] = self.SetupSparseT(prepareBatchGraph.subgsum_param)
 
-        self.inputs['node_input'] = torch.tensor(prepareBatchGraph.node_feat).type(torch.FloatTensor).to(self.device)
-        self.inputs['aux_input'] = torch.tensor(prepareBatchGraph.aux_feat).type(torch.FloatTensor).to(self.device)
+        self.inputs['node_input'] = Variable(torch.tensor(prepareBatchGraph.node_feat).type(torch.FloatTensor)).to(self.device)
+        self.inputs['aux_input'] = Variable(torch.tensor(prepareBatchGraph.aux_feat).type(torch.FloatTensor)).to(self.device)
         return prepareBatchGraph.idx_map_list
 
     def Predict(self,g_list,covered,isSnapSnot):
