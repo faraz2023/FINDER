@@ -10,7 +10,10 @@ class FINDER_net(nn.Module):
     def __init__(self, embedding_size=64, w_initialization_std=1, reg_hidden=32, max_bp_iter=3, embeddingMethod=1, aux_dim=4, device=None):
         super(FINDER_net, self).__init__()
         
-        self.rand_generator = torch.normal
+        #self.rand_generator = torch.normal
+        # see https://discuss.pytorch.org/t/implementing-truncated-normal-initializer/4778/12
+        self.rand_generator = lambda mean, std, size: torch.fmod(torch.normal(mean, std, size=size),2)
+
         self.embedding_size = embedding_size
         self.w_initialization_std = w_initialization_std
         self.reg_hidden = reg_hidden
