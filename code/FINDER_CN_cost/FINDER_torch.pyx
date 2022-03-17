@@ -32,7 +32,7 @@ cdef double GAMMA = 1  # decay rate of past observations
 cdef int UPDATE_TIME = 1000
 cdef int EMBEDDING_SIZE = 64
 #cdef int MAX_ITERATION = 1000000
-cdef int MAX_ITERATION = 901
+cdef int MAX_ITERATION = 400001
 
 cdef double LEARNING_RATE = 0.0001   #dai
 cdef int MEMORY_SIZE = 500000
@@ -68,7 +68,7 @@ class FINDER:
         # init some parameters
         self.embedding_size = EMBEDDING_SIZE
         self.learning_rate = LEARNING_RATE
-        self.g_type = 'small-world'#erdos_renyi, powerlaw, small-world
+        self.g_type = 'barabasi_albert'#erdos_renyi, powerlaw, small-world
         self.training_type = 'degree'   #'random'
         self.TrainSet = graph.py_GSet()
         self.TestSet = graph.py_GSet()
@@ -112,7 +112,7 @@ class FINDER:
         self.test_env = mvc_env.py_MvcEnv(NUM_MAX)
 
         print("CUDA:", torch.cuda.is_available())
-        torch.set_num_threads(16)
+        #torch.set_num_threads(16)
 
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -534,7 +534,7 @@ class FINDER:
 
             if iter % 10 == 0:
                 self.PlayGame(10, eps)
-            if iter % 300 == 0:
+            if iter % 500 == 0:
                 if(iter == 0 or iter == start_iter):
                     N_start = start
                 else:
@@ -556,7 +556,8 @@ class FINDER:
                 if(skip_saved_iter and iter==start_iter):
                     pass
                 else:
-                    self.SaveModel(model_path)
+                    if(iter % 10000 == 0):
+                        self.SaveModel(model_path)
             if( (iter % UPDATE_TIME == 0) or (iter==start_iter)):
                 self.TakeSnapShot()
             self.Fit()
