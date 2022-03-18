@@ -1,8 +1,6 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
 import sys,os
 sys.path.append(os.path.dirname(__file__) + os.sep + '../')
-from FINDER import FINDER
+from FINDER_torch import FINDER
 import numpy as np
 from tqdm import tqdm
 import time
@@ -10,27 +8,33 @@ import networkx as nx
 import pandas as pd
 import pickle as cp
 import random
+def mkdir(path):
+    if not os.path.exists(path):
+        os.mkdir(path)
 
+g_type = "barabasi_albert"
 
 def GetSolution(STEPRATIO, MODEL_FILE):
     ######################################################################################################################
     ##................................................Get Solution (model).....................................................
     dqn = FINDER()
     ## data_test
-    data_test_path = '../data/real/Cost/'
-#     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
-    data_test_name = ['Crime', 'HI-II-14']
-    data_test_costType = ['degree', 'random']
-    model_file = './FINDER_CN_cost/models/%s'%MODEL_FILE
+    data_test_path = '../../data/real/cost/'
+    #data_test_name = ['Crime', 'HI-II-14']
+    #data_test_costType = ['degree', 'random']
+    data_test_name = ['modified-morPOP-NL-day20.txt']
+    data_test_costType = ['degree']
+
+    model_file = './models/{}'.format(MODEL_FILE)
     ## save_dir
     save_dir = '../results/FINDER_CN_cost/real/'
     if not os.path.exists(save_dir):
-        os.mkdir(save_dir)
+        os.makedirs(save_dir, exist_ok=True)
     
     save_dir_degree = save_dir + '/Data_degree'
     save_dir_random = save_dir + '/Data_random'
-    os.mkdir(save_dir_degree)
-    os.mkdir(save_dir_random)
+    mkdir(save_dir_degree)
+    mkdir(save_dir_random)
 
     ## begin computing...
     print('The best model is :%s' % (model_file))
@@ -66,10 +70,11 @@ def EvaluateSolution(STEPRATIO, STRTEGYID):
     ##................................................Evaluate
     dqn = FINDER()
     ## data_test
-    data_test_path = '../data/real/Cost/'
-#     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
-    data_test_name = ['Crime', 'HI-II-14']
-    data_test_costType = ['degree', 'random']
+    data_test_path = '../../data/real/cost/'
+    #data_test_name = ['Crime', 'HI-II-14']
+    #data_test_costType = ['degree', 'random']
+    data_test_name = ['modified-morPOP-NL-day20.txt']
+    data_test_costType = ['degree']
 
     ## save_dir
     save_dir_degree = '../results/FINDER_CN_cost/real/Data_degree/StepRatio_%.4f/' % STEPRATIO
@@ -96,7 +101,7 @@ def EvaluateSolution(STEPRATIO, STRTEGYID):
             df.iloc[0, i] = score
             df.iloc[1, i] = t2 - t1
             if costType == 'degree':
-                result_file = save_dir_degree + '/MaxCCList__Strategy_' + data_test_name[i] + '.txt'
+                result_file = save_dir_degree + '/MaxCCList_Strategy_' + data_test_name[i] + '.txt'
             elif costType == 'random':
                 result_file = save_dir_random + '/MaxCCList_Strategy_' + data_test_name[i] + '.txt'
 
@@ -113,8 +118,8 @@ def EvaluateSolution(STEPRATIO, STRTEGYID):
 
 
 def main():
-    model_file = 'nrange_30_50_iter_122100.ckpt'
-    GetSolution(0.01, model_file)
+    model_file_ckpt = 'truncNormal-TORCH-Model_{}/nrange_30_50_iter_400000.ckpt'.format(g_type)
+    GetSolution(0.01, model_file_ckpt)
     EvaluateSolution(0.01, 0)
 
 if __name__=="__main__":
