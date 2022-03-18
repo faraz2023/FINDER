@@ -78,6 +78,7 @@ def EvaluateSolution(STEPRATIO, MODEL_FILE_CKPT, STRTEGYID):
 
 def main():
     model_file_ckpt = 'Model_{}/nrange_30_50_iter_200000.ckpt'.format(g_type)
+    GetSolution(0.01, model_file_ckpt)
     EvaluateSolution(0.01, model_file_ckpt, 0)
 
 
