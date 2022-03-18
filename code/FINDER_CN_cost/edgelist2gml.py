@@ -3,16 +3,16 @@ import numpy as np
 import random
 import os
 
-data_path = os.path.join("..", "..", "data")
+data_path = os.path.join("..", "..", "data", 'real')
 #data_name = ['ba_space_100']
-data_name = ['day20']
-save_dir = os.path.join("..", "..", "data")
+data_name = ['modified-morPOP-NL-day20.txt']
+save_dir = os.path.join("..", "..", "data", 'real', 'cost')
 
 
 cost_type = 'degree'
 
 for i in range(len(data_name)):
-    data = os.path.join(data_path , data_name[i] + '.edgelist')
+    data = os.path.join(data_path , data_name[i])
     g = nx.read_edgelist(data)
 
     nodes = g.nodes()
