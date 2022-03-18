@@ -32,7 +32,7 @@ def GetSolution(STEPRATIO, MODEL_FILE):
     #model_file = './FINDER_ND_cost/models/%s'%MODEL_FILE
     model_file = './models/{}'.format(MODEL_FILE)
     ## save_dir
-    save_dir = '../results/old_FINDER_CN_cost_tf/real'
+    save_dir = '../results/my_FINDER_CN_cost_tf/real'
     if not os.path.exists(save_dir):
         os.makedirs(save_dir, exist_ok=True)
     
@@ -86,8 +86,8 @@ def EvaluateSolution(STEPRATIO, STRTEGYID):
     #data_test_costType = ['degree']
 
     ## save_dir
-    save_dir_degree = '../results/old_FINDER_CN_cost_tf/real/Data_degree/StepRatio_%.4f/' % STEPRATIO
-    save_dir_random = '../results/old_FINDER_CN_cost_tf/real/Data_random/StepRatio_%.4f/' % STEPRATIO
+    save_dir_degree = '../results/my_FINDER_CN_cost_tf/real/Data_degree/StepRatio_%.4f/' % STEPRATIO
+    save_dir_random = '../results/my_FINDER_CN_cost_tf/real/Data_random/StepRatio_%.4f/' % STEPRATIO
     ## begin computing...
 
     for costType in data_test_costType:
@@ -127,8 +127,8 @@ def EvaluateSolution(STEPRATIO, STRTEGYID):
 
 
 def main():
-    #model_file = 'Model_{}/nrange_30_50_iter_400000.ckpt'.format(g_type)
-    model_file = 'nrange_30_50_iter_122100.ckpt'
+    model_file = 'Model_{}/nrange_30_50_iter_400000.ckpt'.format(g_type)
+    #model_file = 'nrange_30_50_iter_122100.ckpt'
     GetSolution(0.01, model_file)
     EvaluateSolution(0.01, 0)
 
