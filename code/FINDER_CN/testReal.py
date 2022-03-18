@@ -20,7 +20,7 @@ def GetSolution(STEPRATIO, MODEL_FILE):
     #data_test_name = ['Digg','HI-II-14']
     data_test_name = ['modified-morPOP-NL-day20']
 
-    model_file = './models/{}'.format(g_type, MODEL_FILE)
+    model_file = './models/{}'.format(MODEL_FILE)
     ## save_dir
     save_dir = '../results/FINDER_CN/real'
     if not os.path.exists(save_dir):
