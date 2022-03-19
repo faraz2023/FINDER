@@ -1,0 +1,2610 @@
+
+generating validation graphs...
+Validation of HDA: 0.3059150557787594
+Validation of HBA: 0.2372666358314551
+
+generating new training graphs...
+iter 0 eps 1.0 average size of vc:  0.3068705881883486
+testing 100 graphs time: 6.89797163s
+500 iterations total time: 6.91002823s
+model has been saved success!
+iter 500 eps 0.9525 average size of vc:  0.31258352212235085
+testing 100 graphs time: 6.56628513s
+500 iterations total time: 17.33929699s
+iter 1000 eps 0.905 average size of vc:  0.30705121245868494
+testing 100 graphs time: 6.24868178s
+500 iterations total time: 17.73851610s
+iter 1500 eps 0.8575 average size of vc:  0.3037971297066901
+testing 100 graphs time: 6.44882965s
+500 iterations total time: 18.75060554s
+iter 2000 eps 0.81 average size of vc:  0.30249445951619697
+testing 100 graphs time: 6.35721350s
+500 iterations total time: 19.80411361s
+iter 2500 eps 0.7625000000000001 average size of vc:  0.3011384313224437
+testing 100 graphs time: 6.56464386s
+500 iterations total time: 20.80169032s
+iter 3000 eps 0.7150000000000001 average size of vc:  0.2999578448168812
+testing 100 graphs time: 6.37296581s
+500 iterations total time: 21.19566194s
+iter 3500 eps 0.6675000000000001 average size of vc:  0.2992904711625696
+testing 100 graphs time: 6.37209010s
+500 iterations total time: 21.93976331s
+iter 4000 eps 0.62 average size of vc:  0.2977103391104848
+testing 100 graphs time: 6.27858067s
+500 iterations total time: 22.53583223s
+iter 4500 eps 0.5725 average size of vc:  0.29681183514280124
+testing 100 graphs time: 6.31740737s
+500 iterations total time: 23.27659311s
+
+generating new training graphs...
+iter 5000 eps 0.525 average size of vc:  0.29214140691712176
+testing 100 graphs time: 6.34339619s
+500 iterations total time: 24.38793950s
+iter 5500 eps 0.4775 average size of vc:  0.29220225922529325
+testing 100 graphs time: 6.24940300s
+500 iterations total time: 25.01070764s
+iter 6000 eps 0.43 average size of vc:  0.2851725138731295
+testing 100 graphs time: 6.09519982s
+500 iterations total time: 25.32156345s
+iter 6500 eps 0.3825 average size of vc:  0.2855601642443561
+testing 100 graphs time: 6.06825829s
+500 iterations total time: 26.12467944s
+iter 7000 eps 0.33499999999999996 average size of vc:  0.2844370363187791
+testing 100 graphs time: 6.07311201s
+500 iterations total time: 26.73083999s
+iter 7500 eps 0.2875 average size of vc:  0.2784224275098144
+testing 100 graphs time: 5.88860965s
+500 iterations total time: 27.26880364s
+iter 8000 eps 0.24 average size of vc:  0.28339953991427363
+testing 100 graphs time: 6.20348358s
+500 iterations total time: 27.98141878s
+iter 8500 eps 0.1925 average size of vc:  0.2771083561853925
+testing 100 graphs time: 5.84357333s
+500 iterations total time: 28.58098402s
+iter 9000 eps 0.14500000000000002 average size of vc:  0.2789747243638597
+testing 100 graphs time: 5.97084785s
+500 iterations total time: 29.14056732s
+iter 9500 eps 0.0975 average size of vc:  0.2797711808821669
+testing 100 graphs time: 5.98989463s
+500 iterations total time: 30.09948545s
+
+generating new training graphs...
+iter 10000 eps 0.05 average size of vc:  0.27853645994764314
+testing 100 graphs time: 6.05474639s
+500 iterations total time: 30.99804381s
+model has been saved success!
+iter 10500 eps 0.05 average size of vc:  0.2759238218797272
+testing 100 graphs time: 5.98166943s
+500 iterations total time: 31.24310142s
+iter 11000 eps 0.05 average size of vc:  0.27530187335499423
+testing 100 graphs time: 5.85744452s
+500 iterations total time: 30.79512566s
+iter 11500 eps 0.05 average size of vc:  0.2755296514522404
+testing 100 graphs time: 5.89936280s
+500 iterations total time: 30.76424120s
+iter 12000 eps 0.05 average size of vc:  0.27490404523449846
+testing 100 graphs time: 5.79524016s
+500 iterations total time: 30.48882601s
+iter 12500 eps 0.05 average size of vc:  0.27278678053259603
+testing 100 graphs time: 5.80079818s
+500 iterations total time: 30.56559130s
+iter 13000 eps 0.05 average size of vc:  0.2674877356072134
+testing 100 graphs time: 5.74557137s
+500 iterations total time: 30.60922310s
+iter 13500 eps 0.05 average size of vc:  0.27366141814418354
+testing 100 graphs time: 5.79499078s
+500 iterations total time: 30.59622443s
+iter 14000 eps 0.05 average size of vc:  0.26808833502922075
+testing 100 graphs time: 5.73488879s
+500 iterations total time: 30.78484029s
+iter 14500 eps 0.05 average size of vc:  0.2667927972663892
+testing 100 graphs time: 5.75176477s
+500 iterations total time: 30.87237359s
+
+generating new training graphs...
+iter 15000 eps 0.05 average size of vc:  0.2693972439518322
+testing 100 graphs time: 5.77616429s
+500 iterations total time: 31.37185985s
+iter 15500 eps 0.05 average size of vc:  0.2685624049726337
+testing 100 graphs time: 5.75510550s
+500 iterations total time: 30.86454643s
+iter 16000 eps 0.05 average size of vc:  0.2632988474653183
+testing 100 graphs time: 5.74633598s
+500 iterations total time: 31.75087976s
+iter 16500 eps 0.05 average size of vc:  0.2654140205146701
+testing 100 graphs time: 5.79273558s
+500 iterations total time: 32.12677642s
+iter 17000 eps 0.05 average size of vc:  0.2726489233730548
+testing 100 graphs time: 5.89402962s
+500 iterations total time: 32.91608048s
+iter 17500 eps 0.05 average size of vc:  0.27020818531366614
+testing 100 graphs time: 5.87218857s
+500 iterations total time: 33.17276392s
+iter 18000 eps 0.05 average size of vc:  0.26896541888911196
+testing 100 graphs time: 5.87776899s
+500 iterations total time: 33.26454043s
+iter 18500 eps 0.05 average size of vc:  0.27126991358679303
+testing 100 graphs time: 5.88379979s
+500 iterations total time: 33.49766526s
+iter 19000 eps 0.05 average size of vc:  0.26447061961774576
+testing 100 graphs time: 5.77189493s
+500 iterations total time: 33.42899105s
+iter 19500 eps 0.05 average size of vc:  0.26877678963830576
+testing 100 graphs time: 5.86799598s
+500 iterations total time: 34.16624321s
+
+generating new training graphs...
+iter 20000 eps 0.05 average size of vc:  0.2678477210121506
+testing 100 graphs time: 6.39257240s
+500 iterations total time: 34.92690517s
+model has been saved success!
+iter 20500 eps 0.05 average size of vc:  0.26764474402437477
+testing 100 graphs time: 5.83456039s
+500 iterations total time: 33.49802124s
+iter 21000 eps 0.05 average size of vc:  0.2647734345155225
+testing 100 graphs time: 5.78077793s
+500 iterations total time: 32.74549947s
+iter 21500 eps 0.05 average size of vc:  0.2656145070811237
+testing 100 graphs time: 5.79463768s
+500 iterations total time: 33.19747765s
+iter 22000 eps 0.05 average size of vc:  0.2649593884051659
+testing 100 graphs time: 5.80535889s
+500 iterations total time: 33.19609549s
+iter 22500 eps 0.05 average size of vc:  0.26451683191296327
+testing 100 graphs time: 5.81597614s
+500 iterations total time: 33.52417524s
+iter 23000 eps 0.05 average size of vc:  0.26539376487553157
+testing 100 graphs time: 5.81481290s
+500 iterations total time: 33.71518426s
+iter 23500 eps 0.05 average size of vc:  0.26721977442861833
+testing 100 graphs time: 5.85163665s
+500 iterations total time: 33.95902083s
+iter 24000 eps 0.05 average size of vc:  0.2638276523982275
+testing 100 graphs time: 5.78527212s
+500 iterations total time: 33.53701631s
+iter 24500 eps 0.05 average size of vc:  0.2649987422800475
+testing 100 graphs time: 5.85706568s
+500 iterations total time: 33.84109143s
+
+generating new training graphs...
+iter 25000 eps 0.05 average size of vc:  0.26427930326194937
+testing 100 graphs time: 5.92487049s
+500 iterations total time: 34.33980422s
+iter 25500 eps 0.05 average size of vc:  0.26571367241844074
+testing 100 graphs time: 5.86726284s
+500 iterations total time: 34.39375780s
+iter 26000 eps 0.05 average size of vc:  0.26344162996896037
+testing 100 graphs time: 5.86404324s
+500 iterations total time: 34.35679757s
+iter 26500 eps 0.05 average size of vc:  0.26458277209717473
+testing 100 graphs time: 5.87574124s
+500 iterations total time: 34.61965947s
+iter 27000 eps 0.05 average size of vc:  0.2642914778172503
+testing 100 graphs time: 5.88273096s
+500 iterations total time: 34.08486370s
+iter 27500 eps 0.05 average size of vc:  0.26524425650339434
+testing 100 graphs time: 5.90216088s
+500 iterations total time: 34.45332351s
+iter 28000 eps 0.05 average size of vc:  0.26624616849622124
+testing 100 graphs time: 5.91213512s
+500 iterations total time: 34.55014331s
+iter 28500 eps 0.05 average size of vc:  0.2651499311758288
+testing 100 graphs time: 5.92049670s
+500 iterations total time: 34.42187851s
+iter 29000 eps 0.05 average size of vc:  0.2673715200434327
+testing 100 graphs time: 5.89837861s
+500 iterations total time: 34.65489817s
+iter 29500 eps 0.05 average size of vc:  0.2658326470159255
+testing 100 graphs time: 5.83884478s
+500 iterations total time: 34.40538644s
+
+generating new training graphs...
+iter 30000 eps 0.05 average size of vc:  0.2646704854123056
+testing 100 graphs time: 5.92455912s
+500 iterations total time: 34.78168168s
+model has been saved success!
+iter 30500 eps 0.05 average size of vc:  0.26605286279934987
+testing 100 graphs time: 5.85123324s
+500 iterations total time: 34.60198094s
+iter 31000 eps 0.05 average size of vc:  0.2639728575128631
+testing 100 graphs time: 5.85947800s
+500 iterations total time: 34.54056252s
+iter 31500 eps 0.05 average size of vc:  0.26632051413898755
+testing 100 graphs time: 5.87835932s
+500 iterations total time: 34.24295704s
+iter 32000 eps 0.05 average size of vc:  0.26625825167668377
+testing 100 graphs time: 5.87170053s
+500 iterations total time: 34.57367806s
+iter 32500 eps 0.05 average size of vc:  0.2667428593104227
+testing 100 graphs time: 5.83779168s
+500 iterations total time: 34.79202543s
+iter 33000 eps 0.05 average size of vc:  0.26410303163425947
+testing 100 graphs time: 5.88734198s
+500 iterations total time: 34.50348570s
+iter 33500 eps 0.05 average size of vc:  0.26460048019020765
+testing 100 graphs time: 5.85950780s
+500 iterations total time: 34.91692734s
+iter 34000 eps 0.05 average size of vc:  0.26640750084730447
+testing 100 graphs time: 5.88792205s
+500 iterations total time: 34.73299184s
+iter 34500 eps 0.05 average size of vc:  0.26683547483455744
+testing 100 graphs time: 5.95825696s
+500 iterations total time: 34.87786801s
+
+generating new training graphs...
+iter 35000 eps 0.05 average size of vc:  0.26496592180913764
+testing 100 graphs time: 5.88835740s
+500 iterations total time: 34.75110352s
+iter 35500 eps 0.05 average size of vc:  0.26413333951738205
+testing 100 graphs time: 5.90669537s
+500 iterations total time: 34.64918767s
+iter 36000 eps 0.05 average size of vc:  0.26621939481855394
+testing 100 graphs time: 5.87290239s
+500 iterations total time: 34.60836091s
+iter 36500 eps 0.05 average size of vc:  0.26409121097925753
+testing 100 graphs time: 5.87040210s
+500 iterations total time: 34.59880538s
+iter 37000 eps 0.05 average size of vc:  0.26510479613060184
+testing 100 graphs time: 5.86310244s
+500 iterations total time: 34.67642604s
+iter 37500 eps 0.05 average size of vc:  0.26505479221230455
+testing 100 graphs time: 5.86015201s
+500 iterations total time: 34.87522421s
+iter 38000 eps 0.05 average size of vc:  0.2667446643953442
+testing 100 graphs time: 5.92471743s
+500 iterations total time: 34.56725449s
+iter 38500 eps 0.05 average size of vc:  0.2660278641025047
+testing 100 graphs time: 6.05578995s
+500 iterations total time: 35.04625498s
+iter 39000 eps 0.05 average size of vc:  0.26444695706600857
+testing 100 graphs time: 5.87159443s
+500 iterations total time: 34.77621669s
+iter 39500 eps 0.05 average size of vc:  0.2656654638867721
+testing 100 graphs time: 5.86694932s
+500 iterations total time: 34.33838206s
+
+generating new training graphs...
+iter 40000 eps 0.05 average size of vc:  0.26971751713338127
+testing 100 graphs time: 5.99463797s
+500 iterations total time: 34.95161964s
+model has been saved success!
+iter 40500 eps 0.05 average size of vc:  0.26385942493981185
+testing 100 graphs time: 5.86626053s
+500 iterations total time: 34.95298164s
+iter 41000 eps 0.05 average size of vc:  0.2633559705414002
+testing 100 graphs time: 5.86543941s
+500 iterations total time: 35.12430027s
+iter 41500 eps 0.05 average size of vc:  0.26635108383998624
+testing 100 graphs time: 5.89719534s
+500 iterations total time: 34.81740601s
+iter 42000 eps 0.05 average size of vc:  0.26427094203121637
+testing 100 graphs time: 5.89371490s
+500 iterations total time: 34.86696665s
+iter 42500 eps 0.05 average size of vc:  0.26735363119843586
+testing 100 graphs time: 5.87726140s
+500 iterations total time: 35.02525992s
+iter 43000 eps 0.05 average size of vc:  0.26297532367920123
+testing 100 graphs time: 5.83699250s
+500 iterations total time: 34.52697593s
+iter 43500 eps 0.05 average size of vc:  0.2654166679546097
+testing 100 graphs time: 5.91496944s
+500 iterations total time: 35.03554240s
+iter 44000 eps 0.05 average size of vc:  0.26359755770325377
+testing 100 graphs time: 5.94924593s
+500 iterations total time: 34.99039757s
+iter 44500 eps 0.05 average size of vc:  0.2674550889204814
+testing 100 graphs time: 5.89949656s
+500 iterations total time: 34.67744829s
+
+generating new training graphs...
+iter 45000 eps 0.05 average size of vc:  0.2683917184042262
+testing 100 graphs time: 5.92817497s
+500 iterations total time: 35.21573180s
+iter 45500 eps 0.05 average size of vc:  0.26513469908315185
+testing 100 graphs time: 5.82825541s
+500 iterations total time: 35.00871785s
+iter 46000 eps 0.05 average size of vc:  0.2643416208282953
+testing 100 graphs time: 5.85951328s
+500 iterations total time: 34.94848314s
+iter 46500 eps 0.05 average size of vc:  0.26688396307129697
+testing 100 graphs time: 5.90256095s
+500 iterations total time: 34.97060395s
+iter 47000 eps 0.05 average size of vc:  0.26474102463772214
+testing 100 graphs time: 5.91995692s
+500 iterations total time: 35.13134368s
+iter 47500 eps 0.05 average size of vc:  0.2649721312090111
+testing 100 graphs time: 5.86892986s
+500 iterations total time: 34.59043356s
+iter 48000 eps 0.05 average size of vc:  0.26598296564110074
+testing 100 graphs time: 5.92224121s
+500 iterations total time: 34.95232540s
+iter 48500 eps 0.05 average size of vc:  0.26762432074845693
+testing 100 graphs time: 5.92695618s
+500 iterations total time: 34.89331860s
+iter 49000 eps 0.05 average size of vc:  0.2645824445775092
+testing 100 graphs time: 5.88206244s
+500 iterations total time: 34.72882272s
+iter 49500 eps 0.05 average size of vc:  0.2661996512567864
+testing 100 graphs time: 5.88242388s
+500 iterations total time: 34.83524653s
+
+generating new training graphs...
+iter 50000 eps 0.05 average size of vc:  0.26416188003771796
+testing 100 graphs time: 5.92418313s
+500 iterations total time: 35.14232796s
+model has been saved success!
+iter 50500 eps 0.05 average size of vc:  0.26863009239332586
+testing 100 graphs time: 5.92140651s
+500 iterations total time: 35.01718149s
+iter 51000 eps 0.05 average size of vc:  0.26487372727473246
+testing 100 graphs time: 5.90013790s
+500 iterations total time: 34.53049719s
+iter 51500 eps 0.05 average size of vc:  0.2646001904470662
+testing 100 graphs time: 5.89952922s
+500 iterations total time: 34.85013031s
+iter 52000 eps 0.05 average size of vc:  0.2637717094964937
+testing 100 graphs time: 5.81534433s
+500 iterations total time: 34.59904408s
+iter 52500 eps 0.05 average size of vc:  0.267157884840906
+testing 100 graphs time: 5.85268688s
+500 iterations total time: 34.35513298s
+iter 53000 eps 0.05 average size of vc:  0.2665293549724067
+testing 100 graphs time: 5.80926681s
+500 iterations total time: 33.98063070s
+iter 53500 eps 0.05 average size of vc:  0.2690606939935243
+testing 100 graphs time: 5.85964036s
+500 iterations total time: 33.82956277s
+iter 54000 eps 0.05 average size of vc:  0.2641432445104107
+testing 100 graphs time: 5.83476639s
+500 iterations total time: 33.83832951s
+iter 54500 eps 0.05 average size of vc:  0.2648165547684735
+testing 100 graphs time: 5.86086798s
+500 iterations total time: 33.70346888s
+
+generating new training graphs...
+iter 55000 eps 0.05 average size of vc:  0.26557318577909783
+testing 100 graphs time: 5.89462709s
+500 iterations total time: 33.81714076s
+iter 55500 eps 0.05 average size of vc:  0.2638288813085695
+testing 100 graphs time: 5.81145787s
+500 iterations total time: 34.27839052s
+iter 56000 eps 0.05 average size of vc:  0.26271355063839646
+testing 100 graphs time: 5.77950716s
+500 iterations total time: 34.23730822s
+iter 56500 eps 0.05 average size of vc:  0.2651949870968268
+testing 100 graphs time: 5.86738539s
+500 iterations total time: 34.47952049s
+iter 57000 eps 0.05 average size of vc:  0.26366088052089587
+testing 100 graphs time: 5.84591317s
+500 iterations total time: 34.48800309s
+iter 57500 eps 0.05 average size of vc:  0.2682963995250769
+testing 100 graphs time: 5.84768224s
+500 iterations total time: 34.47580624s
+iter 58000 eps 0.05 average size of vc:  0.2652295881401791
+testing 100 graphs time: 5.84360051s
+500 iterations total time: 34.48529164s
+iter 58500 eps 0.05 average size of vc:  0.2667330445793576
+testing 100 graphs time: 5.83650184s
+500 iterations total time: 34.56087888s
+iter 59000 eps 0.05 average size of vc:  0.26656960194444573
+testing 100 graphs time: 5.83935642s
+500 iterations total time: 34.51911338s
+iter 59500 eps 0.05 average size of vc:  0.2632618347972728
+testing 100 graphs time: 5.83190918s
+500 iterations total time: 33.68775016s
+
+generating new training graphs...
+iter 60000 eps 0.05 average size of vc:  0.2674411715465691
+testing 100 graphs time: 5.86049151s
+500 iterations total time: 32.83142266s
+model has been saved success!
+iter 60500 eps 0.05 average size of vc:  0.2656932179645684
+testing 100 graphs time: 5.85169935s
+500 iterations total time: 34.81194205s
+iter 61000 eps 0.05 average size of vc:  0.2639964145838911
+testing 100 graphs time: 5.82995725s
+500 iterations total time: 33.32337889s
+iter 61500 eps 0.05 average size of vc:  0.26833989247103784
+testing 100 graphs time: 5.88008785s
+500 iterations total time: 32.55211441s
+iter 62000 eps 0.05 average size of vc:  0.2658296884884421
+testing 100 graphs time: 5.87874150s
+500 iterations total time: 32.88361168s
+iter 62500 eps 0.05 average size of vc:  0.2669077058136896
+testing 100 graphs time: 5.94902873s
+500 iterations total time: 33.06992499s
+iter 63000 eps 0.05 average size of vc:  0.2675868392629466
+testing 100 graphs time: 5.93697572s
+500 iterations total time: 33.22462750s
+iter 63500 eps 0.05 average size of vc:  0.26572572902222286
+testing 100 graphs time: 5.91496778s
+500 iterations total time: 33.48618754s
+iter 64000 eps 0.05 average size of vc:  0.26555908057876876
+testing 100 graphs time: 5.89021778s
+500 iterations total time: 33.48552343s
+iter 64500 eps 0.05 average size of vc:  0.26747341711163847
+testing 100 graphs time: 5.91534591s
+500 iterations total time: 33.38208872s
+
+generating new training graphs...
+iter 65000 eps 0.05 average size of vc:  0.2674640442328233
+testing 100 graphs time: 5.89997864s
+500 iterations total time: 33.94242115s
+iter 65500 eps 0.05 average size of vc:  0.2650966958058376
+testing 100 graphs time: 5.85217524s
+500 iterations total time: 33.98740896s
+iter 66000 eps 0.05 average size of vc:  0.2680635686588973
+testing 100 graphs time: 5.92420769s
+500 iterations total time: 32.62237568s
+iter 66500 eps 0.05 average size of vc:  0.2665263038469872
+testing 100 graphs time: 5.88281131s
+500 iterations total time: 32.54107421s
+iter 67000 eps 0.05 average size of vc:  0.26827699195590166
+testing 100 graphs time: 5.91710043s
+500 iterations total time: 32.95009428s
+iter 67500 eps 0.05 average size of vc:  0.26720114665915445
+testing 100 graphs time: 5.89424777s
+500 iterations total time: 33.21856276s
+iter 68000 eps 0.05 average size of vc:  0.2642198510381065
+testing 100 graphs time: 5.86575603s
+500 iterations total time: 33.39439674s
+iter 68500 eps 0.05 average size of vc:  0.26668290011535856
+testing 100 graphs time: 5.96913362s
+500 iterations total time: 33.40972994s
+iter 69000 eps 0.05 average size of vc:  0.2680655510115821
+testing 100 graphs time: 5.87735891s
+500 iterations total time: 33.42071823s
+iter 69500 eps 0.05 average size of vc:  0.26511947675461023
+testing 100 graphs time: 5.89095426s
+500 iterations total time: 33.85283170s
+
+generating new training graphs...
+iter 70000 eps 0.05 average size of vc:  0.2645892780631586
+testing 100 graphs time: 5.93315840s
+500 iterations total time: 33.89843168s
+model has been saved success!
+iter 70500 eps 0.05 average size of vc:  0.2656436766936169
+testing 100 graphs time: 5.92062044s
+500 iterations total time: 33.96422465s
+iter 71000 eps 0.05 average size of vc:  0.2699936658590821
+testing 100 graphs time: 5.92618299s
+500 iterations total time: 33.68174492s
+iter 71500 eps 0.05 average size of vc:  0.2636033684099222
+testing 100 graphs time: 5.91498661s
+500 iterations total time: 33.48642106s
+iter 72000 eps 0.05 average size of vc:  0.26497159556275535
+testing 100 graphs time: 5.95559669s
+500 iterations total time: 33.74700553s
+iter 72500 eps 0.05 average size of vc:  0.2677853234305267
+testing 100 graphs time: 5.93962860s
+500 iterations total time: 33.52012946s
+iter 73000 eps 0.05 average size of vc:  0.26620008429205394
+testing 100 graphs time: 5.93235731s
+500 iterations total time: 33.86152674s
+iter 73500 eps 0.05 average size of vc:  0.2668208219361869
+testing 100 graphs time: 5.94416165s
+500 iterations total time: 33.81604660s
+iter 74000 eps 0.05 average size of vc:  0.265404573498172
+testing 100 graphs time: 5.94356108s
+500 iterations total time: 33.94026668s
+iter 74500 eps 0.05 average size of vc:  0.26406840622823075
+testing 100 graphs time: 5.91665220s
+500 iterations total time: 33.89516678s
+
+generating new training graphs...
+iter 75000 eps 0.05 average size of vc:  0.2654288722728538
+testing 100 graphs time: 5.97670388s
+500 iterations total time: 34.18010724s
+iter 75500 eps 0.05 average size of vc:  0.2639561536033911
+testing 100 graphs time: 5.92047787s
+500 iterations total time: 34.36843077s
+iter 76000 eps 0.05 average size of vc:  0.2692984123274651
+testing 100 graphs time: 5.96757030s
+500 iterations total time: 34.15432815s
+iter 76500 eps 0.05 average size of vc:  0.26654343073861
+testing 100 graphs time: 5.93695235s
+500 iterations total time: 34.34531949s
+iter 77000 eps 0.05 average size of vc:  0.2667251399487661
+testing 100 graphs time: 5.96649361s
+500 iterations total time: 34.12794231s
+iter 77500 eps 0.05 average size of vc:  0.2642084516763619
+testing 100 graphs time: 5.95694041s
+500 iterations total time: 34.20864227s
+iter 78000 eps 0.05 average size of vc:  0.266760517267614
+testing 100 graphs time: 5.95629311s
+500 iterations total time: 34.41301984s
+iter 78500 eps 0.05 average size of vc:  0.26473857559507513
+testing 100 graphs time: 5.97456145s
+500 iterations total time: 34.24526315s
+iter 79000 eps 0.05 average size of vc:  0.26913302347798457
+testing 100 graphs time: 5.94391537s
+500 iterations total time: 34.16004085s
+iter 79500 eps 0.05 average size of vc:  0.2671677131806278
+testing 100 graphs time: 5.98569202s
+500 iterations total time: 34.49820855s
+
+generating new training graphs...
+iter 80000 eps 0.05 average size of vc:  0.26859950439533287
+testing 100 graphs time: 6.05058002s
+500 iterations total time: 34.49601752s
+model has been saved success!
+iter 80500 eps 0.05 average size of vc:  0.26607628579444925
+testing 100 graphs time: 6.17298508s
+500 iterations total time: 34.33753437s
+iter 81000 eps 0.05 average size of vc:  0.26502273186454817
+testing 100 graphs time: 5.97862315s
+500 iterations total time: 34.36299112s
+iter 81500 eps 0.05 average size of vc:  0.2650410060292361
+testing 100 graphs time: 5.98767686s
+500 iterations total time: 34.58760668s
+iter 82000 eps 0.05 average size of vc:  0.2655316734599766
+testing 100 graphs time: 6.00979495s
+500 iterations total time: 34.25893193s
+iter 82500 eps 0.05 average size of vc:  0.2662021547996931
+testing 100 graphs time: 5.97609258s
+500 iterations total time: 34.18790402s
+iter 83000 eps 0.05 average size of vc:  0.26275302398917594
+testing 100 graphs time: 5.92110181s
+500 iterations total time: 33.92071092s
+iter 83500 eps 0.05 average size of vc:  0.2664586040400105
+testing 100 graphs time: 5.97450876s
+500 iterations total time: 34.25197283s
+iter 84000 eps 0.05 average size of vc:  0.26472861245415386
+testing 100 graphs time: 5.98342419s
+500 iterations total time: 33.98913908s
+iter 84500 eps 0.05 average size of vc:  0.2667130962724493
+testing 100 graphs time: 5.99047160s
+500 iterations total time: 34.28153566s
+
+generating new training graphs...
+iter 85000 eps 0.05 average size of vc:  0.2666788582796858
+testing 100 graphs time: 6.00642610s
+500 iterations total time: 34.73326812s
+iter 85500 eps 0.05 average size of vc:  0.26630176771968844
+testing 100 graphs time: 5.97167587s
+500 iterations total time: 34.28499016s
+iter 86000 eps 0.05 average size of vc:  0.26630407169071985
+testing 100 graphs time: 5.99353361s
+500 iterations total time: 34.33129861s
+iter 86500 eps 0.05 average size of vc:  0.26756294350599014
+testing 100 graphs time: 5.97312617s
+500 iterations total time: 34.27248007s
+iter 87000 eps 0.05 average size of vc:  0.2680524035049279
+testing 100 graphs time: 5.99761224s
+500 iterations total time: 34.30420794s
+iter 87500 eps 0.05 average size of vc:  0.2659479613430504
+testing 100 graphs time: 5.97313213s
+500 iterations total time: 34.41489309s
+iter 88000 eps 0.05 average size of vc:  0.2660879459881895
+testing 100 graphs time: 5.99341750s
+500 iterations total time: 34.34507857s
+iter 88500 eps 0.05 average size of vc:  0.26761231482510234
+testing 100 graphs time: 5.98843980s
+500 iterations total time: 34.62769036s
+iter 89000 eps 0.05 average size of vc:  0.2665553346854986
+testing 100 graphs time: 5.93484402s
+500 iterations total time: 34.75307808s
+iter 89500 eps 0.05 average size of vc:  0.2652797806069814
+testing 100 graphs time: 5.96752000s
+500 iterations total time: 34.54342670s
+
+generating new training graphs...
+iter 90000 eps 0.05 average size of vc:  0.2663427240623966
+testing 100 graphs time: 6.01993704s
+500 iterations total time: 34.65599454s
+model has been saved success!
+iter 90500 eps 0.05 average size of vc:  0.2652060112315561
+testing 100 graphs time: 5.92234015s
+500 iterations total time: 34.41937703s
+iter 91000 eps 0.05 average size of vc:  0.26360823677237916
+testing 100 graphs time: 5.94252348s
+500 iterations total time: 34.34052145s
+iter 91500 eps 0.05 average size of vc:  0.263663237473152
+testing 100 graphs time: 5.96502256s
+500 iterations total time: 34.41718933s
+iter 92000 eps 0.05 average size of vc:  0.26340704215956984
+testing 100 graphs time: 5.94574904s
+500 iterations total time: 34.43590000s
+iter 92500 eps 0.05 average size of vc:  0.2664272623456212
+testing 100 graphs time: 5.93574286s
+500 iterations total time: 34.10121997s
+iter 93000 eps 0.05 average size of vc:  0.2681447487859628
+testing 100 graphs time: 5.96680951s
+500 iterations total time: 34.64246259s
+iter 93500 eps 0.05 average size of vc:  0.2658076307690668
+testing 100 graphs time: 5.95293283s
+500 iterations total time: 34.02670484s
+iter 94000 eps 0.05 average size of vc:  0.26595048617299893
+testing 100 graphs time: 5.95875764s
+500 iterations total time: 34.36484939s
+iter 94500 eps 0.05 average size of vc:  0.26493284577308507
+testing 100 graphs time: 6.00132847s
+500 iterations total time: 34.20342490s
+
+generating new training graphs...
+iter 95000 eps 0.05 average size of vc:  0.2640205907149274
+testing 100 graphs time: 5.96616244s
+500 iterations total time: 34.65167474s
+iter 95500 eps 0.05 average size of vc:  0.2636743686996603
+testing 100 graphs time: 5.97140265s
+500 iterations total time: 34.29196111s
+iter 96000 eps 0.05 average size of vc:  0.26643083214984536
+testing 100 graphs time: 5.97427511s
+500 iterations total time: 34.49917639s
+iter 96500 eps 0.05 average size of vc:  0.266554395465113
+testing 100 graphs time: 5.98062396s
+500 iterations total time: 34.38991823s
+iter 97000 eps 0.05 average size of vc:  0.2655860130494196
+testing 100 graphs time: 5.93477178s
+500 iterations total time: 34.25524612s
+iter 97500 eps 0.05 average size of vc:  0.26653121119756085
+testing 100 graphs time: 5.98170090s
+500 iterations total time: 34.37622973s
+iter 98000 eps 0.05 average size of vc:  0.2640763988567471
+testing 100 graphs time: 5.96775293s
+500 iterations total time: 34.26197249s
+iter 98500 eps 0.05 average size of vc:  0.2659038861950267
+testing 100 graphs time: 5.95292592s
+500 iterations total time: 34.79290430s
+iter 99000 eps 0.05 average size of vc:  0.26934947074596005
+testing 100 graphs time: 5.96273923s
+500 iterations total time: 34.50710251s
+iter 99500 eps 0.05 average size of vc:  0.2640501452131041
+testing 100 graphs time: 5.94642186s
+500 iterations total time: 34.31854721s
+
+generating new training graphs...
+iter 100000 eps 0.05 average size of vc:  0.2657334695485598
+testing 100 graphs time: 5.98644876s
+500 iterations total time: 34.90489983s
+model has been saved success!
+iter 100500 eps 0.05 average size of vc:  0.2641385513584415
+testing 100 graphs time: 5.95550966s
+500 iterations total time: 34.81800819s
+iter 101000 eps 0.05 average size of vc:  0.2680236692742158
+testing 100 graphs time: 5.97949219s
+500 iterations total time: 34.37946196s
+iter 101500 eps 0.05 average size of vc:  0.26770877774443763
+testing 100 graphs time: 5.96503663s
+500 iterations total time: 34.59795565s
+iter 102000 eps 0.05 average size of vc:  0.2664464574880515
+testing 100 graphs time: 5.93509936s
+500 iterations total time: 34.70643260s
+iter 102500 eps 0.05 average size of vc:  0.2678528857302504
+testing 100 graphs time: 5.99955797s
+500 iterations total time: 34.67862490s
+iter 103000 eps 0.05 average size of vc:  0.2651419642830113
+testing 100 graphs time: 5.98314428s
+500 iterations total time: 34.28222982s
+iter 103500 eps 0.05 average size of vc:  0.26771401133163997
+testing 100 graphs time: 5.98350048s
+500 iterations total time: 34.30328284s
+iter 104000 eps 0.05 average size of vc:  0.26548088509064155
+testing 100 graphs time: 5.99935031s
+500 iterations total time: 34.41281307s
+iter 104500 eps 0.05 average size of vc:  0.26792399331366323
+testing 100 graphs time: 5.94501758s
+500 iterations total time: 34.33930658s
+
+generating new training graphs...
+iter 105000 eps 0.05 average size of vc:  0.2642216266514388
+testing 100 graphs time: 5.97768998s
+500 iterations total time: 34.72264103s
+iter 105500 eps 0.05 average size of vc:  0.26572619448150236
+testing 100 graphs time: 5.95537400s
+500 iterations total time: 34.20457815s
+iter 106000 eps 0.05 average size of vc:  0.2689697356559193
+testing 100 graphs time: 6.00929809s
+500 iterations total time: 34.42010768s
+iter 106500 eps 0.05 average size of vc:  0.26572680313213654
+testing 100 graphs time: 5.92297888s
+500 iterations total time: 34.33067470s
+iter 107000 eps 0.05 average size of vc:  0.2664885345781622
+testing 100 graphs time: 5.97913718s
+500 iterations total time: 34.41234695s
+iter 107500 eps 0.05 average size of vc:  0.2651087924161907
+testing 100 graphs time: 6.00633049s
+500 iterations total time: 34.46231763s
+iter 108000 eps 0.05 average size of vc:  0.2671414530823273
+testing 100 graphs time: 5.93404031s
+500 iterations total time: 34.24484090s
+iter 108500 eps 0.05 average size of vc:  0.26702934039137777
+testing 100 graphs time: 5.93364573s
+500 iterations total time: 34.40445196s
+iter 109000 eps 0.05 average size of vc:  0.26552512523753397
+testing 100 graphs time: 5.96426725s
+500 iterations total time: 34.43386330s
+iter 109500 eps 0.05 average size of vc:  0.2639341118006837
+testing 100 graphs time: 5.92110133s
+500 iterations total time: 34.25959374s
+
+generating new training graphs...
+iter 110000 eps 0.05 average size of vc:  0.2691384717521718
+testing 100 graphs time: 6.01024461s
+500 iterations total time: 34.71697043s
+model has been saved success!
+iter 110500 eps 0.05 average size of vc:  0.2647542909119892
+testing 100 graphs time: 5.95334744s
+500 iterations total time: 34.45850671s
+iter 111000 eps 0.05 average size of vc:  0.2659592654123212
+testing 100 graphs time: 5.98453808s
+500 iterations total time: 34.86197530s
+iter 111500 eps 0.05 average size of vc:  0.26669918035953677
+testing 100 graphs time: 5.98624349s
+500 iterations total time: 34.30340663s
+iter 112000 eps 0.05 average size of vc:  0.26555735161387395
+testing 100 graphs time: 5.99956131s
+500 iterations total time: 34.79167747s
+iter 112500 eps 0.05 average size of vc:  0.2657238581960424
+testing 100 graphs time: 6.00865030s
+500 iterations total time: 34.67428915s
+iter 113000 eps 0.05 average size of vc:  0.2680796360985266
+testing 100 graphs time: 5.98142195s
+500 iterations total time: 34.60204791s
+iter 113500 eps 0.05 average size of vc:  0.26636558842328095
+testing 100 graphs time: 5.96713901s
+500 iterations total time: 34.75171559s
+iter 114000 eps 0.05 average size of vc:  0.2649216895023007
+testing 100 graphs time: 5.96583033s
+500 iterations total time: 34.81252989s
+iter 114500 eps 0.05 average size of vc:  0.26882972358130697
+testing 100 graphs time: 5.95761156s
+500 iterations total time: 34.61887867s
+
+generating new training graphs...
+iter 115000 eps 0.05 average size of vc:  0.269592868202644
+testing 100 graphs time: 5.99212909s
+500 iterations total time: 34.87525823s
+iter 115500 eps 0.05 average size of vc:  0.2647121340469754
+testing 100 graphs time: 5.94150209s
+500 iterations total time: 34.05073087s
+iter 116000 eps 0.05 average size of vc:  0.2642521450711479
+testing 100 graphs time: 5.96596479s
+500 iterations total time: 34.08990687s
+iter 116500 eps 0.05 average size of vc:  0.26681008361659353
+testing 100 graphs time: 5.95162678s
+500 iterations total time: 34.23514164s
+iter 117000 eps 0.05 average size of vc:  0.2639393279512279
+testing 100 graphs time: 5.90442276s
+500 iterations total time: 34.32371722s
+iter 117500 eps 0.05 average size of vc:  0.26659132824243065
+testing 100 graphs time: 5.96491170s
+500 iterations total time: 34.14177778s
+iter 118000 eps 0.05 average size of vc:  0.2652195626148031
+testing 100 graphs time: 5.89571142s
+500 iterations total time: 34.36648215s
+iter 118500 eps 0.05 average size of vc:  0.2693051660357101
+testing 100 graphs time: 5.98660398s
+500 iterations total time: 34.38690780s
+iter 119000 eps 0.05 average size of vc:  0.2649877103290665
+testing 100 graphs time: 5.93043494s
+500 iterations total time: 34.03925393s
+iter 119500 eps 0.05 average size of vc:  0.26587337252487026
+testing 100 graphs time: 5.92786527s
+500 iterations total time: 34.29930634s
+
+generating new training graphs...
+iter 120000 eps 0.05 average size of vc:  0.26717480019633494
+testing 100 graphs time: 5.94497895s
+500 iterations total time: 34.41546714s
+model has been saved success!
+iter 120500 eps 0.05 average size of vc:  0.26594599007349096
+testing 100 graphs time: 5.95610404s
+500 iterations total time: 34.56709531s
+iter 121000 eps 0.05 average size of vc:  0.26576139776256374
+testing 100 graphs time: 5.88719416s
+500 iterations total time: 34.16193722s
+iter 121500 eps 0.05 average size of vc:  0.2667511543979345
+testing 100 graphs time: 5.97364926s
+500 iterations total time: 34.35791386s
+iter 122000 eps 0.05 average size of vc:  0.2674654846273184
+testing 100 graphs time: 5.94899774s
+500 iterations total time: 34.64185109s
+iter 122500 eps 0.05 average size of vc:  0.2703054677487654
+testing 100 graphs time: 5.99079418s
+500 iterations total time: 34.47616153s
+iter 123000 eps 0.05 average size of vc:  0.2648529621713353
+testing 100 graphs time: 5.94577265s
+500 iterations total time: 34.37462161s
+iter 123500 eps 0.05 average size of vc:  0.2648432942902219
+testing 100 graphs time: 5.95886445s
+500 iterations total time: 34.27592648s
+iter 124000 eps 0.05 average size of vc:  0.2644536450270419
+testing 100 graphs time: 5.94918084s
+500 iterations total time: 34.26519453s
+iter 124500 eps 0.05 average size of vc:  0.266293214150987
+testing 100 graphs time: 5.94779992s
+500 iterations total time: 34.40394459s
+
+generating new training graphs...
+iter 125000 eps 0.05 average size of vc:  0.2664010899427257
+testing 100 graphs time: 5.97821140s
+500 iterations total time: 34.66933705s
+iter 125500 eps 0.05 average size of vc:  0.2664971151058379
+testing 100 graphs time: 5.93594718s
+500 iterations total time: 34.33173563s
+iter 126000 eps 0.05 average size of vc:  0.2677823551695284
+testing 100 graphs time: 5.98850775s
+500 iterations total time: 34.23708675s
+iter 126500 eps 0.05 average size of vc:  0.2659165920217417
+testing 100 graphs time: 5.95617938s
+500 iterations total time: 34.46071739s
+iter 127000 eps 0.05 average size of vc:  0.2682284557384314
+testing 100 graphs time: 6.02473140s
+500 iterations total time: 34.59248212s
+iter 127500 eps 0.05 average size of vc:  0.2630793566862467
+testing 100 graphs time: 5.97538352s
+500 iterations total time: 34.43326818s
+iter 128000 eps 0.05 average size of vc:  0.2664674487282287
+testing 100 graphs time: 5.96745682s
+500 iterations total time: 34.33772372s
+iter 128500 eps 0.05 average size of vc:  0.2685281484259407
+testing 100 graphs time: 5.98839068s
+500 iterations total time: 34.28271148s
+iter 129000 eps 0.05 average size of vc:  0.2686749824908457
+testing 100 graphs time: 5.94590425s
+500 iterations total time: 34.45930981s
+iter 129500 eps 0.05 average size of vc:  0.2653214078110387
+testing 100 graphs time: 5.99351501s
+500 iterations total time: 34.42687971s
+
+generating new training graphs...
+iter 130000 eps 0.05 average size of vc:  0.2656957845022243
+testing 100 graphs time: 5.98353410s
+500 iterations total time: 34.76123735s
+model has been saved success!
+iter 130500 eps 0.05 average size of vc:  0.26709724026180715
+testing 100 graphs time: 5.96725702s
+500 iterations total time: 34.65154177s
+iter 131000 eps 0.05 average size of vc:  0.2678388963711615
+testing 100 graphs time: 5.99400091s
+500 iterations total time: 34.85768168s
+iter 131500 eps 0.05 average size of vc:  0.26875662564858355
+testing 100 graphs time: 5.96470666s
+500 iterations total time: 34.56454136s
+iter 132000 eps 0.05 average size of vc:  0.26700609207123854
+testing 100 graphs time: 5.92135644s
+500 iterations total time: 34.58934174s
+iter 132500 eps 0.05 average size of vc:  0.26700469995743936
+testing 100 graphs time: 5.97145581s
+500 iterations total time: 34.70176415s
+iter 133000 eps 0.05 average size of vc:  0.26735401221294
+testing 100 graphs time: 6.01821184s
+500 iterations total time: 34.65658742s
+iter 133500 eps 0.05 average size of vc:  0.2685517329078982
+testing 100 graphs time: 5.94685149s
+500 iterations total time: 34.41263093s
+iter 134000 eps 0.05 average size of vc:  0.26964140785471047
+testing 100 graphs time: 5.99301267s
+500 iterations total time: 34.45110702s
+iter 134500 eps 0.05 average size of vc:  0.2702331077900569
+testing 100 graphs time: 6.04363632s
+500 iterations total time: 34.45573395s
+
+generating new training graphs...
+iter 135000 eps 0.05 average size of vc:  0.26628813992837297
+testing 100 graphs time: 6.01025057s
+500 iterations total time: 35.00518984s
+iter 135500 eps 0.05 average size of vc:  0.26549109715496766
+testing 100 graphs time: 6.12208343s
+500 iterations total time: 35.05804408s
+iter 136000 eps 0.05 average size of vc:  0.26783272301722033
+testing 100 graphs time: 5.95277762s
+500 iterations total time: 34.49021029s
+iter 136500 eps 0.05 average size of vc:  0.26868693392520326
+testing 100 graphs time: 5.96477294s
+500 iterations total time: 34.34941199s
+iter 137000 eps 0.05 average size of vc:  0.26407276602987273
+testing 100 graphs time: 5.96844745s
+500 iterations total time: 34.78383164s
+iter 137500 eps 0.05 average size of vc:  0.2628004818732079
+testing 100 graphs time: 5.95847130s
+500 iterations total time: 33.98195328s
+iter 138000 eps 0.05 average size of vc:  0.26835051373673197
+testing 100 graphs time: 5.97167063s
+500 iterations total time: 34.47053675s
+iter 138500 eps 0.05 average size of vc:  0.2653342040721356
+testing 100 graphs time: 5.96682310s
+500 iterations total time: 34.35618949s
+iter 139000 eps 0.05 average size of vc:  0.26405742588516024
+testing 100 graphs time: 5.99656773s
+500 iterations total time: 34.50784598s
+iter 139500 eps 0.05 average size of vc:  0.2680169887399926
+testing 100 graphs time: 6.01304054s
+500 iterations total time: 34.41704141s
+
+generating new training graphs...
+iter 140000 eps 0.05 average size of vc:  0.2661752502781695
+testing 100 graphs time: 6.00171089s
+500 iterations total time: 34.86392852s
+model has been saved success!
+iter 140500 eps 0.05 average size of vc:  0.2658737059754527
+testing 100 graphs time: 5.93575573s
+500 iterations total time: 34.73143113s
+iter 141000 eps 0.05 average size of vc:  0.26588485492783565
+testing 100 graphs time: 5.92519712s
+500 iterations total time: 34.50194619s
+iter 141500 eps 0.05 average size of vc:  0.2685401059726612
+testing 100 graphs time: 6.02631497s
+500 iterations total time: 34.59171589s
+iter 142000 eps 0.05 average size of vc:  0.2661106295741376
+testing 100 graphs time: 5.95806289s
+500 iterations total time: 34.77111561s
+iter 142500 eps 0.05 average size of vc:  0.26609357101708314
+testing 100 graphs time: 5.98513365s
+500 iterations total time: 34.76970707s
+iter 143000 eps 0.05 average size of vc:  0.26932482565263494
+testing 100 graphs time: 5.99894667s
+500 iterations total time: 34.64218067s
+iter 143500 eps 0.05 average size of vc:  0.2648949127751574
+testing 100 graphs time: 5.92456222s
+500 iterations total time: 34.50403976s
+iter 144000 eps 0.05 average size of vc:  0.26548188874479905
+testing 100 graphs time: 5.93025112s
+500 iterations total time: 34.47072643s
+iter 144500 eps 0.05 average size of vc:  0.2663956220476007
+testing 100 graphs time: 5.97865152s
+500 iterations total time: 34.69443274s
+
+generating new training graphs...
+iter 145000 eps 0.05 average size of vc:  0.2670523920722639
+testing 100 graphs time: 6.02351522s
+500 iterations total time: 35.16100667s
+iter 145500 eps 0.05 average size of vc:  0.2694669400509453
+testing 100 graphs time: 6.01062346s
+500 iterations total time: 34.55967569s
+iter 146000 eps 0.05 average size of vc:  0.26440687150325
+testing 100 graphs time: 5.98136830s
+500 iterations total time: 34.59498567s
+iter 146500 eps 0.05 average size of vc:  0.2682621210358236
+testing 100 graphs time: 5.95670414s
+500 iterations total time: 34.64729855s
+iter 147000 eps 0.05 average size of vc:  0.2672614418508741
+testing 100 graphs time: 5.99047923s
+500 iterations total time: 34.54680830s
+iter 147500 eps 0.05 average size of vc:  0.268026416795388
+testing 100 graphs time: 5.98870921s
+500 iterations total time: 34.37081281s
+iter 148000 eps 0.05 average size of vc:  0.2646670593004013
+testing 100 graphs time: 5.94237447s
+500 iterations total time: 34.37238345s
+iter 148500 eps 0.05 average size of vc:  0.26723427402869815
+testing 100 graphs time: 5.96344042s
+500 iterations total time: 34.67315139s
+iter 149000 eps 0.05 average size of vc:  0.2655528706206083
+testing 100 graphs time: 5.92473912s
+500 iterations total time: 34.65992460s
+iter 149500 eps 0.05 average size of vc:  0.2637648147492501
+testing 100 graphs time: 5.93890047s
+500 iterations total time: 34.27346665s
+
+generating new training graphs...
+iter 150000 eps 0.05 average size of vc:  0.2659940096343469
+testing 100 graphs time: 5.95891094s
+500 iterations total time: 34.71085054s
+model has been saved success!
+iter 150500 eps 0.05 average size of vc:  0.266668476948435
+testing 100 graphs time: 5.98546386s
+500 iterations total time: 34.70006590s
+iter 151000 eps 0.05 average size of vc:  0.26508054747297916
+testing 100 graphs time: 5.94004726s
+500 iterations total time: 34.29700154s
+iter 151500 eps 0.05 average size of vc:  0.26581992953857947
+testing 100 graphs time: 5.94098234s
+500 iterations total time: 34.32937539s
+iter 152000 eps 0.05 average size of vc:  0.26533583429636015
+testing 100 graphs time: 5.97723770s
+500 iterations total time: 34.31216183s
+iter 152500 eps 0.05 average size of vc:  0.2673444224908048
+testing 100 graphs time: 5.97695279s
+500 iterations total time: 34.53662176s
+iter 153000 eps 0.05 average size of vc:  0.26684317688972975
+testing 100 graphs time: 6.02194309s
+500 iterations total time: 34.60710626s
+iter 153500 eps 0.05 average size of vc:  0.26474271677478195
+testing 100 graphs time: 6.00343323s
+500 iterations total time: 34.38199064s
+iter 154000 eps 0.05 average size of vc:  0.2652864305800857
+testing 100 graphs time: 5.97764039s
+500 iterations total time: 34.38290537s
+iter 154500 eps 0.05 average size of vc:  0.26806323450523306
+testing 100 graphs time: 5.99872255s
+500 iterations total time: 34.45206102s
+
+generating new training graphs...
+iter 155000 eps 0.05 average size of vc:  0.2647876694603956
+testing 100 graphs time: 6.00882244s
+500 iterations total time: 34.92935067s
+iter 155500 eps 0.05 average size of vc:  0.267202172047947
+testing 100 graphs time: 5.98741984s
+500 iterations total time: 34.24365022s
+iter 156000 eps 0.05 average size of vc:  0.2651388856842293
+testing 100 graphs time: 5.97853446s
+500 iterations total time: 34.90392845s
+iter 156500 eps 0.05 average size of vc:  0.26218824235283295
+testing 100 graphs time: 5.94176316s
+500 iterations total time: 34.56957506s
+iter 157000 eps 0.05 average size of vc:  0.26592404349294746
+testing 100 graphs time: 5.96080732s
+500 iterations total time: 34.77306989s
+iter 157500 eps 0.05 average size of vc:  0.2676496445034647
+testing 100 graphs time: 5.94557500s
+500 iterations total time: 34.52861636s
+iter 158000 eps 0.05 average size of vc:  0.26756681057133047
+testing 100 graphs time: 5.95199561s
+500 iterations total time: 34.21303987s
+iter 158500 eps 0.05 average size of vc:  0.26968951314977635
+testing 100 graphs time: 5.99644279s
+500 iterations total time: 34.76711644s
+iter 159000 eps 0.05 average size of vc:  0.26491627699717013
+testing 100 graphs time: 5.91003036s
+500 iterations total time: 34.42217038s
+iter 159500 eps 0.05 average size of vc:  0.26489780200527596
+testing 100 graphs time: 5.98766565s
+500 iterations total time: 34.25611537s
+
+generating new training graphs...
+iter 160000 eps 0.05 average size of vc:  0.26693396890696586
+testing 100 graphs time: 6.01457381s
+500 iterations total time: 34.65949431s
+model has been saved success!
+iter 160500 eps 0.05 average size of vc:  0.26614809262590183
+testing 100 graphs time: 5.99707389s
+500 iterations total time: 34.77223491s
+iter 161000 eps 0.05 average size of vc:  0.266402183401367
+testing 100 graphs time: 5.98279142s
+500 iterations total time: 34.72034148s
+iter 161500 eps 0.05 average size of vc:  0.26595575381008424
+testing 100 graphs time: 6.00936103s
+500 iterations total time: 34.54212385s
+iter 162000 eps 0.05 average size of vc:  0.2687388926379799
+testing 100 graphs time: 6.01396012s
+500 iterations total time: 34.61724862s
+iter 162500 eps 0.05 average size of vc:  0.26619098160473903
+testing 100 graphs time: 5.97978306s
+500 iterations total time: 34.37207754s
+iter 163000 eps 0.05 average size of vc:  0.2634803572303017
+testing 100 graphs time: 5.95335412s
+500 iterations total time: 34.08457589s
+iter 163500 eps 0.05 average size of vc:  0.2688113333243879
+testing 100 graphs time: 6.00854802s
+500 iterations total time: 34.53640905s
+iter 164000 eps 0.05 average size of vc:  0.26530699167622124
+testing 100 graphs time: 5.98343015s
+500 iterations total time: 34.32811812s
+iter 164500 eps 0.05 average size of vc:  0.26543695252625554
+testing 100 graphs time: 5.96398354s
+500 iterations total time: 34.45620524s
+
+generating new training graphs...
+iter 165000 eps 0.05 average size of vc:  0.26497909286165694
+testing 100 graphs time: 5.98404884s
+500 iterations total time: 34.62534803s
+iter 165500 eps 0.05 average size of vc:  0.26510864441395865
+testing 100 graphs time: 5.90425491s
+500 iterations total time: 34.51756854s
+iter 166000 eps 0.05 average size of vc:  0.2663331407990639
+testing 100 graphs time: 5.96807218s
+500 iterations total time: 34.67699753s
+iter 166500 eps 0.05 average size of vc:  0.26568440681503913
+testing 100 graphs time: 5.93801355s
+500 iterations total time: 34.45201414s
+iter 167000 eps 0.05 average size of vc:  0.2645361902276621
+testing 100 graphs time: 5.95976090s
+500 iterations total time: 34.91344958s
+iter 167500 eps 0.05 average size of vc:  0.26551007216336264
+testing 100 graphs time: 5.96408868s
+500 iterations total time: 34.70475543s
+iter 168000 eps 0.05 average size of vc:  0.26830123038255954
+testing 100 graphs time: 5.97618151s
+500 iterations total time: 34.65519637s
+iter 168500 eps 0.05 average size of vc:  0.26434954560954826
+testing 100 graphs time: 5.98963475s
+500 iterations total time: 34.32850657s
+iter 169000 eps 0.05 average size of vc:  0.2672264211030556
+testing 100 graphs time: 5.99379301s
+500 iterations total time: 34.54887566s
+iter 169500 eps 0.05 average size of vc:  0.26702595947421315
+testing 100 graphs time: 5.98528576s
+500 iterations total time: 34.60168992s
+
+generating new training graphs...
+iter 170000 eps 0.05 average size of vc:  0.2687723572709425
+testing 100 graphs time: 5.99590135s
+500 iterations total time: 34.64535821s
+model has been saved success!
+iter 170500 eps 0.05 average size of vc:  0.26631175439245813
+testing 100 graphs time: 5.99144769s
+500 iterations total time: 34.91083021s
+iter 171000 eps 0.05 average size of vc:  0.2692052929403339
+testing 100 graphs time: 6.00885129s
+500 iterations total time: 34.68091018s
+iter 171500 eps 0.05 average size of vc:  0.26879031977648105
+testing 100 graphs time: 6.04335380s
+500 iterations total time: 34.49904486s
+iter 172000 eps 0.05 average size of vc:  0.26753948337114203
+testing 100 graphs time: 5.97862196s
+500 iterations total time: 34.81777099s
+iter 172500 eps 0.05 average size of vc:  0.26552622402890197
+testing 100 graphs time: 5.97716355s
+500 iterations total time: 34.81425294s
+iter 173000 eps 0.05 average size of vc:  0.2681800306474076
+testing 100 graphs time: 5.99696732s
+500 iterations total time: 34.80356065s
+iter 173500 eps 0.05 average size of vc:  0.2682454762239987
+testing 100 graphs time: 5.98735094s
+500 iterations total time: 34.61148807s
+iter 174000 eps 0.05 average size of vc:  0.2689064322887558
+testing 100 graphs time: 5.97401977s
+500 iterations total time: 34.71490017s
+iter 174500 eps 0.05 average size of vc:  0.26832089963414024
+testing 100 graphs time: 6.00422001s
+500 iterations total time: 35.11777262s
+
+generating new training graphs...
+iter 175000 eps 0.05 average size of vc:  0.265703819874133
+testing 100 graphs time: 6.01421618s
+500 iterations total time: 35.31959343s
+iter 175500 eps 0.05 average size of vc:  0.26694335140746117
+testing 100 graphs time: 5.95493531s
+500 iterations total time: 34.50832038s
+iter 176000 eps 0.05 average size of vc:  0.2679156900964311
+testing 100 graphs time: 5.97928548s
+500 iterations total time: 34.54582185s
+iter 176500 eps 0.05 average size of vc:  0.26623225166695547
+testing 100 graphs time: 5.98634744s
+500 iterations total time: 34.72751391s
+iter 177000 eps 0.05 average size of vc:  0.26728443945010527
+testing 100 graphs time: 5.95097065s
+500 iterations total time: 34.15248988s
+iter 177500 eps 0.05 average size of vc:  0.26701693771100327
+testing 100 graphs time: 5.98300052s
+500 iterations total time: 34.59948238s
+iter 178000 eps 0.05 average size of vc:  0.26534105532275215
+testing 100 graphs time: 5.94603801s
+500 iterations total time: 34.29737443s
+iter 178500 eps 0.05 average size of vc:  0.2669414249588911
+testing 100 graphs time: 5.96890163s
+500 iterations total time: 34.34698508s
+iter 179000 eps 0.05 average size of vc:  0.26734782354908015
+testing 100 graphs time: 5.98150015s
+500 iterations total time: 34.28145138s
+iter 179500 eps 0.05 average size of vc:  0.26711833468281737
+testing 100 graphs time: 5.99017715s
+500 iterations total time: 34.36118831s
+
+generating new training graphs...
+iter 180000 eps 0.05 average size of vc:  0.26740743908547165
+testing 100 graphs time: 6.01444387s
+500 iterations total time: 34.77332822s
+model has been saved success!
+iter 180500 eps 0.05 average size of vc:  0.26782225592677844
+testing 100 graphs time: 5.97094107s
+500 iterations total time: 35.09943502s
+iter 181000 eps 0.05 average size of vc:  0.2645462065208679
+testing 100 graphs time: 5.94904518s
+500 iterations total time: 34.93313138s
+iter 181500 eps 0.05 average size of vc:  0.2672132294893785
+testing 100 graphs time: 5.96964598s
+500 iterations total time: 34.91280933s
+iter 182000 eps 0.05 average size of vc:  0.2659843280634784
+testing 100 graphs time: 5.95760536s
+500 iterations total time: 34.93729045s
+iter 182500 eps 0.05 average size of vc:  0.2654077401778384
+testing 100 graphs time: 5.99968100s
+500 iterations total time: 34.97953409s
+iter 183000 eps 0.05 average size of vc:  0.2666079093978311
+testing 100 graphs time: 5.99778938s
+500 iterations total time: 35.18556937s
+iter 183500 eps 0.05 average size of vc:  0.2658859513888512
+testing 100 graphs time: 6.00151539s
+500 iterations total time: 35.15073437s
+iter 184000 eps 0.05 average size of vc:  0.2665645607864966
+testing 100 graphs time: 5.96920180s
+500 iterations total time: 35.09163069s
+iter 184500 eps 0.05 average size of vc:  0.26667129685733804
+testing 100 graphs time: 6.02314520s
+500 iterations total time: 35.06970826s
+
+generating new training graphs...
+iter 185000 eps 0.05 average size of vc:  0.2677674447412488
+testing 100 graphs time: 6.06135678s
+500 iterations total time: 35.10614510s
+iter 185500 eps 0.05 average size of vc:  0.26686729403613907
+testing 100 graphs time: 6.02763176s
+500 iterations total time: 34.67752338s
+iter 186000 eps 0.05 average size of vc:  0.2670111835702199
+testing 100 graphs time: 6.00557637s
+500 iterations total time: 34.62561885s
+iter 186500 eps 0.05 average size of vc:  0.263858227543238
+testing 100 graphs time: 5.99998093s
+500 iterations total time: 34.76458604s
+iter 187000 eps 0.05 average size of vc:  0.26485618096410596
+testing 100 graphs time: 5.97204995s
+500 iterations total time: 34.50900420s
+iter 187500 eps 0.05 average size of vc:  0.26919170730810565
+testing 100 graphs time: 6.01924324s
+500 iterations total time: 34.53967128s
+iter 188000 eps 0.05 average size of vc:  0.26551881894059454
+testing 100 graphs time: 6.00857997s
+500 iterations total time: 34.66827709s
+iter 188500 eps 0.05 average size of vc:  0.2671493951327982
+testing 100 graphs time: 5.98892117s
+500 iterations total time: 34.69062811s
+iter 189000 eps 0.05 average size of vc:  0.2669723091536509
+testing 100 graphs time: 5.95515919s
+500 iterations total time: 34.45215901s
+iter 189500 eps 0.05 average size of vc:  0.26508946068023687
+testing 100 graphs time: 5.97787380s
+500 iterations total time: 34.62981721s
+
+generating new training graphs...
+iter 190000 eps 0.05 average size of vc:  0.2665720164875785
+testing 100 graphs time: 5.94021177s
+500 iterations total time: 35.01982323s
+model has been saved success!
+iter 190500 eps 0.05 average size of vc:  0.26431841684610596
+testing 100 graphs time: 5.97380710s
+500 iterations total time: 34.96625336s
+iter 191000 eps 0.05 average size of vc:  0.2644735691636034
+testing 100 graphs time: 6.00111151s
+500 iterations total time: 34.71406334s
+iter 191500 eps 0.05 average size of vc:  0.26628629764461237
+testing 100 graphs time: 5.97261310s
+500 iterations total time: 34.54050861s
+iter 192000 eps 0.05 average size of vc:  0.2662616593489338
+testing 100 graphs time: 6.00467110s
+500 iterations total time: 34.51178427s
+iter 192500 eps 0.05 average size of vc:  0.26534107635130416
+testing 100 graphs time: 6.00218415s
+500 iterations total time: 34.54550149s
+iter 193000 eps 0.05 average size of vc:  0.263983415195151
+testing 100 graphs time: 5.99746656s
+500 iterations total time: 34.55276873s
+iter 193500 eps 0.05 average size of vc:  0.26671804658255793
+testing 100 graphs time: 5.99352908s
+500 iterations total time: 34.73170211s
+iter 194000 eps 0.05 average size of vc:  0.2657501284471612
+testing 100 graphs time: 5.92205095s
+500 iterations total time: 34.18785017s
+iter 194500 eps 0.05 average size of vc:  0.26753125714917564
+testing 100 graphs time: 5.98571515s
+500 iterations total time: 34.66359776s
+
+generating new training graphs...
+iter 195000 eps 0.05 average size of vc:  0.26384298884028856
+testing 100 graphs time: 6.05757546s
+500 iterations total time: 34.93228528s
+iter 195500 eps 0.05 average size of vc:  0.26608914138671325
+testing 100 graphs time: 5.95365763s
+500 iterations total time: 34.31491710s
+iter 196000 eps 0.05 average size of vc:  0.2663830225892402
+testing 100 graphs time: 5.96619201s
+500 iterations total time: 34.42959975s
+iter 196500 eps 0.05 average size of vc:  0.26615004797656266
+testing 100 graphs time: 5.95540237s
+500 iterations total time: 34.50080491s
+iter 197000 eps 0.05 average size of vc:  0.2655367397100987
+testing 100 graphs time: 5.91967511s
+500 iterations total time: 34.16737114s
+iter 197500 eps 0.05 average size of vc:  0.2669824477516778
+testing 100 graphs time: 5.97208452s
+500 iterations total time: 34.32891001s
+iter 198000 eps 0.05 average size of vc:  0.2681959111016362
+testing 100 graphs time: 5.98427439s
+500 iterations total time: 34.48899210s
+iter 198500 eps 0.05 average size of vc:  0.2661272729463687
+testing 100 graphs time: 5.95251894s
+500 iterations total time: 34.44478176s
+iter 199000 eps 0.05 average size of vc:  0.2664784897842411
+testing 100 graphs time: 5.96293330s
+500 iterations total time: 34.28430850s
+iter 199500 eps 0.05 average size of vc:  0.2645355031772031
+testing 100 graphs time: 5.99415565s
+500 iterations total time: 34.58395558s
+
+generating new training graphs...
+iter 200000 eps 0.05 average size of vc:  0.26541770687355704
+testing 100 graphs time: 6.04983425s
+500 iterations total time: 34.60537207s
+model has been saved success!
+iter 200500 eps 0.05 average size of vc:  0.2681121160880824
+testing 100 graphs time: 5.94699955s
+500 iterations total time: 34.42850044s
+iter 201000 eps 0.05 average size of vc:  0.26759566894587683
+testing 100 graphs time: 5.96320677s
+500 iterations total time: 34.50399473s
+iter 201500 eps 0.05 average size of vc:  0.2663442035136836
+testing 100 graphs time: 5.96102691s
+500 iterations total time: 34.62680891s
+iter 202000 eps 0.05 average size of vc:  0.26528016939565097
+testing 100 graphs time: 5.95750046s
+500 iterations total time: 34.62898593s
+iter 202500 eps 0.05 average size of vc:  0.2668363622089035
+testing 100 graphs time: 5.95270348s
+500 iterations total time: 34.41519777s
+iter 203000 eps 0.05 average size of vc:  0.26364076651657986
+testing 100 graphs time: 5.93383908s
+500 iterations total time: 34.63341698s
+iter 203500 eps 0.05 average size of vc:  0.2645779879696091
+testing 100 graphs time: 5.95693374s
+500 iterations total time: 34.27463211s
+iter 204000 eps 0.05 average size of vc:  0.26629488160195364
+testing 100 graphs time: 5.99943781s
+500 iterations total time: 34.48905847s
+iter 204500 eps 0.05 average size of vc:  0.26559176975852944
+testing 100 graphs time: 5.95554352s
+500 iterations total time: 34.53774942s
+
+generating new training graphs...
+iter 205000 eps 0.05 average size of vc:  0.2664747783927899
+testing 100 graphs time: 5.97298717s
+500 iterations total time: 34.58440985s
+iter 205500 eps 0.05 average size of vc:  0.2663963182831997
+testing 100 graphs time: 5.99278426s
+500 iterations total time: 34.64771605s
+iter 206000 eps 0.05 average size of vc:  0.26456267892795454
+testing 100 graphs time: 5.99179149s
+500 iterations total time: 34.52930303s
+iter 206500 eps 0.05 average size of vc:  0.2663218123545379
+testing 100 graphs time: 5.94145870s
+500 iterations total time: 34.60595232s
+iter 207000 eps 0.05 average size of vc:  0.2665388169291822
+testing 100 graphs time: 5.95272136s
+500 iterations total time: 34.60131532s
+iter 207500 eps 0.05 average size of vc:  0.26542168507265407
+testing 100 graphs time: 6.01366687s
+500 iterations total time: 34.84253836s
+iter 208000 eps 0.05 average size of vc:  0.2666563469926443
+testing 100 graphs time: 6.00533032s
+500 iterations total time: 34.54795356s
+iter 208500 eps 0.05 average size of vc:  0.26606464579438893
+testing 100 graphs time: 5.95274425s
+500 iterations total time: 34.42726436s
+iter 209000 eps 0.05 average size of vc:  0.26467455124338435
+testing 100 graphs time: 5.95027971s
+500 iterations total time: 35.00023577s
+iter 209500 eps 0.05 average size of vc:  0.26634611736247504
+testing 100 graphs time: 5.98270464s
+500 iterations total time: 34.43522662s
+
+generating new training graphs...
+iter 210000 eps 0.05 average size of vc:  0.2682080109145321
+testing 100 graphs time: 6.02216053s
+500 iterations total time: 35.05266341s
+model has been saved success!
+iter 210500 eps 0.05 average size of vc:  0.26691078332635443
+testing 100 graphs time: 5.99683046s
+500 iterations total time: 34.90766118s
+iter 211000 eps 0.05 average size of vc:  0.26760583972366603
+testing 100 graphs time: 5.92008185s
+500 iterations total time: 34.73701449s
+iter 211500 eps 0.05 average size of vc:  0.2682808533821525
+testing 100 graphs time: 5.98248744s
+500 iterations total time: 34.79896680s
+iter 212000 eps 0.05 average size of vc:  0.2667902706903345
+testing 100 graphs time: 5.96602321s
+500 iterations total time: 34.87669214s
+iter 212500 eps 0.05 average size of vc:  0.26585701955565894
+testing 100 graphs time: 5.97313643s
+500 iterations total time: 34.76840675s
+iter 213000 eps 0.05 average size of vc:  0.2680631419965252
+testing 100 graphs time: 5.94556451s
+500 iterations total time: 35.01974398s
+iter 213500 eps 0.05 average size of vc:  0.2659867406796297
+testing 100 graphs time: 5.99047804s
+500 iterations total time: 35.08547711s
+iter 214000 eps 0.05 average size of vc:  0.2664247535023414
+testing 100 graphs time: 6.00011396s
+500 iterations total time: 34.99273549s
+iter 214500 eps 0.05 average size of vc:  0.2667565168300955
+testing 100 graphs time: 5.97669816s
+500 iterations total time: 34.84600157s
+
+generating new training graphs...
+iter 215000 eps 0.05 average size of vc:  0.2665044960238707
+testing 100 graphs time: 6.02404737s
+500 iterations total time: 35.24481766s
+iter 215500 eps 0.05 average size of vc:  0.2668753720738198
+testing 100 graphs time: 6.01556873s
+500 iterations total time: 35.01818634s
+iter 216000 eps 0.05 average size of vc:  0.26462568202627834
+testing 100 graphs time: 5.95200038s
+500 iterations total time: 34.90457630s
+iter 216500 eps 0.05 average size of vc:  0.26498191822924577
+testing 100 graphs time: 5.98877859s
+500 iterations total time: 34.88997654s
+iter 217000 eps 0.05 average size of vc:  0.26894121943820354
+testing 100 graphs time: 6.00243211s
+500 iterations total time: 34.96966624s
+iter 217500 eps 0.05 average size of vc:  0.2658698056260867
+testing 100 graphs time: 5.97689104s
+500 iterations total time: 34.99021580s
+iter 218000 eps 0.05 average size of vc:  0.26591809425193286
+testing 100 graphs time: 5.94833183s
+500 iterations total time: 34.82009140s
+iter 218500 eps 0.05 average size of vc:  0.2681478505559917
+testing 100 graphs time: 6.00104165s
+500 iterations total time: 34.74960610s
+iter 219000 eps 0.05 average size of vc:  0.2639100736771189
+testing 100 graphs time: 5.94784737s
+500 iterations total time: 34.79905678s
+iter 219500 eps 0.05 average size of vc:  0.2656979752699781
+testing 100 graphs time: 5.96557474s
+500 iterations total time: 34.76900491s
+
+generating new training graphs...
+iter 220000 eps 0.05 average size of vc:  0.26487661221145414
+testing 100 graphs time: 5.98280859s
+500 iterations total time: 35.30506044s
+model has been saved success!
+iter 220500 eps 0.05 average size of vc:  0.2662354048180632
+testing 100 graphs time: 5.95805025s
+500 iterations total time: 34.69703198s
+iter 221000 eps 0.05 average size of vc:  0.2663411764348329
+testing 100 graphs time: 5.93621016s
+500 iterations total time: 34.51570941s
+iter 221500 eps 0.05 average size of vc:  0.2651557832206619
+testing 100 graphs time: 5.98109794s
+500 iterations total time: 34.72933653s
+iter 222000 eps 0.05 average size of vc:  0.2670253448335437
+testing 100 graphs time: 5.89951491s
+500 iterations total time: 34.65866742s
+iter 222500 eps 0.05 average size of vc:  0.2659435398820574
+testing 100 graphs time: 5.98518443s
+500 iterations total time: 34.61641675s
+iter 223000 eps 0.05 average size of vc:  0.264721108837326
+testing 100 graphs time: 6.02563286s
+500 iterations total time: 34.49162328s
+iter 223500 eps 0.05 average size of vc:  0.26607289034296583
+testing 100 graphs time: 5.95569444s
+500 iterations total time: 34.43329529s
+iter 224000 eps 0.05 average size of vc:  0.26604901919960333
+testing 100 graphs time: 5.98324203s
+500 iterations total time: 34.71003708s
+iter 224500 eps 0.05 average size of vc:  0.26355733878607684
+testing 100 graphs time: 5.96845508s
+500 iterations total time: 34.69973171s
+
+generating new training graphs...
+iter 225000 eps 0.05 average size of vc:  0.2652467030410736
+testing 100 graphs time: 6.07680011s
+500 iterations total time: 35.38160671s
+iter 225500 eps 0.05 average size of vc:  0.26755081639532047
+testing 100 graphs time: 5.99807310s
+500 iterations total time: 35.01930879s
+iter 226000 eps 0.05 average size of vc:  0.2668328846836033
+testing 100 graphs time: 5.91998029s
+500 iterations total time: 34.80120710s
+iter 226500 eps 0.05 average size of vc:  0.26920175203972974
+testing 100 graphs time: 6.00406575s
+500 iterations total time: 34.74994983s
+iter 227000 eps 0.05 average size of vc:  0.26616142995391057
+testing 100 graphs time: 5.96665239s
+500 iterations total time: 34.90847778s
+iter 227500 eps 0.05 average size of vc:  0.2679763768319871
+testing 100 graphs time: 5.94187498s
+500 iterations total time: 34.67355751s
+iter 228000 eps 0.05 average size of vc:  0.2664324819448358
+testing 100 graphs time: 5.95755529s
+500 iterations total time: 35.20313885s
+iter 228500 eps 0.05 average size of vc:  0.2646962574684276
+testing 100 graphs time: 6.01039958s
+500 iterations total time: 35.09197511s
+iter 229000 eps 0.05 average size of vc:  0.26378645487735475
+testing 100 graphs time: 5.97608376s
+500 iterations total time: 35.02138854s
+iter 229500 eps 0.05 average size of vc:  0.2672768412515757
+testing 100 graphs time: 5.96945572s
+500 iterations total time: 34.79581131s
+
+generating new training graphs...
+iter 230000 eps 0.05 average size of vc:  0.26639411077040487
+testing 100 graphs time: 6.04680824s
+500 iterations total time: 35.18527348s
+model has been saved success!
+iter 230500 eps 0.05 average size of vc:  0.26632611638643794
+testing 100 graphs time: 5.95499015s
+500 iterations total time: 34.82696631s
+iter 231000 eps 0.05 average size of vc:  0.2638457358245647
+testing 100 graphs time: 5.95637178s
+500 iterations total time: 34.60869526s
+iter 231500 eps 0.05 average size of vc:  0.2664543466353301
+testing 100 graphs time: 5.99754429s
+500 iterations total time: 34.59993343s
+iter 232000 eps 0.05 average size of vc:  0.27105522131995424
+testing 100 graphs time: 6.02227783s
+500 iterations total time: 34.69172071s
+iter 232500 eps 0.05 average size of vc:  0.2674202149936076
+testing 100 graphs time: 5.99158454s
+500 iterations total time: 34.75648241s
+iter 233000 eps 0.05 average size of vc:  0.2661575715602429
+testing 100 graphs time: 5.95064163s
+500 iterations total time: 34.71527872s
+iter 233500 eps 0.05 average size of vc:  0.26751283782521545
+testing 100 graphs time: 5.94877195s
+500 iterations total time: 34.58210132s
+iter 234000 eps 0.05 average size of vc:  0.26860902902330974
+testing 100 graphs time: 5.95814562s
+500 iterations total time: 34.75079805s
+iter 234500 eps 0.05 average size of vc:  0.26631728082057776
+testing 100 graphs time: 5.96069717s
+500 iterations total time: 34.79843745s
+
+generating new training graphs...
+iter 235000 eps 0.05 average size of vc:  0.26711525753136217
+testing 100 graphs time: 5.96194410s
+500 iterations total time: 35.00180667s
+iter 235500 eps 0.05 average size of vc:  0.26700495169427174
+testing 100 graphs time: 5.98763561s
+500 iterations total time: 34.85112302s
+iter 236000 eps 0.05 average size of vc:  0.26858529979584383
+testing 100 graphs time: 5.99907923s
+500 iterations total time: 34.78432725s
+iter 236500 eps 0.05 average size of vc:  0.26748075877047506
+testing 100 graphs time: 5.98348022s
+500 iterations total time: 34.96772889s
+iter 237000 eps 0.05 average size of vc:  0.267880280797273
+testing 100 graphs time: 5.97600365s
+500 iterations total time: 34.97256902s
+iter 237500 eps 0.05 average size of vc:  0.26827056099862806
+testing 100 graphs time: 5.95520377s
+500 iterations total time: 34.46699545s
+iter 238000 eps 0.05 average size of vc:  0.2665410198919198
+testing 100 graphs time: 5.99518347s
+500 iterations total time: 34.40812285s
+iter 238500 eps 0.05 average size of vc:  0.268305049091452
+testing 100 graphs time: 5.96977496s
+500 iterations total time: 34.68306621s
+iter 239000 eps 0.05 average size of vc:  0.2669450694592877
+testing 100 graphs time: 5.95103788s
+500 iterations total time: 34.86201218s
+iter 239500 eps 0.05 average size of vc:  0.26530737549306127
+testing 100 graphs time: 5.95935893s
+500 iterations total time: 34.65341159s
+
+generating new training graphs...
+iter 240000 eps 0.05 average size of vc:  0.26598821431280795
+testing 100 graphs time: 6.00177836s
+500 iterations total time: 35.14483771s
+model has been saved success!
+iter 240500 eps 0.05 average size of vc:  0.2659189032932183
+testing 100 graphs time: 6.01047659s
+500 iterations total time: 35.14374060s
+iter 241000 eps 0.05 average size of vc:  0.2690802194099973
+testing 100 graphs time: 6.01911640s
+500 iterations total time: 34.84496419s
+iter 241500 eps 0.05 average size of vc:  0.2676312742704715
+testing 100 graphs time: 6.02622485s
+500 iterations total time: 34.92271607s
+iter 242000 eps 0.05 average size of vc:  0.2698393343582799
+testing 100 graphs time: 5.99560666s
+500 iterations total time: 34.90849142s
+iter 242500 eps 0.05 average size of vc:  0.26426971363246515
+testing 100 graphs time: 6.02008247s
+500 iterations total time: 34.88054415s
+iter 243000 eps 0.05 average size of vc:  0.2632497203984618
+testing 100 graphs time: 5.96155787s
+500 iterations total time: 34.80616961s
+iter 243500 eps 0.05 average size of vc:  0.2685440200167503
+testing 100 graphs time: 5.94872236s
+500 iterations total time: 34.75476253s
+iter 244000 eps 0.05 average size of vc:  0.2669182323131271
+testing 100 graphs time: 6.04813123s
+500 iterations total time: 34.49654955s
+iter 244500 eps 0.05 average size of vc:  0.2680595140909624
+testing 100 graphs time: 5.94701529s
+500 iterations total time: 34.80499587s
+
+generating new training graphs...
+iter 245000 eps 0.05 average size of vc:  0.2685154923085101
+testing 100 graphs time: 6.05947781s
+500 iterations total time: 35.00895113s
+iter 245500 eps 0.05 average size of vc:  0.2691927473510911
+testing 100 graphs time: 6.03645396s
+500 iterations total time: 34.70570942s
+iter 246000 eps 0.05 average size of vc:  0.2678612048583793
+testing 100 graphs time: 5.95963359s
+500 iterations total time: 35.10344691s
+iter 246500 eps 0.05 average size of vc:  0.2684897872594581
+testing 100 graphs time: 5.92619061s
+500 iterations total time: 34.63466574s
+iter 247000 eps 0.05 average size of vc:  0.2684300746205579
+testing 100 graphs time: 5.99394655s
+500 iterations total time: 34.65889352s
+iter 247500 eps 0.05 average size of vc:  0.2686105370885612
+testing 100 graphs time: 5.98352861s
+500 iterations total time: 34.44398536s
+iter 248000 eps 0.05 average size of vc:  0.2653970681973153
+testing 100 graphs time: 5.98584437s
+500 iterations total time: 34.75539390s
+iter 248500 eps 0.05 average size of vc:  0.2694391385880144
+testing 100 graphs time: 5.98801851s
+500 iterations total time: 34.98823953s
+iter 249000 eps 0.05 average size of vc:  0.26845615538555406
+testing 100 graphs time: 5.97151041s
+500 iterations total time: 34.82171455s
+iter 249500 eps 0.05 average size of vc:  0.2669296592281999
+testing 100 graphs time: 5.96560240s
+500 iterations total time: 34.52595931s
+
+generating new training graphs...
+iter 250000 eps 0.05 average size of vc:  0.26718112216338885
+testing 100 graphs time: 6.00533676s
+500 iterations total time: 34.92351106s
+model has been saved success!
+iter 250500 eps 0.05 average size of vc:  0.2669017029849602
+testing 100 graphs time: 6.01489687s
+500 iterations total time: 34.62632568s
+iter 251000 eps 0.05 average size of vc:  0.2697791418698325
+testing 100 graphs time: 6.06211591s
+500 iterations total time: 34.53894153s
+iter 251500 eps 0.05 average size of vc:  0.2677600971167476
+testing 100 graphs time: 6.01290751s
+500 iterations total time: 34.56521776s
+iter 252000 eps 0.05 average size of vc:  0.2645455830042649
+testing 100 graphs time: 5.95255232s
+500 iterations total time: 34.60688088s
+iter 252500 eps 0.05 average size of vc:  0.2635781220141066
+testing 100 graphs time: 5.94139671s
+500 iterations total time: 34.37489245s
+iter 253000 eps 0.05 average size of vc:  0.26662316109965545
+testing 100 graphs time: 5.92635179s
+500 iterations total time: 34.47740918s
+iter 253500 eps 0.05 average size of vc:  0.26915614848161495
+testing 100 graphs time: 5.97005463s
+500 iterations total time: 34.41357807s
+iter 254000 eps 0.05 average size of vc:  0.2654928506677402
+testing 100 graphs time: 5.95819497s
+500 iterations total time: 34.75807474s
+iter 254500 eps 0.05 average size of vc:  0.26725880106779654
+testing 100 graphs time: 6.00940442s
+500 iterations total time: 34.48294272s
+
+generating new training graphs...
+iter 255000 eps 0.05 average size of vc:  0.2665681613609695
+testing 100 graphs time: 6.03000641s
+500 iterations total time: 34.81229791s
+iter 255500 eps 0.05 average size of vc:  0.2670832923516588
+testing 100 graphs time: 5.95603848s
+500 iterations total time: 34.47366891s
+iter 256000 eps 0.05 average size of vc:  0.267636966541489
+testing 100 graphs time: 5.98539591s
+500 iterations total time: 34.68615778s
+iter 256500 eps 0.05 average size of vc:  0.2695254664203733
+testing 100 graphs time: 5.96225405s
+500 iterations total time: 34.96645428s
+iter 257000 eps 0.05 average size of vc:  0.2651140563288863
+testing 100 graphs time: 6.01340938s
+500 iterations total time: 34.55532604s
+iter 257500 eps 0.05 average size of vc:  0.26847718726949965
+testing 100 graphs time: 5.97003484s
+500 iterations total time: 34.62480253s
+iter 258000 eps 0.05 average size of vc:  0.267344032043463
+testing 100 graphs time: 6.01029515s
+500 iterations total time: 34.36943696s
+iter 258500 eps 0.05 average size of vc:  0.2649722104774063
+testing 100 graphs time: 5.97385335s
+500 iterations total time: 34.37712085s
+iter 259000 eps 0.05 average size of vc:  0.267890147366541
+testing 100 graphs time: 5.96828198s
+500 iterations total time: 34.72245198s
+iter 259500 eps 0.05 average size of vc:  0.2663381619889808
+testing 100 graphs time: 5.98580790s
+500 iterations total time: 34.63823317s
+
+generating new training graphs...
+iter 260000 eps 0.05 average size of vc:  0.2659183330032456
+testing 100 graphs time: 5.94357872s
+500 iterations total time: 34.78203181s
+model has been saved success!
+iter 260500 eps 0.05 average size of vc:  0.2673055605178683
+testing 100 graphs time: 5.95749855s
+500 iterations total time: 34.93200909s
+iter 261000 eps 0.05 average size of vc:  0.2655570820865002
+testing 100 graphs time: 5.99823856s
+500 iterations total time: 34.74773055s
+iter 261500 eps 0.05 average size of vc:  0.2641468596431172
+testing 100 graphs time: 5.93684292s
+500 iterations total time: 34.61774079s
+iter 262000 eps 0.05 average size of vc:  0.26641556279163775
+testing 100 graphs time: 5.94088840s
+500 iterations total time: 34.83003268s
+iter 262500 eps 0.05 average size of vc:  0.2665096115447591
+testing 100 graphs time: 5.95287848s
+500 iterations total time: 34.85419035s
+iter 263000 eps 0.05 average size of vc:  0.26765379624190194
+testing 100 graphs time: 5.98727536s
+500 iterations total time: 34.79237371s
+iter 263500 eps 0.05 average size of vc:  0.26722377995101954
+testing 100 graphs time: 5.98851562s
+500 iterations total time: 34.77776096s
+iter 264000 eps 0.05 average size of vc:  0.26551411139231257
+testing 100 graphs time: 5.93242431s
+500 iterations total time: 34.30350767s
+iter 264500 eps 0.05 average size of vc:  0.26718499143146074
+testing 100 graphs time: 6.00102115s
+500 iterations total time: 34.49728140s
+
+generating new training graphs...
+iter 265000 eps 0.05 average size of vc:  0.26784058332406074
+testing 100 graphs time: 5.99041915s
+500 iterations total time: 34.77176760s
+iter 265500 eps 0.05 average size of vc:  0.26649856933344834
+testing 100 graphs time: 5.96466303s
+500 iterations total time: 34.46204327s
+iter 266000 eps 0.05 average size of vc:  0.2661495624531387
+testing 100 graphs time: 5.99497581s
+500 iterations total time: 34.77409405s
+iter 266500 eps 0.05 average size of vc:  0.26751006874235983
+testing 100 graphs time: 6.02776217s
+500 iterations total time: 34.48715736s
+iter 267000 eps 0.05 average size of vc:  0.26594322958639816
+testing 100 graphs time: 6.01636529s
+500 iterations total time: 34.52823408s
+iter 267500 eps 0.05 average size of vc:  0.26507447989948
+testing 100 graphs time: 5.94064617s
+500 iterations total time: 34.44193893s
+iter 268000 eps 0.05 average size of vc:  0.2666879766290537
+testing 100 graphs time: 5.95831347s
+500 iterations total time: 34.56284887s
+iter 268500 eps 0.05 average size of vc:  0.26694599049180257
+testing 100 graphs time: 5.96522331s
+500 iterations total time: 34.49990541s
+iter 269000 eps 0.05 average size of vc:  0.2675214055320411
+testing 100 graphs time: 5.99870753s
+500 iterations total time: 34.48504145s
+iter 269500 eps 0.05 average size of vc:  0.2654286109152835
+testing 100 graphs time: 5.96932983s
+500 iterations total time: 34.53104358s
+
+generating new training graphs...
+iter 270000 eps 0.05 average size of vc:  0.26637792499787133
+testing 100 graphs time: 5.98675132s
+500 iterations total time: 34.93326533s
+model has been saved success!
+iter 270500 eps 0.05 average size of vc:  0.2663257457804676
+testing 100 graphs time: 5.99230552s
+500 iterations total time: 34.80804550s
+iter 271000 eps 0.05 average size of vc:  0.2658571763665973
+testing 100 graphs time: 5.98470736s
+500 iterations total time: 34.83455300s
+iter 271500 eps 0.05 average size of vc:  0.2709431035884378
+testing 100 graphs time: 5.99010491s
+500 iterations total time: 34.79559354s
+iter 272000 eps 0.05 average size of vc:  0.2651125539718288
+testing 100 graphs time: 5.96422529s
+500 iterations total time: 34.55766986s
+iter 272500 eps 0.05 average size of vc:  0.2669584734446852
+testing 100 graphs time: 6.00324297s
+500 iterations total time: 34.53343274s
+iter 273000 eps 0.05 average size of vc:  0.26656409955471505
+testing 100 graphs time: 5.97311354s
+500 iterations total time: 34.73665002s
+iter 273500 eps 0.05 average size of vc:  0.2661359960711043
+testing 100 graphs time: 5.97533059s
+500 iterations total time: 34.82144106s
+iter 274000 eps 0.05 average size of vc:  0.26772968575677636
+testing 100 graphs time: 6.00670958s
+500 iterations total time: 34.83145999s
+iter 274500 eps 0.05 average size of vc:  0.2649609135884593
+testing 100 graphs time: 6.00342345s
+500 iterations total time: 34.99295751s
+
+generating new training graphs...
+iter 275000 eps 0.05 average size of vc:  0.2668627026883507
+testing 100 graphs time: 6.00475121s
+500 iterations total time: 35.16737653s
+iter 275500 eps 0.05 average size of vc:  0.2679420019537693
+testing 100 graphs time: 5.97548032s
+500 iterations total time: 34.66840333s
+iter 276000 eps 0.05 average size of vc:  0.26731487755257216
+testing 100 graphs time: 6.01841593s
+500 iterations total time: 35.01468332s
+iter 276500 eps 0.05 average size of vc:  0.2657912988734375
+testing 100 graphs time: 6.00427127s
+500 iterations total time: 35.02186870s
+iter 277000 eps 0.05 average size of vc:  0.26674934014364315
+testing 100 graphs time: 6.01677680s
+500 iterations total time: 34.79457249s
+iter 277500 eps 0.05 average size of vc:  0.2653631682943048
+testing 100 graphs time: 5.98741031s
+500 iterations total time: 34.70502057s
+iter 278000 eps 0.05 average size of vc:  0.26484586617737593
+testing 100 graphs time: 5.97730660s
+500 iterations total time: 34.77015862s
+iter 278500 eps 0.05 average size of vc:  0.2661202374214662
+testing 100 graphs time: 5.97621608s
+500 iterations total time: 35.07179400s
+iter 279000 eps 0.05 average size of vc:  0.2652778656126209
+testing 100 graphs time: 5.94011927s
+500 iterations total time: 34.86986747s
+iter 279500 eps 0.05 average size of vc:  0.26735218045410203
+testing 100 graphs time: 6.01759410s
+500 iterations total time: 34.82748044s
+
+generating new training graphs...
+iter 280000 eps 0.05 average size of vc:  0.266571164909508
+testing 100 graphs time: 6.03336906s
+500 iterations total time: 35.02148388s
+model has been saved success!
+iter 280500 eps 0.05 average size of vc:  0.2677786309377235
+testing 100 graphs time: 5.99212599s
+500 iterations total time: 34.69302350s
+iter 281000 eps 0.05 average size of vc:  0.2667624514807056
+testing 100 graphs time: 5.98489356s
+500 iterations total time: 34.62666635s
+iter 281500 eps 0.05 average size of vc:  0.2675725250948103
+testing 100 graphs time: 6.00232649s
+500 iterations total time: 34.85719494s
+iter 282000 eps 0.05 average size of vc:  0.26666098051704074
+testing 100 graphs time: 5.99598694s
+500 iterations total time: 34.61460571s
+iter 282500 eps 0.05 average size of vc:  0.268765782734715
+testing 100 graphs time: 6.01115751s
+500 iterations total time: 34.88402299s
+iter 283000 eps 0.05 average size of vc:  0.2668963689707772
+testing 100 graphs time: 6.00075722s
+500 iterations total time: 34.77349101s
+iter 283500 eps 0.05 average size of vc:  0.2672642824241284
+testing 100 graphs time: 5.96275330s
+500 iterations total time: 34.67312676s
+iter 284000 eps 0.05 average size of vc:  0.26699988211550374
+testing 100 graphs time: 6.04146314s
+500 iterations total time: 34.80202751s
+iter 284500 eps 0.05 average size of vc:  0.2688017252887607
+testing 100 graphs time: 5.97469330s
+500 iterations total time: 34.98522169s
+
+generating new training graphs...
+iter 285000 eps 0.05 average size of vc:  0.26729059983856335
+testing 100 graphs time: 6.03138995s
+500 iterations total time: 35.15241271s
+iter 285500 eps 0.05 average size of vc:  0.26430377937335225
+testing 100 graphs time: 5.92906356s
+500 iterations total time: 34.74590213s
+iter 286000 eps 0.05 average size of vc:  0.26642990689473406
+testing 100 graphs time: 5.96508956s
+500 iterations total time: 34.91847777s
+iter 286500 eps 0.05 average size of vc:  0.266911704872556
+testing 100 graphs time: 5.97432065s
+500 iterations total time: 34.93785259s
+iter 287000 eps 0.05 average size of vc:  0.26645851979327384
+testing 100 graphs time: 5.97488904s
+500 iterations total time: 35.02048003s
+iter 287500 eps 0.05 average size of vc:  0.26749260660025775
+testing 100 graphs time: 5.98480201s
+500 iterations total time: 34.93862007s
+iter 288000 eps 0.05 average size of vc:  0.26649805424047407
+testing 100 graphs time: 6.00118327s
+500 iterations total time: 35.06850634s
+iter 288500 eps 0.05 average size of vc:  0.2671299348414838
+testing 100 graphs time: 5.99238682s
+500 iterations total time: 35.06371145s
+iter 289000 eps 0.05 average size of vc:  0.2675349950278502
+testing 100 graphs time: 6.01508880s
+500 iterations total time: 35.19101379s
+iter 289500 eps 0.05 average size of vc:  0.2665881665094157
+testing 100 graphs time: 5.97029567s
+500 iterations total time: 34.96662372s
+
+generating new training graphs...
+iter 290000 eps 0.05 average size of vc:  0.2662397319782176
+testing 100 graphs time: 5.99302626s
+500 iterations total time: 35.31739006s
+model has been saved success!
+iter 290500 eps 0.05 average size of vc:  0.26478263484647613
+testing 100 graphs time: 5.92649126s
+500 iterations total time: 34.86909233s
+iter 291000 eps 0.05 average size of vc:  0.2675002666264373
+testing 100 graphs time: 6.00744605s
+500 iterations total time: 34.88773442s
+iter 291500 eps 0.05 average size of vc:  0.2647466559598777
+testing 100 graphs time: 5.95142198s
+500 iterations total time: 34.77960460s
+iter 292000 eps 0.05 average size of vc:  0.2657504399600858
+testing 100 graphs time: 5.95111728s
+500 iterations total time: 35.09557374s
+iter 292500 eps 0.05 average size of vc:  0.2655383404716118
+testing 100 graphs time: 5.94268727s
+500 iterations total time: 34.95684883s
+iter 293000 eps 0.05 average size of vc:  0.2640201974237393
+testing 100 graphs time: 5.95861816s
+500 iterations total time: 34.65072076s
+iter 293500 eps 0.05 average size of vc:  0.26636337522038805
+testing 100 graphs time: 5.97500682s
+500 iterations total time: 34.77566357s
+iter 294000 eps 0.05 average size of vc:  0.2670220944590873
+testing 100 graphs time: 6.00068212s
+500 iterations total time: 34.90050426s
+iter 294500 eps 0.05 average size of vc:  0.2672860136898932
+testing 100 graphs time: 5.93721652s
+500 iterations total time: 34.64527752s
+
+generating new training graphs...
+iter 295000 eps 0.05 average size of vc:  0.26467024027880987
+testing 100 graphs time: 5.97307253s
+500 iterations total time: 35.09186556s
+iter 295500 eps 0.05 average size of vc:  0.26741794915755596
+testing 100 graphs time: 5.95609808s
+500 iterations total time: 34.81606173s
+iter 296000 eps 0.05 average size of vc:  0.26703009164397384
+testing 100 graphs time: 5.99739361s
+500 iterations total time: 34.62071729s
+iter 296500 eps 0.05 average size of vc:  0.26594915235247885
+testing 100 graphs time: 5.93303347s
+500 iterations total time: 34.65646818s
+iter 297000 eps 0.05 average size of vc:  0.26830531633853694
+testing 100 graphs time: 5.99025393s
+500 iterations total time: 34.58781190s
+iter 297500 eps 0.05 average size of vc:  0.26716206754655636
+testing 100 graphs time: 5.99294305s
+500 iterations total time: 34.82578382s
+iter 298000 eps 0.05 average size of vc:  0.2680790803831379
+testing 100 graphs time: 5.98955727s
+500 iterations total time: 34.81113924s
+iter 298500 eps 0.05 average size of vc:  0.2662471853890589
+testing 100 graphs time: 5.98377848s
+500 iterations total time: 35.00731379s
+iter 299000 eps 0.05 average size of vc:  0.2672308324750684
+testing 100 graphs time: 5.98743844s
+500 iterations total time: 34.71679446s
+iter 299500 eps 0.05 average size of vc:  0.26660200973131004
+testing 100 graphs time: 5.93385172s
+500 iterations total time: 34.52955701s
+
+generating new training graphs...
+iter 300000 eps 0.05 average size of vc:  0.26993621772401616
+testing 100 graphs time: 5.98873448s
+500 iterations total time: 34.96176188s
+model has been saved success!
+iter 300500 eps 0.05 average size of vc:  0.26513241967107654
+testing 100 graphs time: 5.95670915s
+500 iterations total time: 34.84830636s
+iter 301000 eps 0.05 average size of vc:  0.26542444105870566
+testing 100 graphs time: 5.97440052s
+500 iterations total time: 34.91840472s
+iter 301500 eps 0.05 average size of vc:  0.26564238353559105
+testing 100 graphs time: 5.96840215s
+500 iterations total time: 34.73964409s
+iter 302000 eps 0.05 average size of vc:  0.26567542593982935
+testing 100 graphs time: 6.00812364s
+500 iterations total time: 35.07206549s
+iter 302500 eps 0.05 average size of vc:  0.26867615077575885
+testing 100 graphs time: 6.02788877s
+500 iterations total time: 34.91915892s
+iter 303000 eps 0.05 average size of vc:  0.26661921105266667
+testing 100 graphs time: 5.94510365s
+500 iterations total time: 34.71234569s
+iter 303500 eps 0.05 average size of vc:  0.2632854007364575
+testing 100 graphs time: 5.94914317s
+500 iterations total time: 34.87466909s
+iter 304000 eps 0.05 average size of vc:  0.2647161189977643
+testing 100 graphs time: 6.02442551s
+500 iterations total time: 34.73188850s
+iter 304500 eps 0.05 average size of vc:  0.26445008957863764
+testing 100 graphs time: 5.99416065s
+500 iterations total time: 34.42072774s
+
+generating new training graphs...
+iter 305000 eps 0.05 average size of vc:  0.26703691174748145
+testing 100 graphs time: 5.99604630s
+500 iterations total time: 35.33980107s
+iter 305500 eps 0.05 average size of vc:  0.26558814942734404
+testing 100 graphs time: 6.00038123s
+500 iterations total time: 34.74200720s
+iter 306000 eps 0.05 average size of vc:  0.2672394849661223
+testing 100 graphs time: 5.99551678s
+500 iterations total time: 34.52366419s
+iter 306500 eps 0.05 average size of vc:  0.2654374141107534
+testing 100 graphs time: 5.99085927s
+500 iterations total time: 34.50897218s
+iter 307000 eps 0.05 average size of vc:  0.26546787633532604
+testing 100 graphs time: 5.97833180s
+500 iterations total time: 34.68404714s
+iter 307500 eps 0.05 average size of vc:  0.26462412423998677
+testing 100 graphs time: 5.98787308s
+500 iterations total time: 34.47315455s
+iter 308000 eps 0.05 average size of vc:  0.2659115289940979
+testing 100 graphs time: 5.96977091s
+500 iterations total time: 34.81653344s
+iter 308500 eps 0.05 average size of vc:  0.2672259156411175
+testing 100 graphs time: 5.98383427s
+500 iterations total time: 34.75700358s
+iter 309000 eps 0.05 average size of vc:  0.2659535191453168
+testing 100 graphs time: 6.01973987s
+500 iterations total time: 34.73393395s
+iter 309500 eps 0.05 average size of vc:  0.26788297807259687
+testing 100 graphs time: 6.01488924s
+500 iterations total time: 34.84097406s
+
+generating new training graphs...
+iter 310000 eps 0.05 average size of vc:  0.26587054458572446
+testing 100 graphs time: 5.99968410s
+500 iterations total time: 34.79690578s
+model has been saved success!
+iter 310500 eps 0.05 average size of vc:  0.2667361241783551
+testing 100 graphs time: 5.99775338s
+500 iterations total time: 34.69640619s
+iter 311000 eps 0.05 average size of vc:  0.2653122762230877
+testing 100 graphs time: 6.02405643s
+500 iterations total time: 35.02852829s
+iter 311500 eps 0.05 average size of vc:  0.26571218316929907
+testing 100 graphs time: 5.98557377s
+500 iterations total time: 34.34526034s
+iter 312000 eps 0.05 average size of vc:  0.2640335544273723
+testing 100 graphs time: 5.97963023s
+500 iterations total time: 34.96675480s
+iter 312500 eps 0.05 average size of vc:  0.26573945215829187
+testing 100 graphs time: 6.01938057s
+500 iterations total time: 34.58627163s
+iter 313000 eps 0.05 average size of vc:  0.26642647487052507
+testing 100 graphs time: 5.99833965s
+500 iterations total time: 34.63884214s
+iter 313500 eps 0.05 average size of vc:  0.267260443537027
+testing 100 graphs time: 5.98195958s
+500 iterations total time: 34.69781939s
+iter 314000 eps 0.05 average size of vc:  0.26698089719831597
+testing 100 graphs time: 5.99189687s
+500 iterations total time: 34.73585457s
+iter 314500 eps 0.05 average size of vc:  0.2649891134917485
+testing 100 graphs time: 6.01825213s
+500 iterations total time: 34.61763398s
+
+generating new training graphs...
+iter 315000 eps 0.05 average size of vc:  0.2679534953117726
+testing 100 graphs time: 6.01474667s
+500 iterations total time: 34.66014209s
+iter 315500 eps 0.05 average size of vc:  0.2671835826470685
+testing 100 graphs time: 6.01136780s
+500 iterations total time: 34.61558118s
+iter 316000 eps 0.05 average size of vc:  0.26752925893977153
+testing 100 graphs time: 5.98937273s
+500 iterations total time: 34.86993175s
+iter 316500 eps 0.05 average size of vc:  0.26703225933830127
+testing 100 graphs time: 5.98494649s
+500 iterations total time: 34.25853209s
+iter 317000 eps 0.05 average size of vc:  0.26871760354684143
+testing 100 graphs time: 6.02410531s
+500 iterations total time: 34.97260095s
+iter 317500 eps 0.05 average size of vc:  0.26426933504183764
+testing 100 graphs time: 5.93648124s
+500 iterations total time: 34.71370078s
+iter 318000 eps 0.05 average size of vc:  0.2674950588290144
+testing 100 graphs time: 5.98561287s
+500 iterations total time: 34.66977464s
+iter 318500 eps 0.05 average size of vc:  0.26804633038244247
+testing 100 graphs time: 6.00402236s
+500 iterations total time: 34.69859942s
+iter 319000 eps 0.05 average size of vc:  0.2671361161350878
+testing 100 graphs time: 5.98777676s
+500 iterations total time: 34.83564728s
+iter 319500 eps 0.05 average size of vc:  0.2663296975397117
+testing 100 graphs time: 5.94928026s
+500 iterations total time: 34.69843564s
+
+generating new training graphs...
+iter 320000 eps 0.05 average size of vc:  0.2689682165265615
+testing 100 graphs time: 6.06340694s
+500 iterations total time: 35.03491957s
+model has been saved success!
+iter 320500 eps 0.05 average size of vc:  0.2657986701749829
+testing 100 graphs time: 5.97461367s
+500 iterations total time: 34.48786893s
+iter 321000 eps 0.05 average size of vc:  0.2668397715111657
+testing 100 graphs time: 5.97864509s
+500 iterations total time: 34.40831488s
+iter 321500 eps 0.05 average size of vc:  0.2673294408952016
+testing 100 graphs time: 6.02523422s
+500 iterations total time: 34.27770150s
+iter 322000 eps 0.05 average size of vc:  0.2663692368787953
+testing 100 graphs time: 5.97868013s
+500 iterations total time: 34.51881445s
+iter 322500 eps 0.05 average size of vc:  0.26726421568513176
+testing 100 graphs time: 5.94770408s
+500 iterations total time: 34.30495296s
+iter 323000 eps 0.05 average size of vc:  0.26823703848949787
+testing 100 graphs time: 6.01453328s
+500 iterations total time: 34.67930629s
+iter 323500 eps 0.05 average size of vc:  0.26864904258239375
+testing 100 graphs time: 6.02253413s
+500 iterations total time: 34.50482982s
+iter 324000 eps 0.05 average size of vc:  0.2644481259322446
+testing 100 graphs time: 6.01579237s
+500 iterations total time: 34.56605884s
+iter 324500 eps 0.05 average size of vc:  0.26834114075227455
+testing 100 graphs time: 5.97294617s
+500 iterations total time: 34.52360498s
+
+generating new training graphs...
+iter 325000 eps 0.05 average size of vc:  0.2666725849201475
+testing 100 graphs time: 6.02953553s
+500 iterations total time: 34.76478262s
+iter 325500 eps 0.05 average size of vc:  0.2648428154320174
+testing 100 graphs time: 5.97799158s
+500 iterations total time: 34.55610710s
+iter 326000 eps 0.05 average size of vc:  0.2656952939764057
+testing 100 graphs time: 5.93377304s
+500 iterations total time: 34.33589892s
+iter 326500 eps 0.05 average size of vc:  0.2665624095114867
+testing 100 graphs time: 6.00071955s
+500 iterations total time: 34.68760800s
+iter 327000 eps 0.05 average size of vc:  0.26321317310743414
+testing 100 graphs time: 5.96025515s
+500 iterations total time: 34.56428154s
+iter 327500 eps 0.05 average size of vc:  0.2662223360372752
+testing 100 graphs time: 6.00900126s
+500 iterations total time: 34.67753027s
+iter 328000 eps 0.05 average size of vc:  0.26817976263609267
+testing 100 graphs time: 6.01497126s
+500 iterations total time: 34.79447722s
+iter 328500 eps 0.05 average size of vc:  0.2669151628115137
+testing 100 graphs time: 5.97218347s
+500 iterations total time: 34.63823570s
+iter 329000 eps 0.05 average size of vc:  0.2652145225399081
+testing 100 graphs time: 5.97980046s
+500 iterations total time: 34.72026587s
+iter 329500 eps 0.05 average size of vc:  0.26717839372904295
+testing 100 graphs time: 5.99318314s
+500 iterations total time: 34.54772897s
+
+generating new training graphs...
+iter 330000 eps 0.05 average size of vc:  0.26727073211906605
+testing 100 graphs time: 6.02341247s
+500 iterations total time: 35.01675675s
+model has been saved success!
+iter 330500 eps 0.05 average size of vc:  0.2648314658897003
+testing 100 graphs time: 5.96677947s
+500 iterations total time: 34.77594369s
+iter 331000 eps 0.05 average size of vc:  0.2653898643610195
+testing 100 graphs time: 5.98250556s
+500 iterations total time: 34.65644232s
+iter 331500 eps 0.05 average size of vc:  0.266925645520166
+testing 100 graphs time: 5.97412038s
+500 iterations total time: 34.78046392s
+iter 332000 eps 0.05 average size of vc:  0.2647510660386828
+testing 100 graphs time: 5.95663595s
+500 iterations total time: 34.67975864s
+iter 332500 eps 0.05 average size of vc:  0.2666789228922466
+testing 100 graphs time: 5.96965766s
+500 iterations total time: 34.79594072s
+iter 333000 eps 0.05 average size of vc:  0.267325280180465
+testing 100 graphs time: 6.02467680s
+500 iterations total time: 34.82759456s
+iter 333500 eps 0.05 average size of vc:  0.26673455839481697
+testing 100 graphs time: 6.00744581s
+500 iterations total time: 34.83686875s
+iter 334000 eps 0.05 average size of vc:  0.26584528902615007
+testing 100 graphs time: 5.99717665s
+500 iterations total time: 34.64048042s
+iter 334500 eps 0.05 average size of vc:  0.2658847024924221
+testing 100 graphs time: 5.96475196s
+500 iterations total time: 34.40014132s
+
+generating new training graphs...
+iter 335000 eps 0.05 average size of vc:  0.26474589307249624
+testing 100 graphs time: 6.00992703s
+500 iterations total time: 34.82102031s
+iter 335500 eps 0.05 average size of vc:  0.2676803308677989
+testing 100 graphs time: 5.94243765s
+500 iterations total time: 34.84128540s
+iter 336000 eps 0.05 average size of vc:  0.2666462154068137
+testing 100 graphs time: 6.00033998s
+500 iterations total time: 34.77154993s
+iter 336500 eps 0.05 average size of vc:  0.2655091526776598
+testing 100 graphs time: 6.00988221s
+500 iterations total time: 34.74927421s
+iter 337000 eps 0.05 average size of vc:  0.2657153004936688
+testing 100 graphs time: 5.99783278s
+500 iterations total time: 34.72189165s
+iter 337500 eps 0.05 average size of vc:  0.266456533593814
+testing 100 graphs time: 6.02130842s
+500 iterations total time: 34.54369590s
+iter 338000 eps 0.05 average size of vc:  0.26607060506410646
+testing 100 graphs time: 5.99393034s
+500 iterations total time: 34.76495709s
+iter 338500 eps 0.05 average size of vc:  0.2681044846440205
+testing 100 graphs time: 5.99361372s
+500 iterations total time: 34.81690009s
+iter 339000 eps 0.05 average size of vc:  0.26901130054339073
+testing 100 graphs time: 6.03999496s
+500 iterations total time: 34.83554722s
+iter 339500 eps 0.05 average size of vc:  0.26584808737587606
+testing 100 graphs time: 6.00092077s
+500 iterations total time: 34.70860771s
+
+generating new training graphs...
+iter 340000 eps 0.05 average size of vc:  0.26725649362316356
+testing 100 graphs time: 6.04912162s
+500 iterations total time: 34.79958342s
+model has been saved success!
+iter 340500 eps 0.05 average size of vc:  0.2666020513448685
+testing 100 graphs time: 6.05836177s
+500 iterations total time: 34.64149747s
+iter 341000 eps 0.05 average size of vc:  0.2675950491267669
+testing 100 graphs time: 5.98026967s
+500 iterations total time: 34.94310659s
+iter 341500 eps 0.05 average size of vc:  0.26700631162765803
+testing 100 graphs time: 6.01874518s
+500 iterations total time: 34.99743219s
+iter 342000 eps 0.05 average size of vc:  0.26426330120531555
+testing 100 graphs time: 5.94410515s
+500 iterations total time: 34.65912268s
+iter 342500 eps 0.05 average size of vc:  0.2640854604788851
+testing 100 graphs time: 5.96303415s
+500 iterations total time: 34.82237556s
+iter 343000 eps 0.05 average size of vc:  0.2649532769850817
+testing 100 graphs time: 5.97005081s
+500 iterations total time: 34.78579210s
+iter 343500 eps 0.05 average size of vc:  0.2669400717698956
+testing 100 graphs time: 6.00263357s
+500 iterations total time: 34.91925278s
+iter 344000 eps 0.05 average size of vc:  0.2645808150225364
+testing 100 graphs time: 5.96193552s
+500 iterations total time: 35.00177015s
+iter 344500 eps 0.05 average size of vc:  0.26703330843700546
+testing 100 graphs time: 5.95915413s
+500 iterations total time: 34.95812169s
+
+generating new training graphs...
+iter 345000 eps 0.05 average size of vc:  0.26470185487057774
+testing 100 graphs time: 5.98090219s
+500 iterations total time: 35.06346728s
+iter 345500 eps 0.05 average size of vc:  0.26551170179079775
+testing 100 graphs time: 5.99881005s
+500 iterations total time: 34.78671651s
+iter 346000 eps 0.05 average size of vc:  0.26498740091778605
+testing 100 graphs time: 6.00595784s
+500 iterations total time: 34.73034012s
+iter 346500 eps 0.05 average size of vc:  0.26637831120159516
+testing 100 graphs time: 5.99015212s
+500 iterations total time: 34.80701113s
+iter 347000 eps 0.05 average size of vc:  0.2678711519068897
+testing 100 graphs time: 5.99626732s
+500 iterations total time: 35.01098525s
+iter 347500 eps 0.05 average size of vc:  0.26790097100162197
+testing 100 graphs time: 5.99616861s
+500 iterations total time: 35.01554527s
+iter 348000 eps 0.05 average size of vc:  0.2690059645714836
+testing 100 graphs time: 5.97589731s
+500 iterations total time: 34.80630075s
+iter 348500 eps 0.05 average size of vc:  0.26729858773230936
+testing 100 graphs time: 6.02632308s
+500 iterations total time: 34.83976624s
+iter 349000 eps 0.05 average size of vc:  0.2666974780511442
+testing 100 graphs time: 5.95686507s
+500 iterations total time: 34.92280652s
+iter 349500 eps 0.05 average size of vc:  0.2700910667852156
+testing 100 graphs time: 6.01122904s
+500 iterations total time: 35.11868607s
+
+generating new training graphs...
+iter 350000 eps 0.05 average size of vc:  0.268660930277305
+testing 100 graphs time: 6.08290553s
+500 iterations total time: 35.24898267s
+model has been saved success!
+iter 350500 eps 0.05 average size of vc:  0.2662113481113837
+testing 100 graphs time: 5.98326683s
+500 iterations total time: 34.84753096s
+iter 351000 eps 0.05 average size of vc:  0.26742700831878646
+testing 100 graphs time: 6.03448629s
+500 iterations total time: 34.66439654s
+iter 351500 eps 0.05 average size of vc:  0.26784764423194884
+testing 100 graphs time: 6.02500010s
+500 iterations total time: 34.73844690s
+iter 352000 eps 0.05 average size of vc:  0.267193430328334
+testing 100 graphs time: 6.00925922s
+500 iterations total time: 35.05275829s
+iter 352500 eps 0.05 average size of vc:  0.26735541003885255
+testing 100 graphs time: 5.97388124s
+500 iterations total time: 34.68806172s
+iter 353000 eps 0.05 average size of vc:  0.2659886685207071
+testing 100 graphs time: 6.00315785s
+500 iterations total time: 34.63224214s
+iter 353500 eps 0.05 average size of vc:  0.26734702067253696
+testing 100 graphs time: 5.99765086s
+500 iterations total time: 34.92147648s
+iter 354000 eps 0.05 average size of vc:  0.26853162988662926
+testing 100 graphs time: 5.99358082s
+500 iterations total time: 34.79201122s
+iter 354500 eps 0.05 average size of vc:  0.2652513442159381
+testing 100 graphs time: 5.95665503s
+500 iterations total time: 34.78861834s
+
+generating new training graphs...
+iter 355000 eps 0.05 average size of vc:  0.2670857641163029
+testing 100 graphs time: 6.01556349s
+500 iterations total time: 34.99719746s
+iter 355500 eps 0.05 average size of vc:  0.26525675940774723
+testing 100 graphs time: 5.96118069s
+500 iterations total time: 34.86463466s
+iter 356000 eps 0.05 average size of vc:  0.2680116013796391
+testing 100 graphs time: 5.96502399s
+500 iterations total time: 35.01995730s
+iter 356500 eps 0.05 average size of vc:  0.26323578727780433
+testing 100 graphs time: 5.99948120s
+500 iterations total time: 34.48664170s
+iter 357000 eps 0.05 average size of vc:  0.2668921195892909
+testing 100 graphs time: 5.96669483s
+500 iterations total time: 34.71223404s
+iter 357500 eps 0.05 average size of vc:  0.26589298193927396
+testing 100 graphs time: 5.96325111s
+500 iterations total time: 34.68230040s
+iter 358000 eps 0.05 average size of vc:  0.2664113565673112
+testing 100 graphs time: 6.01665354s
+500 iterations total time: 34.35182127s
+iter 358500 eps 0.05 average size of vc:  0.2638906635776167
+testing 100 graphs time: 5.93870068s
+500 iterations total time: 34.68587589s
+iter 359000 eps 0.05 average size of vc:  0.2678289482454551
+testing 100 graphs time: 6.01813531s
+500 iterations total time: 34.86788086s
+iter 359500 eps 0.05 average size of vc:  0.26750660827392186
+testing 100 graphs time: 5.96623898s
+500 iterations total time: 34.74730605s
+
+generating new training graphs...
+iter 360000 eps 0.05 average size of vc:  0.2671789818746772
+testing 100 graphs time: 6.05516171s
+500 iterations total time: 34.97559731s
+model has been saved success!
+iter 360500 eps 0.05 average size of vc:  0.2640002394432518
+testing 100 graphs time: 5.97351432s
+500 iterations total time: 34.97394741s
+iter 361000 eps 0.05 average size of vc:  0.26780328059240777
+testing 100 graphs time: 6.00784516s
+500 iterations total time: 34.92433770s
+iter 361500 eps 0.05 average size of vc:  0.26907257244022015
+testing 100 graphs time: 6.03636718s
+500 iterations total time: 34.77395022s
+iter 362000 eps 0.05 average size of vc:  0.2667798357500781
+testing 100 graphs time: 6.03654361s
+500 iterations total time: 34.84293034s
+iter 362500 eps 0.05 average size of vc:  0.2674656350197506
+testing 100 graphs time: 5.98001814s
+500 iterations total time: 34.82280049s
+iter 363000 eps 0.05 average size of vc:  0.26637572394632525
+testing 100 graphs time: 5.97662544s
+500 iterations total time: 34.76673059s
+iter 363500 eps 0.05 average size of vc:  0.26660101050859536
+testing 100 graphs time: 5.95031333s
+500 iterations total time: 34.86252520s
+iter 364000 eps 0.05 average size of vc:  0.26855499866887617
+testing 100 graphs time: 6.01201916s
+500 iterations total time: 34.81810705s
+iter 364500 eps 0.05 average size of vc:  0.263812732881205
+testing 100 graphs time: 5.97454095s
+500 iterations total time: 34.61099636s
+
+generating new training graphs...
+iter 365000 eps 0.05 average size of vc:  0.2665856656266896
+testing 100 graphs time: 6.07949138s
+500 iterations total time: 35.32954863s
+iter 365500 eps 0.05 average size of vc:  0.2675712111563387
+testing 100 graphs time: 5.97944069s
+500 iterations total time: 34.57841841s
+iter 366000 eps 0.05 average size of vc:  0.2646982595283089
+testing 100 graphs time: 5.97347069s
+500 iterations total time: 34.67536444s
+iter 366500 eps 0.05 average size of vc:  0.2657402998625433
+testing 100 graphs time: 6.03238130s
+500 iterations total time: 34.80283305s
+iter 367000 eps 0.05 average size of vc:  0.2683820298924606
+testing 100 graphs time: 6.02512288s
+500 iterations total time: 34.92784445s
+iter 367500 eps 0.05 average size of vc:  0.26995587018942474
+testing 100 graphs time: 6.07408738s
+500 iterations total time: 34.97614758s
+iter 368000 eps 0.05 average size of vc:  0.2680502974516877
+testing 100 graphs time: 6.00804567s
+500 iterations total time: 34.72713897s
+iter 368500 eps 0.05 average size of vc:  0.2676776633492
+testing 100 graphs time: 5.98418713s
+500 iterations total time: 34.71138037s
+iter 369000 eps 0.05 average size of vc:  0.2668337856187277
+testing 100 graphs time: 5.99724340s
+500 iterations total time: 34.74572013s
+iter 369500 eps 0.05 average size of vc:  0.2654574854205791
+testing 100 graphs time: 5.97323298s
+500 iterations total time: 34.88197454s
+
+generating new training graphs...
+iter 370000 eps 0.05 average size of vc:  0.2666514214980789
+testing 100 graphs time: 6.03852630s
+500 iterations total time: 34.94643771s
+model has been saved success!
+iter 370500 eps 0.05 average size of vc:  0.26693288344842686
+testing 100 graphs time: 5.99021363s
+500 iterations total time: 34.94925189s
+iter 371000 eps 0.05 average size of vc:  0.2666038737781344
+testing 100 graphs time: 5.99522018s
+500 iterations total time: 34.52769175s
+iter 371500 eps 0.05 average size of vc:  0.264828184970882
+testing 100 graphs time: 6.01363754s
+500 iterations total time: 34.91729410s
+iter 372000 eps 0.05 average size of vc:  0.2684911102845127
+testing 100 graphs time: 5.94755530s
+500 iterations total time: 34.66283857s
+iter 372500 eps 0.05 average size of vc:  0.26507123998284177
+testing 100 graphs time: 5.95563650s
+500 iterations total time: 34.60759777s
+iter 373000 eps 0.05 average size of vc:  0.26612000681893483
+testing 100 graphs time: 5.95006585s
+500 iterations total time: 34.81746527s
+iter 373500 eps 0.05 average size of vc:  0.2649647347040536
+testing 100 graphs time: 5.97536898s
+500 iterations total time: 34.49874286s
+iter 374000 eps 0.05 average size of vc:  0.26812964590943217
+testing 100 graphs time: 5.97484064s
+500 iterations total time: 34.52748345s
+iter 374500 eps 0.05 average size of vc:  0.26732207407082664
+testing 100 graphs time: 5.97939801s
+500 iterations total time: 34.74942938s
+
+generating new training graphs...
+iter 375000 eps 0.05 average size of vc:  0.2676529807561516
+testing 100 graphs time: 5.99498749s
+500 iterations total time: 34.91749507s
+iter 375500 eps 0.05 average size of vc:  0.2656172348787834
+testing 100 graphs time: 6.02224112s
+500 iterations total time: 34.71023552s
+iter 376000 eps 0.05 average size of vc:  0.26992439031543247
+testing 100 graphs time: 6.01779723s
+500 iterations total time: 34.70382469s
+iter 376500 eps 0.05 average size of vc:  0.2680999147697646
+testing 100 graphs time: 6.01878977s
+500 iterations total time: 34.75516877s
+iter 377000 eps 0.05 average size of vc:  0.2656952273301378
+testing 100 graphs time: 6.00210714s
+500 iterations total time: 34.56849129s
+iter 377500 eps 0.05 average size of vc:  0.2701048882951811
+testing 100 graphs time: 6.02176213s
+500 iterations total time: 34.94619974s
+iter 378000 eps 0.05 average size of vc:  0.2673826407322835
+testing 100 graphs time: 6.00729346s
+500 iterations total time: 34.84632401s
+iter 378500 eps 0.05 average size of vc:  0.265001313229847
+testing 100 graphs time: 5.94550490s
+500 iterations total time: 34.76416320s
+iter 379000 eps 0.05 average size of vc:  0.266692198826388
+testing 100 graphs time: 5.97947407s
+500 iterations total time: 34.83448476s
+iter 379500 eps 0.05 average size of vc:  0.2685101424518054
+testing 100 graphs time: 5.98914051s
+500 iterations total time: 34.75963050s
+
+generating new training graphs...
+iter 380000 eps 0.05 average size of vc:  0.2698972813746364
+testing 100 graphs time: 6.09405279s
+500 iterations total time: 35.02131726s
+model has been saved success!
+iter 380500 eps 0.05 average size of vc:  0.2656357786374371
+testing 100 graphs time: 5.98213196s
+500 iterations total time: 34.72659818s
+iter 381000 eps 0.05 average size of vc:  0.2664865937993061
+testing 100 graphs time: 5.99435878s
+500 iterations total time: 34.84154937s
+iter 381500 eps 0.05 average size of vc:  0.2681037089463627
+testing 100 graphs time: 5.96778846s
+500 iterations total time: 34.58264782s
+iter 382000 eps 0.05 average size of vc:  0.2679436024103252
+testing 100 graphs time: 5.97440720s
+500 iterations total time: 34.78884489s
+iter 382500 eps 0.05 average size of vc:  0.26684551285412383
+testing 100 graphs time: 5.99320269s
+500 iterations total time: 34.68844222s
+iter 383000 eps 0.05 average size of vc:  0.26704692107681455
+testing 100 graphs time: 6.00269127s
+500 iterations total time: 34.82022989s
+iter 383500 eps 0.05 average size of vc:  0.2659601237390155
+testing 100 graphs time: 5.98544765s
+500 iterations total time: 34.61274260s
+iter 384000 eps 0.05 average size of vc:  0.26553621951486234
+testing 100 graphs time: 5.98137999s
+500 iterations total time: 34.53299665s
+iter 384500 eps 0.05 average size of vc:  0.2664831047894375
+testing 100 graphs time: 6.02363467s
+500 iterations total time: 34.80542764s
+
+generating new training graphs...
+iter 385000 eps 0.05 average size of vc:  0.2672604340869665
+testing 100 graphs time: 6.07803106s
+500 iterations total time: 35.37849267s
+iter 385500 eps 0.05 average size of vc:  0.2657610018057648
+testing 100 graphs time: 6.00618410s
+500 iterations total time: 34.75320510s
+iter 386000 eps 0.05 average size of vc:  0.26599806700663
+testing 100 graphs time: 5.99032235s
+500 iterations total time: 34.52313916s
+iter 386500 eps 0.05 average size of vc:  0.26710679816465555
+testing 100 graphs time: 5.98501921s
+500 iterations total time: 34.64938361s
+iter 387000 eps 0.05 average size of vc:  0.26806708128895906
+testing 100 graphs time: 5.99430633s
+500 iterations total time: 34.84713466s
+iter 387500 eps 0.05 average size of vc:  0.2668319810764717
+testing 100 graphs time: 5.99675417s
+500 iterations total time: 34.88584890s
+iter 388000 eps 0.05 average size of vc:  0.2689359841520489
+testing 100 graphs time: 5.98999929s
+500 iterations total time: 34.94804732s
+iter 388500 eps 0.05 average size of vc:  0.26813306036216655
+testing 100 graphs time: 5.98499584s
+500 iterations total time: 34.59354458s
+iter 389000 eps 0.05 average size of vc:  0.26758635383856466
+testing 100 graphs time: 6.00398135s
+500 iterations total time: 34.61168726s
+iter 389500 eps 0.05 average size of vc:  0.2668733594561977
+testing 100 graphs time: 5.96470141s
+500 iterations total time: 34.73573943s
+
+generating new training graphs...
+iter 390000 eps 0.05 average size of vc:  0.2689341588605813
+testing 100 graphs time: 6.02756882s
+500 iterations total time: 35.00948971s
+model has been saved success!
+iter 390500 eps 0.05 average size of vc:  0.2672819917147772
+testing 100 graphs time: 5.98376775s
+500 iterations total time: 34.52610577s
+iter 391000 eps 0.05 average size of vc:  0.2657329627330551
+testing 100 graphs time: 5.98297429s
+500 iterations total time: 34.71736031s
+iter 391500 eps 0.05 average size of vc:  0.2670922236686443
+testing 100 graphs time: 5.96014380s
+500 iterations total time: 34.40059020s
+iter 392000 eps 0.05 average size of vc:  0.26635244157159
+testing 100 graphs time: 6.00924277s
+500 iterations total time: 34.74446074s
+iter 392500 eps 0.05 average size of vc:  0.26558230025076446
+testing 100 graphs time: 5.98127484s
+500 iterations total time: 34.65905499s
+iter 393000 eps 0.05 average size of vc:  0.26723499208989937
+testing 100 graphs time: 5.98392701s
+500 iterations total time: 34.83287918s
+iter 393500 eps 0.05 average size of vc:  0.26663544176006626
+testing 100 graphs time: 5.98526955s
+500 iterations total time: 34.65711575s
+iter 394000 eps 0.05 average size of vc:  0.267844993288755
+testing 100 graphs time: 5.93108964s
+500 iterations total time: 34.59436904s
+iter 394500 eps 0.05 average size of vc:  0.26754398310993893
+testing 100 graphs time: 5.97545099s
+500 iterations total time: 34.46887877s
+
+generating new training graphs...
+iter 395000 eps 0.05 average size of vc:  0.26611549070504137
+testing 100 graphs time: 6.00727463s
+500 iterations total time: 34.93808097s
+iter 395500 eps 0.05 average size of vc:  0.26916348351710634
+testing 100 graphs time: 5.99613380s
+500 iterations total time: 34.82110686s
+iter 396000 eps 0.05 average size of vc:  0.26770197509974225
+testing 100 graphs time: 6.00919580s
+500 iterations total time: 34.80099437s
+iter 396500 eps 0.05 average size of vc:  0.265074706845753
+testing 100 graphs time: 6.01625443s
+500 iterations total time: 34.68241439s
+iter 397000 eps 0.05 average size of vc:  0.2669287098891819
+testing 100 graphs time: 5.99181795s
+500 iterations total time: 34.63620516s
+iter 397500 eps 0.05 average size of vc:  0.2656743750604733
+testing 100 graphs time: 5.98353720s
+500 iterations total time: 35.00687867s
+iter 398000 eps 0.05 average size of vc:  0.26592599243134335
+testing 100 graphs time: 5.94408035s
+500 iterations total time: 34.70840218s
+iter 398500 eps 0.05 average size of vc:  0.2684925745257722
+testing 100 graphs time: 5.97019124s
+500 iterations total time: 34.59020927s
+iter 399000 eps 0.05 average size of vc:  0.2674350462631937
+testing 100 graphs time: 5.96916389s
+500 iterations total time: 34.84368695s
+iter 399500 eps 0.05 average size of vc:  0.26601615922541755
+testing 100 graphs time: 6.02537465s
+500 iterations total time: 34.89881483s
+
+generating new training graphs...
+iter 400000 eps 0.05 average size of vc:  0.26850401216570396
+testing 100 graphs time: 6.05099082s
+500 iterations total time: 35.20990135s
+model has been saved success!
