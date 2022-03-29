@@ -30,7 +30,7 @@ from FINDER_net import FINDER_net
 cdef double GAMMA = 1  # decay rate of past observations
 cdef int UPDATE_TIME = 1000
 cdef int EMBEDDING_SIZE = 64
-cdef int MAX_ITERATION = 500000
+cdef int MAX_ITERATION = 500001
 #cdef double LEARNING_RATE = 0.0001   #dai
 cdef double LEARNING_RATE = 0.0001   #dai
 cdef int MEMORY_SIZE = 500000
@@ -99,7 +99,7 @@ class FINDER:
         else:
             self.loss = nn.MSELoss()
 
-        self.IsDoubleDQN = False
+        self.IsDoubleDQN = True
         self.IsPrioritizedSampling = False
         self.IsMultiStepDQN = True     ##(if IsNStepDQN=False, N_STEP==1)
 
@@ -148,7 +148,7 @@ class FINDER:
 
 
     ############----------------------------- variants for CM 220328 (start) ------------------- ###################################
-    def cm_graph(cur_n, cm_degrees, cm_degrees_freq, cm_degrees_mean):
+    def cm_graph(self, cur_n, cm_degrees, cm_degrees_freq, cm_degrees_mean):
         # sample from nomarlized P(k) w.r.t frequency in orginal graph
         cm_trained_degrees = np.random.choice(a=cm_degrees, size=cur_n, p=cm_degrees_freq)
 
@@ -533,7 +533,7 @@ class FINDER:
 
             if iter % 10 == 0:
                 self.PlayGame(10, eps)
-            if iter % 300 == 0:
+            if iter % 500 == 0:
                 if(iter == 0 or iter == start_iter):
                     N_start = start
                 else:
@@ -548,13 +548,14 @@ class FINDER:
                 print('iter %d, eps %.4f, average size of vc:%.6f'%(iter, eps, frac/n_valid))
                 print ('testing 200 graphs time: %.2fs'%(test_end-test_start))
                 N_end = time.perf_counter()
-                print ('300 iterations total time: %.2fs\n'%(N_end-N_start))
+                print ('500 iterations total time: %.2fs\n'%(N_end-N_start))
                 sys.stdout.flush()
                 model_path = '%s/nrange_%d_%d_iter_%d.ckpt' % (save_dir, NUM_MIN, NUM_MAX, iter)
                 if(skip_saved_iter and iter==start_iter):
                     pass
                 else:
-                    self.SaveModel(model_path)
+                    if(iter % 5000==0):
+                        self.SaveModel(model_path)
             if( (iter % UPDATE_TIME == 0) or (iter==start_iter)):
                 self.TakeSnapShot()
             self.Fit()
