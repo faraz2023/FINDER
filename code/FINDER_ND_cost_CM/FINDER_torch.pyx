@@ -33,7 +33,7 @@ from FINDER_net import FINDER_net
 cdef double GAMMA = 1  # decay rate of past observations
 cdef int UPDATE_TIME = 1000
 cdef int EMBEDDING_SIZE = 64
-cdef int MAX_ITERATION = 1000000
+cdef int MAX_ITERATION = 500001
 cdef double LEARNING_RATE = 0.0001   #dai
 cdef int MEMORY_SIZE = 500000
 cdef double Alpha = 0.001 ## weight of reconstruction loss
@@ -99,7 +99,7 @@ class FINDER:
             self.loss = nn.HuberLoss(delta=1.0)
         else:
             self.loss = nn.MSELoss()
-        self.IsDoubleDQN = False
+        self.IsDoubleDQN = True
         self.IsPrioritizedSampling = False
 
 
@@ -266,7 +266,7 @@ class FINDER:
         print ('Validation of HBA: %.16f'%(result_betweeness / n_valid))
 
     ############----------------------------- variants for CM 220328 (start) ------------------- ###################################
-    def cm_graph(cur_n, cm_degrees, cm_degrees_freq, cm_degrees_mean):
+    def cm_graph(self, cur_n, cm_degrees, cm_degrees_freq, cm_degrees_mean):
         # sample from nomarlized P(k) w.r.t frequency in orginal graph
         cm_trained_degrees = np.random.choice(a=cm_degrees, size=cur_n, p=cm_degrees_freq)
 
