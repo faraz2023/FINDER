@@ -280,8 +280,14 @@ class FINDER:
         if(np.sum(cm_trained_degrees) % 2 == 1):
             cm_trained_degrees[0]+=1
 
-        # apply sequence of degrees
-        return nx.configuration_model(deg_sequence=cm_trained_degrees)
+        # cm_g, apply sequence of degrees
+        cmg_g = nx.configuration_model(deg_sequence=cm_trained_degrees)
+
+        # make it a connected graph, clean self-loops
+        cmg_g = nx.Graph(cmg_g)
+        cmg_g.remove_edges_from(nx.selfloop_edges(cmg_g))
+
+        return cmg_g
 
     ############----------------------------- variants for CM 220328 (end) ------------------- ###################################
 
