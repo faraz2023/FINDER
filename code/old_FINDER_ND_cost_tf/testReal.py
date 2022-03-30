@@ -17,20 +17,24 @@ def GetSolution(STEPRATIO, MODEL_FILE):
     ##................................................Get Solution (model).....................................................
     dqn = FINDER()
     ## data_test
-    data_test_path = '../data/real/Cost/'
+    data_test_path = '../../data/real/cost/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
-    data_test_name = ['Crime', 'HI-II-14']
-    data_test_costType = ['degree', 'random']
-    model_file = './FINDER_ND_cost/models/%s'%MODEL_FILE
+    #data_test_name = ['Crime', 'HI-II-14']
+    #data_test_costType = ['degree', 'random']
+    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05']
+    data_test_costType = ['degree']
+    model_file = './models/%s'%MODEL_FILE
     ## save_dir
-    save_dir = '../results/FINDER_ND_cost/real'
+    save_dir = '../results/old_FINDER_ND_cost_tf/real'
     if not os.path.exists(save_dir):
         os.mkdir(save_dir)
     
     save_dir_degree = save_dir + '/Data_degree'
     save_dir_random = save_dir + '/Data_random'
-    os.mkdir(save_dir_degree)
-    os.mkdir(save_dir_random)
+    if not os.path.exists(save_dir_degree):
+        os.mkdir(save_dir_degree)
+    if not os.path.exists(save_dir_random):
+        os.mkdir(save_dir_random)
 
     ## begin computing...
     print('The best model is :%s' % (model_file))
@@ -67,14 +71,16 @@ def EvaluateSolution(STEPRATIO, STRTEGYID):
     ##................................................Evaluate Solution.....................................................
     dqn = FINDER()
     ## data_test
-    data_test_path = '../data/real/Cost/'
+    data_test_path = '../../data/real/cost/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
-    data_test_name = ['Crime', 'HI-II-14']
-    data_test_costType = ['degree', 'random']
+    #data_test_name = ['Crime', 'HI-II-14']
+    #data_test_costType = ['degree', 'random']
+    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05']
+    data_test_costType = ['degree']
 
     ## save_dir
-    save_dir_degree = '../results/FINDER_ND_cost/real/Data_degree/StepRatio_%.4f/' % STEPRATIO
-    save_dir_random = '../results/FINDER_ND_cost/real/Data_random/StepRatio_%.4f/' % STEPRATIO
+    save_dir_degree = '../results/old_FINDER_ND_cost_tf/real/Data_degree/StepRatio_%.4f/' % STEPRATIO
+    save_dir_random = '../results/old_FINDER_ND_cost_tf/real/Data_random/StepRatio_%.4f/' % STEPRATIO
     ## begin computing...
 
     for costType in data_test_costType:

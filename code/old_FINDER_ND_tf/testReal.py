@@ -16,14 +16,15 @@ def GetSolution(STEPRATIO, MODEL_FILE_CKPT):
     ######################################################################################################################
     ##................................................Get Solution (model).....................................................
     dqn = FINDER()
-    data_test_path = '../data/real/'
+    data_test_path = '../../data/real/'
 #     data_test_name = ['Crime','HI-II-14','Digg','Enron','Gnutella31','Epinions','Facebook','Youtube','Flickr']
-    data_test_name = ['Crime','HI-II-14']
-    model_file_path = './FINDER_ND/models/'
+    #data_test_name = ['Crime','HI-II-14']
+    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05']
+    model_file_path = './models/'
     model_file_ckpt = MODEL_FILE_CKPT
     model_file = model_file_path + model_file_ckpt
     ## save_dir
-    save_dir = '../results/FINDER_ND/real'
+    save_dir = '../results/old_FINDER_ND_tf/real'
     if not os.path.exists(save_dir):
         os.mkdir(save_dir)
         
@@ -50,10 +51,11 @@ def EvaluateSolution(STEPRATIO, MODEL_FILE_CKPT, STRTEGYID):
     #######################################################################################################################
     ##................................................Evaluate Solution.....................................................
     dqn = FINDER()
-    data_test_path = '../data/real/'
+    data_test_path = '../../data/real/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
-    data_test_name = ['Crime', 'HI-II-14']
-    save_dir = '../results/FINDER_ND/real/StepRatio_%.4f/'%STEPRATIO
+    #data_test_name = ['Crime', 'HI-II-14']
+    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05']
+    save_dir = '../results/old_FINDER_ND_tf/real/StepRatio_%.4f/'%STEPRATIO
     ## begin computing...
     df = pd.DataFrame(np.arange(2 * len(data_test_name)).reshape((2, len(data_test_name))), index=['solution', 'time'], columns=data_test_name)
     for i in range(len(data_test_name)):

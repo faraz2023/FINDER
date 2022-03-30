@@ -24,12 +24,14 @@ def GetSolution(STEPRATIO, MODEL_FILE):
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
     #data_test_name = ['Crime', 'HI-II-14']
     #data_test_costType = ['degree', 'random']
-    data_test_name = ['HI-II-14', 'Digg']
-    data_test_costType = ['001', 'zero', 'degree']
+    #data_test_name = ['HI-II-14', 'Digg']
+    #data_test_costType = ['001', 'zero', 'degree']
+    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05']
+    data_test_costType = ['degree']
     #model_file = './FINDER_ND_cost/models/%s'%MODEL_FILE
-    model_file = './models/TORCH-Model_barabasi_albert/{}'.format(MODEL_FILE)
+    model_file = './models/DoubleDQN-truncNormal-TORCH-Model_configuration_model/{}'.format(MODEL_FILE)
     ## save_dir
-    save_dir = '../results/FINDER_ND_cost/real'
+    save_dir = '../results/FINDER_ND_cost_CM/real'
     if not os.path.exists(save_dir):
         os.makedirs(save_dir, exist_ok=True)
     
@@ -91,13 +93,15 @@ def EvaluateSolution(STEPRATIO, STRTEGYID):
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
     #data_test_name = ['Crime', 'HI-II-14']
     #data_test_costType = ['degree', 'random']
-    data_test_name = ['HI-II-14', 'Digg']
-    data_test_costType = ['001', 'zero', 'degree']
+    #data_test_name = ['HI-II-14', 'Digg']
+    #data_test_costType = ['001', 'zero', 'degree']
+    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05']
+    data_test_costType = ['degree']
 
     ## save_dir
-    save_dir_degree = '../results/FINDER_ND_cost/real/Data_degree/StepRatio_%.4f/' % STEPRATIO
-    save_dir_zero = '../results/FINDER_ND_cost/real/Data_zero/StepRatio_%.4f/' % STEPRATIO
-    save_dir_001 = '../results/FINDER_ND_cost/real/Data_001/StepRatio_%.4f/' % STEPRATIO
+    save_dir_degree = '../results/FINDER_ND_cost_CM/real/Data_degree/StepRatio_%.4f/' % STEPRATIO
+    save_dir_zero = '../results/FINDER_ND_cost_CM/real/Data_zero/StepRatio_%.4f/' % STEPRATIO
+    save_dir_001 = '../results/FINDER_ND_cost_CM/real/Data_001/StepRatio_%.4f/' % STEPRATIO
 
     #save_dir_random = '../results/FINDER_ND_cost/real/Data_random/StepRatio_%.4f/' % STEPRATIO
     ## begin computing...
@@ -151,7 +155,7 @@ def EvaluateSolution(STEPRATIO, STRTEGYID):
             df.to_csv(save_dir_001 + '/solution_%s_score.csv' % (costType), encoding='utf-8', index=False)
 
 def main():
-    model_file = 'nrange_30_50_iter_944400.ckpt'
+    model_file = 'nrange_30_50_iter_500000.ckpt'
     GetSolution(0.01, model_file)
     EvaluateSolution(0.01, 0)
 

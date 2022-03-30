@@ -17,13 +17,14 @@ def GetSolution(STEPRATIO, MODEL_FILE):
     ######################################################################################################################
     ##................................................Get Solution (model).....................................................
     dqn = FINDER()
-    g_type = "barabasi_albert"
+    g_type = "configuration_model"
     data_test_path = '../../data/real/'
 #     data_test_name = ['Crime','HI-II-14','Digg','Enron','Gnutella31','Epinions','Facebook','Youtube','Flickr']
-    data_test_name = ['Digg','HI-II-14']
-    model_file = './models/TORCH-Model_{}/{}'.format(g_type, MODEL_FILE)
+    #data_test_name = ['Digg','HI-II-14']
+    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05']
+    model_file = './models/DoubleDQN-TORCH-Model_{}/{}'.format(g_type, MODEL_FILE)
     ## save_dir
-    save_dir = '../results/FINDER_ND/real'
+    save_dir = '../results/FINDER_ND_CM/real'
     if not os.path.exists(save_dir):
         os.makedirs(save_dir, exist_ok=True)        
     ## begin computing...
@@ -50,8 +51,9 @@ def EvaluateSolution(STEPRATIO, MODEL_FILE, STRTEGYID):
     dqn = FINDER()
     data_test_path = '../../data/real/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
-    data_test_name = ['Digg', 'HI-II-14']
-    save_dir = '../results/FINDER_ND/real/StepRatio_%.4f/'%STEPRATIO
+    #data_test_name = ['Digg', 'HI-II-14']
+    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05']
+    save_dir = '../results/FINDER_ND_CM/real/StepRatio_%.4f/'%STEPRATIO
     ## begin computing...
     df = pd.DataFrame(np.arange(2 * len(data_test_name)).reshape((2, len(data_test_name))), index=['solution', 'time'], columns=data_test_name)
     for i in range(len(data_test_name)):
@@ -75,7 +77,7 @@ def EvaluateSolution(STEPRATIO, MODEL_FILE, STRTEGYID):
 
 
 def main():
-    model_file= 'nrange_30_50_iter_206700.ckpt'
+    model_file= 'nrange_30_50_iter_500000.ckpt'
     GetSolution(0.01, model_file)
     EvaluateSolution(0.01, model_file, 0)
 
