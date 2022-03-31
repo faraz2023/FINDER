@@ -26,7 +26,7 @@ def GetSolution(STEPRATIO, MODEL_FILE):
     #data_test_costType = ['degree', 'random']
     #data_test_name = ['HI-II-14', 'Digg']
     #data_test_costType = ['001', 'zero', 'degree']
-    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05']
+    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05','Lit-BM','Test_space_screens-19','HI-union','HuRI']
     data_test_costType = ['degree']
     #model_file = './FINDER_ND_cost/models/%s'%MODEL_FILE
     model_file = './models/truncNormal-TORCH-Model_configuration_model/{}'.format(MODEL_FILE)
@@ -95,7 +95,7 @@ def EvaluateSolution(STEPRATIO, STRTEGYID):
     #data_test_costType = ['degree', 'random']
     #data_test_name = ['HI-II-14', 'Digg']
     #data_test_costType = ['001', 'zero', 'degree']
-    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05']
+    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05','Lit-BM','Test_space_screens-19','HI-union','HuRI']
     data_test_costType = ['degree']
 
     ## save_dir

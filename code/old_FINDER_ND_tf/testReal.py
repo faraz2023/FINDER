@@ -19,7 +19,7 @@ def GetSolution(STEPRATIO, MODEL_FILE_CKPT):
     data_test_path = '../../data/real/'
 #     data_test_name = ['Crime','HI-II-14','Digg','Enron','Gnutella31','Epinions','Facebook','Youtube','Flickr']
     #data_test_name = ['Crime','HI-II-14']
-    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05']
+    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05','Lit-BM','Test_space_screens-19','HI-union','HuRI']
     model_file_path = './models/'
     model_file_ckpt = MODEL_FILE_CKPT
     model_file = model_file_path + model_file_ckpt
@@ -54,7 +54,7 @@ def EvaluateSolution(STEPRATIO, MODEL_FILE_CKPT, STRTEGYID):
     data_test_path = '../../data/real/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
     #data_test_name = ['Crime', 'HI-II-14']
-    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05']
+    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05','Lit-BM','Test_space_screens-19','HI-union','HuRI']
     save_dir = '../results/old_FINDER_ND_tf/real/StepRatio_%.4f/'%STEPRATIO
     ## begin computing...
     df = pd.DataFrame(np.arange(2 * len(data_test_name)).reshape((2, len(data_test_name))), index=['solution', 'time'], columns=data_test_name)
