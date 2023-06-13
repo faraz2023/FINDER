@@ -1,5 +1,27 @@
 # Attention: This repo is currently under construction
 <hr>
+
+# Introduction
+Biological networks have a key role in drug discovery for disease treatement. The study of biological networks and identifying critical nodes can facilitate identification of the key targets in treating diseases. However, efficiently finding critical nodes with low cost is challenging. Additionally different experimental works exist to identify critical nodes which are expensive and time consuming. The development of analytics including statistics and machine learning has revolutionized critical node detections [1]. The Critical Node Detection Problem (CNDP) is the optimizaiton problem that consists in finding a set of nodes, the deletion of which maximally degrades network connectivity according to some predefined connectivity metrices[2]. This project is to find a minimum cardinality set of proteins whose removal would optimally dismantle the interactions in the protein- protein network and help neutralize harmful organisms such as bacteria or viruses. Finding key players or nodes in protein-protein interaction networks can have great implications for structure based strategies of drug design. We use Finder [2] a novel frame work that combines techniques from Graph Neural Net (GNN) and Reinforcement Learning (RL) to achieve fast and effective CNDP. The original finder is writen with tensor flow (TF). We wrote Finder with pytorch to implement for our work. And then we applied a serials of ehancements, particularly for human protein-protein networks. 
+
+**Reference**
+
+[1] X.Liu et al., "Coputational methods for identifying the critical nodes in biological networks", vol.21, no.2, pp. 486-497, 2020.
+
+[2] C. Fan, L. Zeng, Y. Sun, and Y.Y. Liu, Finder supplementary, vol. 2, no.6. 2020.
+
+
+# Data
+
+### Data source (raw)
+
+Title: The Human Reference Protein Interactome Mapping Project
+
+link: http://www.interactome-atlas.org/download
+
+
+# Seed model:
+
 # FINDER (FInding key players in complex Networks through DEep Reinforcement learning)
 
 This is a PyTorch implementation of FINDER, as described in the paper:
@@ -25,7 +47,10 @@ Finding an optimal set of nodes, called key players, whose activation (or remova
      - [FINDER_CN](./code/FINDER_CN): source code for the Critical Node (CN) problem under the node-unweighted scenario.
      - [FINDER_CN_cost](./code/FINDER_CN_cost): source code for the Critical Node (CN) problem under the node-weighted (including degree-based costs and random costs) scenarios.
      - [FINDER_ND](./code/FINDER_ND): source code for the Network Dismantling (ND) problem under the node-unweighted scenario.
+     - [FINDER_ND_CM](./code/FINDER_ND_CM): source code for the Network Dismantling (ND) problem under the node-unweighted scenario, with configuraion model.
      - [FINDER_ND_cost](./code/FINDER_ND_cost): source code for the Network Dismantling (ND) problem under the node-weighted (including degree-based costs and random costs) scenarios.
+     - [FINDER_ND_cost_CM](./code/FINDER_ND_cost): source code for the Network Dismantling (ND) problem under the node-weighted (including degree-based costs and random costs) scenarios, with configuration model.
+     - [old_FINDER_CN_cost_tf],[old_FINDER_CN_tf],[old_FINDER_ND_cost_tf],[old_FINDER_ND_tf], old tensor flow versions
 - [results](./results): results obtained by FINDER for all the cases, which should be the same as are reported in the paper.
 
 
@@ -72,12 +97,19 @@ python setup.py build_ext -i
 ```
 
 ## Typical install time
-It took about 5 mins to install all the required packages, and about 1 mins to make all the files.
+It took about 15 mins to install all the required packages, and about 1 mins to make all the files.
 
 # Reproduction instructions
 
 ## Instructions to run
 1. Train the model, 
+```
+CUDA_VISIBLE_DEVICES=gpu_id python train_torch.py
+
+```
+Modify the hyper-parameters in `FINDER_torch.pyx` to tune the model, and make files after the the modification.
+
+For old tensorflow models:
 ```
 CUDA_VISIBLE_DEVICES=gpu_id python train.py
 ```
@@ -100,7 +132,9 @@ Using the well-trained model (stored in `./models`), you can obtain the results 
 The experimental results are saved in the `results` folder, which contains four subfolders, each of which corresponds to one model, and the synthetic and real results are separated into two different subfolders for the sake of clearity.
 
 ## Expected run time
-It took about 17 hours to obtain all results, including 'FINDER_CN', 'FINDER_CN_cost', 'FINDER_ND' and 'FINDER_ND_cost' four models, on both synthetic data and real data, containing both node uniform weights, degree-based weights and random weights.
+Trainning takes about 10 hours for each model.
+
+Test takes about <2 minutes for ND models, 3~4 minutes for ND_cost models.
 
 
 # Basebline methods implementation
@@ -120,7 +154,7 @@ https://github.com/hcmidt/corehd (CoreHD)
 https://github.com/renxiaolong/Generalized-Network-Dismantling (GND and RatioCut)
 ```
 
-# Reproducing the results that reported in the paper
+# Reproducing the results that reported in the FINDER paper
 
 Here is the link to the dataset that was used in the paper, including: 1) real data: nine different test data collected from the SNAP repository; 2) synthetic data: generated by Barab\'{a}si-Albert (BA) model.
 

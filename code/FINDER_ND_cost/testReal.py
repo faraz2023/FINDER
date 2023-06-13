@@ -24,8 +24,10 @@ def GetSolution(STEPRATIO, MODEL_FILE):
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
     #data_test_name = ['Crime', 'HI-II-14']
     #data_test_costType = ['degree', 'random']
-    data_test_name = ['HI-II-14', 'Digg']
-    data_test_costType = ['001', 'zero', 'degree']
+    #data_test_name = ['HI-II-14', 'Digg']
+    #data_test_costType = ['001', 'zero', 'degree']
+    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05','Lit-BM','Test_space_screens-19','HI-union','HuRI','HI-union-exclude-14']
+    data_test_costType = ['degree']
     #model_file = './FINDER_ND_cost/models/%s'%MODEL_FILE
     model_file = './models/TORCH-Model_barabasi_albert/{}'.format(MODEL_FILE)
     ## save_dir
@@ -91,8 +93,10 @@ def EvaluateSolution(STEPRATIO, STRTEGYID):
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
     #data_test_name = ['Crime', 'HI-II-14']
     #data_test_costType = ['degree', 'random']
-    data_test_name = ['HI-II-14', 'Digg']
-    data_test_costType = ['001', 'zero', 'degree']
+    #data_test_name = ['HI-II-14', 'Digg']
+    #data_test_costType = ['001', 'zero', 'degree']
+    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05','Lit-BM','Test_space_screens-19','HI-union','HuRI','HI-union-exclude-14']
+    data_test_costType = ['degree']
 
     ## save_dir
     save_dir_degree = '../results/FINDER_ND_cost/real/Data_degree/StepRatio_%.4f/' % STEPRATIO

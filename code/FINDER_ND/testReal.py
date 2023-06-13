@@ -20,7 +20,8 @@ def GetSolution(STEPRATIO, MODEL_FILE):
     g_type = "barabasi_albert"
     data_test_path = '../../data/real/'
 #     data_test_name = ['Crime','HI-II-14','Digg','Enron','Gnutella31','Epinions','Facebook','Youtube','Flickr']
-    data_test_name = ['Digg','HI-II-14']
+    #data_test_name = ['Digg','HI-II-14']
+    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05','Lit-BM','Test_space_screens-19','HI-union','HuRI','HI-union-exclude-14']
     model_file = './models/TORCH-Model_{}/{}'.format(g_type, MODEL_FILE)
     ## save_dir
     save_dir = '../results/FINDER_ND/real'
@@ -50,7 +51,8 @@ def EvaluateSolution(STEPRATIO, MODEL_FILE, STRTEGYID):
     dqn = FINDER()
     data_test_path = '../../data/real/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
-    data_test_name = ['Digg', 'HI-II-14']
+    #data_test_name = ['Digg', 'HI-II-14']
+    data_test_name = ['HI-II-14','Yang-16','Yu-11','Venkatesan-09','H-I-05','Lit-BM','Test_space_screens-19','HI-union','HuRI','HI-union-exclude-14']
     save_dir = '../results/FINDER_ND/real/StepRatio_%.4f/'%STEPRATIO
     ## begin computing...
     df = pd.DataFrame(np.arange(2 * len(data_test_name)).reshape((2, len(data_test_name))), index=['solution', 'time'], columns=data_test_name)
